@@ -1,6 +1,36 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  --color-mainblue: #002075;
+  --color-blue1: #002AA0;
+  --color-blue2: #083BA9;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+}
+
+.font-trapix {
+  font-family: var(--font-trapix);
+}
+.font-formular-regular {
+  font-family: var(--font-formular-regular);
+}
+.font-formular-medium {
+  font-family: var(--font-formular-medium);
+}
+.font-formular-bold {
+  font-family: var(--font-formular-bold);
+}
+.font-formular-black {
+  font-family: var(--font-formular-black);
+}
+.font-formular-mono {
+  font-family: var(--font-formular-mono);
+}
+.font-fontspring {
+  font-family: var(--font-fontspring);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -76,6 +106,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --font-trapix: 'Trapix', sans-serif;
+  --font-formular-regular: 'Formular', sans-serif;
+  --font-formular-medium: 'Formular', sans-serif;
+  --font-formular-bold: 'Formular', sans-serif;
+  --font-formular-black: 'Formular', sans-serif;
+  --font-formular-mono: 'Formular Mono', monospace;
+  --font-fontspring: 'Breul Grotesk A', sans-serif;
 }
 
 .dark {
