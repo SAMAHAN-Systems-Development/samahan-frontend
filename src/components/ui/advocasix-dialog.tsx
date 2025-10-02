@@ -72,7 +72,7 @@ export default function AdvocasixDialog({
         >
           <h1
             className="
-              font-formular-bold leading-tight
+              font-formular-black leading-tight
               text-2xl sm:text-3xl md:text-4xl lg:text-5xl
               text-mainblue
              
