@@ -32,7 +32,7 @@ export default function AdvocasixDialog({
           "max-w-[100vw] sm:!max-w-[92vw] md:!max-w-[86vw] lg:!max-w-[78vw]",
           "gap-0",
           "p-0",
-          "border-2 border-blue2",
+          "border-2 border-mainblue",
           "overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl",
 
           className
@@ -41,13 +41,13 @@ export default function AdvocasixDialog({
         <button
           onClick={() => onOpenChange(false)}
           aria-label="Close"
-          className="absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full bg-blue2 text-white
+          className="absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full bg-mainblue text-white
                      sm:h-10 sm:w-10 md:h-11 md:w-11"
         >
           <X className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />
         </button>
 
-        <div className="relative border-b-2 border-b-blue2">
+        <div className="relative border-b-2 border-b-mainblue">
           <Image
             src={image.imgSource}
             alt={image.imageAlt}
@@ -74,7 +74,7 @@ export default function AdvocasixDialog({
             className="
               font-formular-bold leading-tight
               text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-              text-blue2
+              text-mainblue
              
                    w-full
             "
@@ -86,7 +86,7 @@ export default function AdvocasixDialog({
             className="
             mt-1.5 sm:mt-2 md:mt-2.5
             font-formular-regular
-            text-blue2
+            text-mainblue
             text-[11px] sm:text-xs md:text-sm
             leading-[1.25] md:leading-snug
             w-full max-w-none           
