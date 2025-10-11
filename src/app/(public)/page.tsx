@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "@/components/ui/Navigation";
+
 export const metadata = {
   title: "SAMAHAN Website 2025-2026",
   description: "Frontend for Samahan Website",
