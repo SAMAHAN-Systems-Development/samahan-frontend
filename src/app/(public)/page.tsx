@@ -42,6 +42,7 @@ export default function Home() {
       <div className="mt-8 font-extrabold uppercase">
         Test your components below
       </div>
+
     </div>
   );
 }
