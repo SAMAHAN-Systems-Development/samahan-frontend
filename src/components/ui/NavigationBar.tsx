@@ -25,7 +25,7 @@ const infoPortal = [
 
 export default function Navbar() {
   return (
-    <div className="sticky top-0 z-50 py-4 px-4 sm:px-6 lg:px-40 select-none">
+    <div className="sticky top-0 z-50 py-4 px-4 sm:px-6 lg:px-8 xl:px-24 2xl:px-40 select-none">
       {/* Mobile: details/summary toggle (no hooks) */}
       <details className="lg:hidden group relative">
         <summary className="list-none">
@@ -81,7 +81,7 @@ export default function Navbar() {
           {/* Information portal collapsible */}
           <details className="px-2 py-1 group">
             <summary className="w-full flex items-center justify-between px-2 py-2 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md">
-              <span>Information portal</span>
+              <span>Information Portal</span>
               <FiChevronDown className="transition-transform group-open:rotate-180" />
             </summary>
             <div className="pl-4 pb-2">
@@ -101,16 +101,16 @@ export default function Navbar() {
 
       {/* Desktop nav (unchanged layout; mapped content) */}
       <div className="hidden lg:block">
-        <div className="bg-mainblue h-14 flex items-center justify-between px-12 rounded-full">
-          <div className="relative h-10 w-32">
+        <div className="bg-mainblue h-14 flex items-center justify-between lg:px-6 xl:px-12 rounded-full">
+          <div className="relative h-10 w-28 xl:w-32">
             <Image src="/logo.png" alt="On The Move Logo" fill />
           </div>
-          <div className="flex items-center space-x-10 xl:space-x-16">
+          <div className="flex items-center flex-nowrap  space-x-12 md:space-x-12 xl:space-x-16 2xl:space-x-24s">
             {headLinks.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-white font-formular-mono"
+                className="text-white font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
               >
                 {l.label}
               </Link>
@@ -120,10 +120,10 @@ export default function Navbar() {
             <div className="relative inline-block align-middle group">
               <button
                 type="button"
-                className="flex items-center gap-1 text-white cursor-pointer font-formular-mono"
+                className="flex items-center gap-1 text-white cursor-pointer font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
               >
                 Offices
-                <FiChevronDown className="text-white transition-transform duration-200 group-hover:rotate-180 ml-14" />
+                <FiChevronDown className="text-white transition-transform duration-200 group-hover:rotate-180 ml-2 xl:ml-4" />
               </button>
               <div className="absolute left-1/2 top-full -translate-x-1/2 hidden group-hover:block z-10">
                 <div className="min-w-48 bg-white border mt-4 border-mainblue rounded-b-md shadow-lg py-1">
@@ -140,7 +140,10 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="/FAQ" className="text-white font-formular-mono">
+            <Link
+              href="/FAQ"
+              className="text-white font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
+            >
               FAQ
             </Link>
 
@@ -148,13 +151,13 @@ export default function Navbar() {
             <div className="relative inline-block align-middle group">
               <button
                 type="button"
-                className="flex items-center gap-1 text-white cursor-pointer font-formular-mono"
+                className="flex items-center gap-1 text-white cursor-pointer font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
               >
-                Information portal
-                <FiChevronDown className="text-white transition-transform duration-200 group-hover:rotate-180" />
+                Information Portal
+                <FiChevronDown className="text-white transition-transform duration-200 group-hover:rotate-180 ml-2 xl:ml-4" />
               </button>
               <div className="absolute left-1/2 top-full -translate-x-1/2 hidden group-hover:block z-10">
-                <div className="min-w-48 bg-white border mt-4 border-mainblue rounded-b-md shadow-lg py-1">
+                <div className="min-w-60 bg-white border mt-4 border-mainblue rounded-b-md shadow-lg py-1">
                   {infoPortal.map((i) => (
                     <Link
                       key={i.href}
@@ -173,3 +176,4 @@ export default function Navbar() {
     </div>
   );
 }
+
