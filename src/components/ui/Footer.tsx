@@ -86,7 +86,7 @@ export default function Footer() {
                     </div>
                     <div className="font-trapix text-lg flex flex-col">
                         Email
-                        <div className="font-formular-mono text-xs mt-2">samahan@addu.edu.ph</div>
+                        <div className="font-formular-mono text-xs mt-2">samahan<span className="font-fontspring text-xs">@</span>addu.edu.ph</div>
                     </div>
                     <div className="font-trapix text-lg flex flex-col">
                         Socials
