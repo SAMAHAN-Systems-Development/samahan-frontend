@@ -41,7 +41,7 @@ export default function Navbar() {
         </summary>
 
         {/* Mobile menu panel overlay */}
-        <div className="absolute left-0 right-0 top-14 mt-0 px-0 bg-mainblue text-white rounded-b-2xl shadow-md divide-y divide-white/10 z-40 max-h-[calc(100vh-3.5rem)] overflow-y-auto">
+        <div className="absolute left-0 right-0 top-14 mt-0 px-0 bg-mainblue text-white rounded-b-2xl shadow-md divide-y divide-white/10 z-40  overflow-y-auto">
           {headLinks.map((l) => (
             <Link
               key={l.href}
@@ -176,4 +176,3 @@ export default function Navbar() {
     </div>
   );
 }
-
