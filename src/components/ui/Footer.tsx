@@ -86,7 +86,7 @@ export default function Footer() {
                     </div>
                     <div className="font-trapix text-lg flex flex-col">
                         Email
-                        <div className="font-formular-mono text-xs mt-2">samahan<span className="font-fontspring text-xs">@</span>addu.edu.ph</div>
+                        <div className="font-formular-mono text-xs mt-2">samahan<span className="font-trapix text-xs">@</span>addu.edu.ph</div>
                     </div>
                     <div className="font-trapix text-lg flex flex-col">
                         Socials
@@ -105,7 +105,7 @@ export default function Footer() {
                 {/* Assets By */}
                 <div className="left assets-by font-formular-mono text-sm flex flex-col text-center lg:text-left">
                     <div className="flex-row">Assets by <span className="font-trapix">SAMAHAN Creative Team</span></div>
-                    <div className="flex-row">Developed by <span className="font-trapix">SAMAHAN Systems Development</span></div>
+                    <div className="flex-row">Developed by <Link href="/" className="hover:underline"><span className="font-trapix">SAMAHAN Systems Development</span></Link></div>
                 </div>
                 {/* Copyright */}
                 <div className="right copyright font-formular-mono text-sm">
