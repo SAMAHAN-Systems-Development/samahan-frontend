@@ -18,7 +18,7 @@ const offices = [
 ];
 const infoPortal = [
   { label: "Monthly Reports", href: "/offices/osp" },
-  { label: "GAZETTE", href: "/offices/osvp" },
+  { label: "GAZETTE", href: "/information-portal/gazette" },
   { label: "GUIDESITE", href: "/offices/osg" },
   { label: "ACADEMIX", href: "/offices/ost" },
 ];
