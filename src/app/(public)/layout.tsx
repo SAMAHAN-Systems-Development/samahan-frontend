@@ -8,6 +8,8 @@ import {
   formularMono,
   fontspring,
 } from "../font";
+import Navbar from "@/components/ui/navigation-bar";
+import Footer from "@/components/ui/Footer";
 
 export default function RootLayout({
   children,
@@ -28,7 +30,9 @@ export default function RootLayout({
           "antialiased",
         ].join(" ")}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

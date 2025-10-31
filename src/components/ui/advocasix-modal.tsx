@@ -42,7 +42,7 @@ export default function AdvocasixModal({
           onClick={() => onOpenChange(false)}
           aria-label="Close"
           className="absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full bg-mainblue hover:scale-105 transition-all ease-in text-white
-                     sm:h-10 sm:w-10 md:h-11 md:w-11"
+                     sm:h-10 sm:w-10 md:h-11 md:w-11 cursor-pointer"
         >
           <X className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />
         </button>
@@ -75,7 +75,7 @@ export default function AdvocasixModal({
               font-formular-black leading-tight
               text-2xl sm:text-3xl md:text-4xl lg:text-5xl
               text-mainblue
-             
+              uppercase
                    w-full
             "
           >

@@ -15,7 +15,7 @@ export default function SDGCard({
 }: SDGCardProps) {
   return (
     <div
-      className={`relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-white p-4 md:p-6 w-56 md:w-64 lg:w-66 h-40 sm:h-44 md:h-48 group cursor-pointer flex flex-col justify-between ${cardColor}`}
+      className={`relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-white p-4 md:p-6 w-56 md:w-64 lg:w-66 h-40 sm:h-44 md:h-48 group flex flex-col justify-between ${cardColor}`}
     >
       <div className="flex items-center gap-2 sm:gap-3">
         <span className="font-formular-black text-2xl sm:text-3xl md:text-4xl leading-none">
