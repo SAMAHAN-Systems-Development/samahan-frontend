@@ -3,7 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 
-const reportCardVariants = cva("scale grid grid-rows-3 overflow-hidden", {
+const reportCardVariants = cva("grid grid-rows-3 overflow-hidden", {
   variants: {
     size: {
       default: "max-h-105 min-h-105 max-w-105 min-w-105",
