@@ -53,7 +53,7 @@ const SamaSynchCalendarSection = () => {
   return (
     <div className="relative flex flex-col items-center gap-16 w-full pt-10 pb-100 px-6 sm:px-10 lg:px-16">
       {/* BACKGROUND IMAGE */}
-      <div className="absolute left-1/2 top-[40%] -translate-x-1/2 h-[75vh] md:h-[70vh] lg:h-[75vh] -z-10 pointer-events-none">
+      <div className="absolute left-1/2 top-[30%] md:top-[40%] -translate-x-1/2 h-[75vh] md:h-[70vh] lg:h-[75vh] -z-10 pointer-events-none">
         <div className="relative w-[180vw] h-full">
           <Image
             alt="SamaSynch Background"
