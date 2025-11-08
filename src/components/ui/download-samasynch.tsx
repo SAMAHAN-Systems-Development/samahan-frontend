@@ -12,7 +12,7 @@ const DownloadSamasynch = () => {
           <a
             className="px-8 py-2 md:px-12 md:py-3 text-[3vw] md:text-lg font-formular bg-mainblue rounded-2xl cursor-pointer text-center text-white"
             href="/sample.pdf"
-            target="_blank"
+            download="SAMASync-Calendar.pdf"
           >
             Download a Copy
           </a>
@@ -23,9 +23,3 @@ const DownloadSamasynch = () => {
 };
 
 export default DownloadSamasynch;
-
-
-//TEST COMPONENT
-
-// import DownloadSamasynch from "@/components/ui/download-samasynch";
-// <DownloadSamasynch />;
