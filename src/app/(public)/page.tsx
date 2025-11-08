@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { advocasixData } from '@/data/advocasix-card-data';
 import { sdgData } from '@/data/sdg-card-data';
 import HomePageClient from '@/components/pages/home-page';
+import DownloadSamasynch from '@/components/ui/download-samasynch';
 
 export const metadata: Metadata = {
   title: "SAMAHAN Website 2025-2026",
@@ -10,9 +11,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <HomePageClient 
-      advocasixData={advocasixData} 
-      sdgData={sdgData} 
-    />
+    <>
+      <HomePageClient advocasixData={advocasixData} sdgData={sdgData} />
+      <DownloadSamasynch />
+    </>
   );
 }
+
+
