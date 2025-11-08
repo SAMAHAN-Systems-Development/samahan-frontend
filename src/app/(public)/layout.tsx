@@ -10,7 +10,6 @@ import {
 } from "../font";
 import Navbar from "@/components/ui/navigation-bar";
 import Footer from "@/components/ui/Footer";
-// import Accordion from "@/components/ui/FAQ-accordion";
 
 export default function RootLayout({
   children,
@@ -32,7 +31,6 @@ export default function RootLayout({
         ].join(" ")}
       >
         <Navbar />
-        {/* <Accordion></Accordion> */}
         {children}
         <Footer />
       </body>
