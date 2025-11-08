@@ -10,9 +10,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <HomePageClient 
-      advocasixData={advocasixData} 
-      sdgData={sdgData} 
-    />
+    <>
+      <HomePageClient advocasixData={advocasixData} sdgData={sdgData} />
+    </>
   );
 }
+
+
