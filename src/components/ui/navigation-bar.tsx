@@ -30,13 +30,13 @@ export default function Navbar() {
       <details className="lg:hidden group relative">
         <summary className="list-none">
           <div className="bg-mainblue h-14 flex items-center justify-between px-4 sm:px-6 rounded-none">
-            <div className="relative h-6 w-20 sm:w-32">
+            <Link href="/" className="relative h-6 w-20 sm:w-32">
               <Image
                 src="/images/on-the-move-logo.png"
                 alt="On The Move Logo"
                 fill
               />
-            </div>
+            </Link>
             <div className="text-white p-2 cursor-pointer">
               <FiMenu size={22} className="block group-open:hidden" />
               <FiX size={22} className="hidden group-open:block" />
@@ -106,13 +106,13 @@ export default function Navbar() {
       {/* Desktop nav (unchanged layout; mapped content) */}
       <div className="hidden lg:block">
         <div className="bg-mainblue h-14 flex items-center justify-between lg:px-6 xl:px-10 rounded-full">
-          <div className="relative h-6 w-20  xl:w-22">
+          <Link href="/" className="relative h-6 w-20  xl:w-22">
             <Image
               src="/images/on-the-move-logo.png"
               alt="On The Move Logo"
               fill
             />
-          </div>
+          </Link>
           <div className="flex items-center flex-nowrap  space-x-12 md:space-x-12 xl:space-x-16 2xl:space-x-24s">
             {headLinks.map((l) => (
               <Link
