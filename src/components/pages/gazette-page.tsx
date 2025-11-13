@@ -1,6 +1,5 @@
 import React from 'react'
 import ConstitutionFile from '../ConstitutionFile'
-import DocumentEntry from '@/components/sections/document-entry'
 
 function GazettePage() {
   return (
