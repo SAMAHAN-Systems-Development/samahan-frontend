@@ -7,7 +7,7 @@ import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 const headLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "SAMASYNCH", href: "/contact" },
+  { label: "SAMASYNCH", href: "/samasynch" },
 ];
 const offices = [
   { label: "OSP", href: "/offices/osp" },
@@ -17,10 +17,10 @@ const offices = [
   { label: "Independent Bodies", href: "/offices/independent-bodies" },
 ];
 const infoPortal = [
-  { label: "Monthly Reports", href: "/offices/osp" },
+  { label: "Monthly Reports", href: "/information-portal/monthly-reports" },
   { label: "GAZETTE", href: "/information-portal/gazette" },
-  { label: "GUIDESITE", href: "/offices/osg" },
-  { label: "ACADEMIX", href: "/offices/ost" },
+  { label: "GUIDESITE", href: "/information-portal/guidesite" },
+  { label: "ACADEMIX", href: "/information-portal/academix" },
 ];
 
 export default function Navbar() {
@@ -76,7 +76,7 @@ export default function Navbar() {
           </details>
 
           <Link
-            href="/FAQ"
+            href="/faq"
             className="block px-4 py-3 font-formular-mono hover:bg-white/10"
           >
             FAQ
@@ -149,7 +149,7 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="/FAQ"
+              href="/faq"
               className="text-white font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
             >
               FAQ
