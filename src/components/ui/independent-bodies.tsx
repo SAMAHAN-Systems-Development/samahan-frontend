@@ -20,28 +20,28 @@ const IndependentBodies = ({
   image: { imgSource, imgAlt },
 }: IndependentBodiesProps) => {
   return (
-    <div className="w-[24rem] h-[15rem] flex justify-center items-center flex-col">
+    <div className="w-[24rem] h-max flex justify-center items-center flex-col">
       <Link href={facebookLink} target="_blank" rel="noopener noreferrer"> 
-        <Card className="!border-0 shadow-none">
+        <Card className="!border-0 shadow-none gap-2">
           <CardHeader>
             <div className="flex items-center justify-center">
-              <div className="relative bg-amber-500 rounded-full w-36 h-36 overflow-hidden">
+              <div className="relative w-36 h-36 overflow-hidden">
                 <Image
                   src={imgSource}
                   alt={imgAlt}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>
           </CardHeader>
           <CardContent>
-            <h1 className="text-mainblue font-formular-black text-2xl text-center">
+            <h1 className="text-mainblue font-formular-black text-lg text-center">
               {organizationName}
             </h1>
-            <div className="flex justify-center mt-2">
-              <div className="flex justify-center items-center gap-1 text-blue1 w-3/4">
-                <FaFacebook size={45} />
+            <div className="flex justify-center mt-1">
+              <div className="flex justify-center items-center gap-3 text-blue1 w-3/4">
+                <div className="w-min h-min"><FaFacebook size={25}/></div>
                 <p className="font-formular-mono text-sm text-center">
                   {facebookName}
                 </p>
