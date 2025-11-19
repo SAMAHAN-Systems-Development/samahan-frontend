@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { X } from "lucide-react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
 interface AdvocasixModalProps {
@@ -24,6 +24,7 @@ export default function AdvocasixModal({
 }: AdvocasixModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogOverlay className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
       <DialogContent
         onInteractOutside={(e) => e.preventDefault()}
         className={cn(
