@@ -19,7 +19,7 @@ export default function SDGCard({
   return (
     <div
       className={cn(
-        `group relative flex aspect-3/2 w-full flex-col items-center justify-between overflow-hidden rounded-lg px-4 py-2 text-white last:self-center xs:w-35 md:w-55 md:p-4 lg:aspect-5/3 lg:w-65 xl:aspect-5/4 xl:w-55 ${cardColor}`,
+        `group relative flex aspect-3/2 w-full flex-col items-center justify-between overflow-hidden rounded-lg px-4 py-2 text-white last:self-center xxs:w-35 md:w-55 md:p-4 lg:aspect-5/3 lg:w-65 xl:aspect-5/4 xl:w-55 ${cardColor}`,
         className,
       )}
     >

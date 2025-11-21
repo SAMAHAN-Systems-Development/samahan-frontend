@@ -14,7 +14,7 @@ const AdvocasixCard = ({
   image: { imgSource, imgAlt },
 }: AdvocasixCardProp) => {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-2 transition-transform hover:scale-102 xs:w-30 md:w-50 md:gap-4 lg:w-60 xl:w-80">
+    <div className="flex w-full flex-col items-center justify-center gap-2 transition-transform hover:scale-102 xxs:w-30 md:w-50 md:gap-4 lg:w-60 xl:w-80">
       <Card className="relative aspect-4/3 w-full overflow-hidden rounded-xl border-2 border-mainblue">
         <Image src={imgSource} alt={imgAlt} fill className="object-cover" />
       </Card>
