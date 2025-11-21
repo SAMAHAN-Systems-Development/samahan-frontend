@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import HomePageClient from "@/components/pages/home-page";
+import DigitalApplications from "@/components/sections/digital-applications";
 export const metadata: Metadata = {
   title: "SAMAHAN Website 2025-2026",
   description: "Frontend for Samahan Website",
