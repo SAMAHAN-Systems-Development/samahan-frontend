@@ -1,6 +1,8 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 interface SDGCardProps {
+  className?: string;
   cardNumber: number;
   name: string;
   imageUrl?: string;
@@ -8,6 +10,7 @@ interface SDGCardProps {
 }
 
 export default function SDGCard({
+  className,
   cardNumber,
   name,
   imageUrl,
@@ -15,34 +18,33 @@ export default function SDGCard({
 }: SDGCardProps) {
   return (
     <div
-      className={`relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-white p-4 md:p-6 w-56 md:w-64 lg:w-66 h-40 sm:h-44 md:h-48 group flex flex-col justify-between ${cardColor}`}
+      className={cn(
+        `group relative flex aspect-3/2 w-full flex-col items-center justify-between overflow-hidden rounded-lg px-4 py-2 text-white last:self-center xs:w-35 md:w-55 md:p-4 lg:aspect-5/3 lg:w-65 xl:aspect-5/4 xl:w-55 ${cardColor}`,
+        className,
+      )}
     >
-      <div className="flex items-center gap-2 sm:gap-3">
-        <span className="font-formular-black text-2xl sm:text-3xl md:text-4xl leading-none">
+      <div className="flex w-full flex-row items-center gap-1 md:gap-2">
+        <p className="font-formular-black text-sm leading-none md:text-xl lg:text-2xl">
           {cardNumber}.
-        </span>
-        <h3 className="font-formular-black text-xs sm:text-sm uppercase leading-tight tracking-wide">
+        </p>
+        <p className="font-formular-black text-[.5rem] leading-tight tracking-wide uppercase md:text-xs">
           {name}
-        </h3>
+        </p>
       </div>
 
-      <div className="flex justify-center">
-        <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-lg flex items-center justify-center">
-          {imageUrl ? (
-            <Image
-              src={imageUrl}
-              alt={`SDG ${cardNumber}: ${name}`}
-              width={80}
-              height={80}
-              className="object-contain filter brightness-0 invert w-full h-full"
-            />
-          ) : (
-            <span className="text-lg sm:text-xl md:text-2xl font-bold">
-              {cardNumber}
-            </span>
-          )}
-        </div>
-      </div>
+      {imageUrl ? (
+        <Image
+          src={imageUrl}
+          alt={`SDG ${cardNumber}: ${name}`}
+          width={100}
+          height={100}
+          className="aspect-square w-10 object-contain brightness-0 invert filter md:w-16 lg:w-18 xl:w-22"
+        />
+      ) : (
+        <span className="text-lg font-bold sm:text-xl md:text-2xl">
+          {cardNumber}
+        </span>
+      )}
     </div>
   );
 }
