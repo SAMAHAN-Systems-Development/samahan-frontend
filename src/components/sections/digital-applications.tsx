@@ -95,7 +95,7 @@ const DigitalApplications = () => {
           <TabHeader name="HELPFUL DIGITAL APPLICATION" />
         </div>
 
-        <div className="mt-8 space-y-16">
+        <div className="mt-15 space-y-15 lg:space-y-32">
           {categories.map((category, index) => (
             <div key={index} className="text-center">
               <h3 className="font-trapix text-2xl md:text-3xl text-mainblue mb-4">
