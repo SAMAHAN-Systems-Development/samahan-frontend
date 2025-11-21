@@ -13,7 +13,7 @@ export default function AdvocasixSection() {
 
   return (
     <>
-      <section className="mt-10 flex w-full flex-col px-8 xs:w-80 md:w-120 lg:w-204 xl:w-268">
+      <section className="mt-10 flex w-full flex-col px-8 xxs:w-80 md:w-120 lg:w-204 xl:w-268">
         <h1 className="font-formular-black text-center text-xl text-mainblue md:text-3xl lg:text-4xl xl:text-6xl">
           ADVOCASIX
         </h1>

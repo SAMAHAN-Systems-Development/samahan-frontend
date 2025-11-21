@@ -23,7 +23,7 @@ export default function SDGSection() {
   };
 
   return (
-    <section className="my-20 flex w-full flex-col px-4 xs:w-80 md:mt-12 md:w-121 lg:my-40 lg:w-209 xl:my-60 xl:w-295">
+    <section className="my-20 flex w-full flex-col px-4 xxs:w-80 md:mt-12 md:w-121 lg:my-40 lg:w-209 xl:my-60 xl:w-295">
       <h1 className="font-formular-black text-center text-xl leading-none text-mainblue md:text-3xl lg:text-4xl xl:text-6xl">
         UNITED NATIONS
       </h1>

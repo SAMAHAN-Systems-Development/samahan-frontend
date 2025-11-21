@@ -2,13 +2,13 @@
 @import "tw-animate-css";
 
 @theme {
-  --breakpoint-xs: 20rem;
+  --breakpoint-xxs: 20rem;
+  --breakpoint-xs: 425px;
   --color-mainblue: #002075;
   --color-blue1: #002AA0;
   --color-blue2: #083BA9;
   --color-white: #FFFFFF;
   --color-black: #000000;
-  --breakpoint-xs: 425px;
 }
 
 .font-trapix {
