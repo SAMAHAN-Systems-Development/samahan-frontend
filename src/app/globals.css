@@ -8,6 +8,7 @@
   --color-blue2: #083BA9;
   --color-white: #FFFFFF;
   --color-black: #000000;
+  --breakpoint-xs: 425px;
 }
 
 .font-trapix {
