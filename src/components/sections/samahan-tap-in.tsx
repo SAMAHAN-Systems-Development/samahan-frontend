@@ -1,4 +1,6 @@
 import React from 'react';
+import TabHeader from '../ui/tab-header';
+import Link from 'next/link';
 
 export default function TapIn() {
     const assets = [
@@ -50,46 +52,55 @@ export default function TapIn() {
     };
 
     return (
-        <div className="font-formular-regular text-mainblue">
-            {/* Placeholder: Put tab header here */}
-            <div className="tab-header"></div>
-            {/* Container for list items */}
-            <div className="list-container">
-                {/* Main list */}
+        <div className="font-formular-regular text-mainblue w-full sm:w-[90%] sm:mx-auto">
+            <TabHeader
+                name="SAMAHAN TAP-IN"
+            />
+            <div className="list-container py-8 px-4 sm:px-16 w-full">
                 <ol type="1" className="list-decimal pl-5 space-y-6">
                     <li><strong>Craft the concept paper for your event/activity. </strong>
-                        Secure required parts of the paper {renderWithFallbackFont('(refer to the concept paper form)')}, and its needed signatures. Afterward, submit it to the Office of the Student Affairs through this link: Concept Paper Form.
-                        Submit your response through this link as well.
+                        Secure required parts of the paper {renderWithFallbackFont('(refer to the concept paper form), and its needed signatures. Afterward, submit it to the Office of the Student Affairs through this link: ')}
+                        <Link href="/" target="_blank" rel="noopener noreferrer" className="hover:underline text-mainblue break-all">Concept Paper Form</Link>
+                        . Submit your response through this link as well.
                     </li>
                     <li><strong>Once approved, you may proceed with booking your desired venue. </strong>
                         {renderWithFallbackFont('Channels may vary depending on your chosen venue:')}
                         {/* Sublist 1 */}
                          <ol type="a" className="list-[lower-alpha] pl-5 mt-2 space-y-4">
                             <li>
-                                {renderWithFallbackFont('booking.addu.edu.ph for the following assets:')}
+                                <Link href="https://booking.addu.edu.ph" target="_blank" rel="noopener noreferrer" className="hover:underline text-mainblue">
+                                {renderWithFallbackFont('booking.addu.edu.ph')}
+                                </Link>
+                                {renderWithFallbackFont(' for the following assets:')}
                                 <div className="table-container p-4">
-                                    <div className="border border-mainblue rounded-lg">
-                                        {/* Mobile View: Single Column */}
-                                        <div className="md:hidden">
-                                            {assets.map((asset, index) => (
-                                                <div key={index} className={`flex ${index < assets.length - 1 ? 'border-b border-mainblue' : ''}`}>
-                                                    <span className="w-16 p-2 font-bold border-r border-mainblue text-center">{toRoman(index + 1)}.</span>
-                                                    <span className="flex-1 p-2">{renderWithFallbackFont(asset)}</span>
-                                                </div>
-                                            ))}
+                                    <div className="border border-mainblue">
+                                       {/* Mobile View */}
+                                       <div className="md:hidden grid" style={{ gridTemplateColumns: '3.5rem 1fr' }}>
+                                          {assets.map((asset, index) => (
+                                            <div key={index} className="contents">
+                                              {/* Index cell (left column) */}
+                                              <div className="border-t border-b border-r border-mainblue font-bold text-center p-2 bg-white">
+                                                {toRoman(index + 1)}.
+                                              </div>
+                                              {/* Description cell (right column) */}
+                                              <div className="border-t border-b border-r border-mainblue p-2 break-words bg-white">
+                                                {renderWithFallbackFont(asset)}
+                                              </div>
+                                            </div>
+                                          ))}
                                         </div>
 
-                                        {/* Desktop View: Two Columns */}
+                                        {/* Desktop View */}
                                         <div className="hidden md:grid md:grid-cols-2">
                                             {Array.from({ length: 11 }).map((_, index) => (
                                                 <React.Fragment key={index}>
                                                     <div className={`flex ${index < 10 ? 'border-b border-mainblue' : ''}`}>
-                                                        <span className="w-16 p-2 font-bold border-r border-mainblue text-center">{toRoman(index + 1)}.</span>
-                                                        <span className="flex-1 p-2">{renderWithFallbackFont(assets[index])}</span>
+                                                        <span className="w-16 p-3 font-bold border-r border-mainblue text-center">{toRoman(index + 1)}.</span>
+                                                        <span className="flex-1 p-3">{renderWithFallbackFont(assets[index])}</span>
                                                     </div>
                                                     <div className={`flex ${index < 10 ? 'border-b border-mainblue' : ''} md:border-l border-mainblue`}>
-                                                        <span className="w-16 p-2 font-bold border-r border-mainblue text-center">{toRoman(index + 12)}.</span>
-                                                        <span className="flex-1 p-2">{renderWithFallbackFont(assets[index + 11])}</span>
+                                                        <span className="w-16 p-3 font-bold border-r border-mainblue text-center">{toRoman(index + 12)}.</span>
+                                                        <span className="flex-1 p-3">{renderWithFallbackFont(assets[index + 11])}</span>
                                                     </div>
                                                 </React.Fragment>
                                             ))}
@@ -97,7 +108,16 @@ export default function TapIn() {
                                     </div>
                                 </div>
                             </li>
-                            <li> {renderWithFallbackFont('https://library.addu.edu.ph/book-a-library-facility for the following library facilities:')}
+                            <li> 
+                                <Link
+                                    href="https://library.addu.edu.ph/booking/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:underline text-mainblue break-all"
+                                    >
+                                    {renderWithFallbackFont('https://library.addu.edu.ph/booking/')}
+                                </Link>
+                                {renderWithFallbackFont(' for the following library facilities:')}
                                 <ol type="i" className="list-[lower-roman] pl-5 mt-2 space-y-1">
                                     <li>Multi-purpose Room</li>
                                     <li>Collaboratorium</li>
