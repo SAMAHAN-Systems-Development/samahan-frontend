@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import { FiChevronRight, FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 
 // Data sources
 const headLinks = [
@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 z-50 py-4 px-4 sm:px-6 lg:px-8 xl:px-24 2xl:px-40 select-none">
       {/* Mobile: details/summary toggle (no hooks) */}
-      <details className="lg:hidden group relative">
+      <details className="lg:hidden relative">
         <summary className="list-none">
           <div className="bg-mainblue h-14 flex items-center justify-between px-4 sm:px-6 rounded-none">
             <Link href="/" className="relative h-6 w-20 sm:w-32">
@@ -57,12 +57,12 @@ export default function Navbar() {
           ))}
 
           {/* Offices collapsible */}
-          <details className="px-2 py-1 group">
-            <summary className="w-full flex items-center justify-between px-2 py-2 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md">
+          <details className="px-2 py-1 group/office">
+            <summary className="list-none w-full flex items-center justify-between px-2 py-2 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md">
               <span>Offices</span>
-              <FiChevronDown className="transition-transform group-open:rotate-180" />
+              <FiChevronRight className="transition-transform duration-300 group-open/office:rotate-90" />
             </summary>
-            <div className="pl-4 pb-2">
+            <div className="pl-4 pb-2 ">
               {offices.map((o) => (
                 <Link
                   key={o.href}
@@ -83,10 +83,10 @@ export default function Navbar() {
           </Link>
 
           {/* Information portal collapsible */}
-          <details className="px-2 py-1 group">
-            <summary className="w-full flex items-center justify-between px-2 py-2 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md">
+          <details className="px-2 py-1 group/infop">
+            <summary className="list-none w-full flex items-center justify-between px-2 py-2 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md">
               <span>Information Portal</span>
-              <FiChevronDown className="transition-transform group-open:rotate-180" />
+              <FiChevronRight className="transition-transform duration-300 group-open/infop:rotate-90" />
             </summary>
             <div className="pl-4 pb-2">
               {infoPortal.map((i) => (
