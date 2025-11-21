@@ -62,7 +62,7 @@ export default function Navbar() {
               <span>Offices</span>
               <FiChevronRight className="transition-transform duration-300 group-open/office:rotate-90" />
             </summary>
-            <div className="pl-4 pb-2 ">
+            <div className="pl-4 pb-2">
               {offices.map((o) => (
                 <Link
                   key={o.href}
