@@ -11,7 +11,7 @@ export interface FAQAccordionProps {
   FaqAccordionData: FAQAccordionDataType[];
 }
 
-export default function FAQAccordion({ FaqAccordionData }: FAQAccordionProps) {
+function FAQAccordion({ FaqAccordionData }: FAQAccordionProps) {
   return (
     <div className="w-full max-w-3xl mx-auto px-2">
       <div className="w-full">
@@ -42,3 +42,5 @@ export default function FAQAccordion({ FaqAccordionData }: FAQAccordionProps) {
     </div>
   );
 }
+
+export default FAQAccordion;

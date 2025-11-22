@@ -1,5 +1,5 @@
-import FAQAccordion from "../ui/faq-accordion";
 import { FAQAccordionData } from "@/data/faq-accordion-data";
+import FAQAccordion from "../ui/faq-accordion";
 
 const FaqCategorySection = () => {
   return (
