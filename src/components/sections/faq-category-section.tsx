@@ -1,9 +1,6 @@
 import React from "react";
 import FAQAccordion from "../ui/faq-accordion";
-import {
-  FAQAccordionDataType,
-  FAQAccordionData,
-} from "@/data/faq-accordion-data";
+import { FAQAccordionData } from "@/data/faq-accordion-data";
 
 const FaqCategorySection = () => {
   return (
