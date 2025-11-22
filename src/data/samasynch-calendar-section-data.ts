@@ -1,14 +1,24 @@
+// samasynch-calendar-section-data.ts
 import { CalendarEntryProps } from "@/components/ui/calendar-entry";
 
 export interface MonthData {
-  index: number;
+  index: number; // JS month index (0-based)
+  year: number;
   dateWithEvents: Date[];
   calendarEntry: CalendarEntryProps[];
 }
 
-export const FIRST_SEMESTER: Record<string, MonthData> = {
+export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
+  MAY: {
+    index: 4, // May 2025
+    year: 2025,
+    dateWithEvents: [],
+    calendarEntry: [],
+  },
+
   JUNE: {
-    index: 5,
+    index: 5, // June 2025
+    year: 2025,
     dateWithEvents: [new Date(2025, 5, 1), new Date(2025, 5, 30)],
     calendarEntry: [
       {
@@ -21,12 +31,38 @@ export const FIRST_SEMESTER: Record<string, MonthData> = {
       },
     ],
   },
-  JULY: { index: 6, dateWithEvents: [], calendarEntry: [] },
-  AUGUST: { index: 7, dateWithEvents: [], calendarEntry: [] },
-  SEPTEMBER: { index: 8, dateWithEvents: [], calendarEntry: [] },
-  OCTOBER: { index: 9, dateWithEvents: [], calendarEntry: [] },
+
+  JULY: {
+    index: 6, // July 2025
+    year: 2025,
+    dateWithEvents: [],
+    calendarEntry: [],
+  },
+
+  AUGUST: {
+    index: 7, // August 2025
+    year: 2025,
+    dateWithEvents: [],
+    calendarEntry: [],
+  },
+
+  SEPTEMBER: {
+    index: 8, // September 2025
+    year: 2025,
+    dateWithEvents: [],
+    calendarEntry: [],
+  },
+
+  OCTOBER: {
+    index: 9, // October 2025
+    year: 2025,
+    dateWithEvents: [],
+    calendarEntry: [],
+  },
+
   NOVEMBER: {
-    index: 10,
+    index: 10, // November 2025
+    year: 2025,
     dateWithEvents: [
       // Saints' Day
       new Date(2025, 10, 1),
@@ -91,7 +127,6 @@ export const FIRST_SEMESTER: Record<string, MonthData> = {
         endDate: 15,
         eventName: "Final Exams",
       },
-
       {
         startDate: 16,
         eventName: "Start of Semestral Break",
@@ -104,12 +139,9 @@ export const FIRST_SEMESTER: Record<string, MonthData> = {
     ],
   },
 
-  DECEMBER: { index: 11, dateWithEvents: [], calendarEntry: [] },
-};
-
-export const SECOND_SEMESTER: Record<string, MonthData> = {
   DECEMBER: {
-    index: 11, // December (0-based index)
+    index: 11, // December 2025
+    year: 2025,
     dateWithEvents: [
       new Date(2025, 11, 1),
       new Date(2025, 11, 5),
@@ -141,14 +173,31 @@ export const SECOND_SEMESTER: Record<string, MonthData> = {
     ],
   },
 
-  JANUARY: { index: 0, dateWithEvents: [], calendarEntry: [] },
-  FEBRUARY: { index: 1, dateWithEvents: [], calendarEntry: [] },
-  MARCH: { index: 2, dateWithEvents: [], calendarEntry: [] },
-  APRIL: {
-    index: 3,
+  JANUARY: {
+    index: 0, // January 2026
+    year: 2026,
     dateWithEvents: [],
     calendarEntry: [],
   },
-  MAY: { index: 4, dateWithEvents: [], calendarEntry: [] },
-  JUNE: { index: 5, dateWithEvents: [], calendarEntry: [] },
+
+  FEBRUARY: {
+    index: 1, // February 2026
+    year: 2026,
+    dateWithEvents: [],
+    calendarEntry: [],
+  },
+
+  MARCH: {
+    index: 2, // March 2026
+    year: 2026,
+    dateWithEvents: [],
+    calendarEntry: [],
+  },
+
+  APRIL: {
+    index: 3, // April 2026
+    year: 2026,
+    dateWithEvents: [],
+    calendarEntry: [],
+  },
 };

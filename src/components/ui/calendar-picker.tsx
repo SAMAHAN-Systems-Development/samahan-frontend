@@ -41,7 +41,6 @@ const CalendarPicker = ({
   return (
     <div className="p-4 border-2 border-blue1 rounded-2xl bg-white shadow-sm inline-block">
       <DayPicker
-        animate
         mode="single"
         hideNavigation
         month={month}
@@ -67,7 +66,7 @@ const CalendarPicker = ({
         }}
         classNames={{
           day: "relative text-mainblue font-formular-mono text-sm",
-          caption_label: "hidden",
+          month_caption: "hidden",
           weekday: "uppercase font-fontspring text-mainblue",
         }}
       />
