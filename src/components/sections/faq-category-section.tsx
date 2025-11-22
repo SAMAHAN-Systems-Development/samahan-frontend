@@ -1,4 +1,3 @@
-import React from "react";
 import FAQAccordion from "../ui/faq-accordion";
 import { FAQAccordionData } from "@/data/faq-accordion-data";
 
