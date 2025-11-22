@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Accordion,
   AccordionItem,
@@ -7,23 +5,22 @@ import {
   AccordionContent,
 } from "./accordion";
 
-import { FAQAccordionData } from "../../data/FAQ-accordion-data";
+import { type FAQAccordionDataType } from "@/data/faq-accordion-data";
 
-const FAQS = FAQAccordionData.map((item) => ({
-  title: item.AccordionTitle,
-  content: item.Accordioncontent,
-}));
+export interface FAQAccordionProps {
+  FaqAccordionData: FAQAccordionDataType[];
+}
 
-export default function FAQAccordion() {
+export default function FAQAccordion({ FaqAccordionData }: FAQAccordionProps) {
   return (
     <div className="w-full max-w-3xl mx-auto px-2">
       <div className="w-full">
         <Accordion type="single" collapsible className="w-full">
-          {FAQS.map((f, i) => (
+          {FaqAccordionData.map((accordion, i) => (
             <AccordionItem
               key={i}
               value={`item-${i}`}
-              className="rounded-4xl bg-slate-400 overflow-hidden mb-20 "
+              className="rounded-4xl bg-white overflow-hidden mb-5 "
             >
               <AccordionTrigger
                 className={
@@ -32,11 +29,11 @@ export default function FAQAccordion() {
                   "[&>svg]:bg-[#052a73] [&>svg]:text-white [&>svg]:rounded-full [&>svg]:p-2 [&>svg]:w-9 [&>svg]:h-9 [&>svg]:flex [&>svg]:items-center [&>svg]:justify-center"
                 }
               >
-                {f.title}
+                {accordion.AccordionTitle}
               </AccordionTrigger>
 
               <AccordionContent className="px-6 pt-0 ml-4 mr-12 text-sm text-blue-900">
-                {f.content}
+                {accordion.Accordioncontent}
               </AccordionContent>
             </AccordionItem>
           ))}
