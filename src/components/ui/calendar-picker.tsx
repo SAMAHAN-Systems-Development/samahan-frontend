@@ -58,8 +58,8 @@ const CalendarPicker = ({
           activeDates:
             "bg-mainblue text-white font-formular-mono rounded-none  after:content-[''] after:absolute after:bottom-[3px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white",
           startingDate:
-            "bg-mainblue text-white font-formular-mono rounded-l-2xl",
-          endingDate: "bg-mainblue text-white font-formular-mono rounded-r-2xl",
+            "bg-mainblue text-white font-formular-mono rounded-l-3xl",
+          endingDate: "bg-mainblue text-white font-formular-mono rounded-r-3xl",
         }}
         styles={{
           day: { pointerEvents: "none" },
