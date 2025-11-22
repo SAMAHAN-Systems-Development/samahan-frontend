@@ -96,7 +96,7 @@ const SamaSynchCalendarSection = () => {
         {/* CALENDAR + ENTRIES */}
         <section className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 w-full max-w-6xl z-10">
           {/* Calendar */}
-          <div className="flex justify-center md:justify-start px-4">
+          <div className="flex justify-center md:justify-start px-4 max-w-[315px]">
             <div
               className="
     transform 
