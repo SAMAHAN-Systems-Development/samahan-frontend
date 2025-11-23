@@ -9,7 +9,7 @@ function IndependentBodiesPage() {
         <IndependentBodiesSection />
         <div className='h-20'></div>
     </div>
-  )
+  );
 }
 
-export default IndependentBodiesPage
+export default IndependentBodiesPage;
