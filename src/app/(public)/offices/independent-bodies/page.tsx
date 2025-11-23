@@ -1,12 +1,11 @@
-import IndependentBodiesPage from '@/components/pages/independent-bodies-page'
-import React from 'react'
+import IndependentBodiesPage from "@/components/pages/independent-bodies-page";
 
 function Page() {
   return (
-    <div>
-        <IndependentBodiesPage />
-    </div>
-  )
+    <>
+      <IndependentBodiesPage />
+    </>
+  );
 }
 
-export default Page
+export default Page;
