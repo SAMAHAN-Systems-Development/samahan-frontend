@@ -26,13 +26,12 @@ const infoPortal = [
 export default function Navbar() {
   return (
     <div className="sticky top-0 z-50 py-4 px-4 sm:px-6 lg:px-8 xl:px-24 2xl:px-40 select-none">
-      {/* Mobile: details/summary toggle (no hooks) */}
       <details className="lg:hidden group relative">
         <summary className="list-none">
-          <div className="bg-mainblue h-14 flex items-center justify-start px-4 sm:px-6 rounded-none">
-            <div className="text-white p-2 cursor-pointer">
+          <div className="flex items-center justify-start px-4 sm:px-6 group-open:bg-mainblue group-open:h-14">
+            <div className="text-mainblue group-open:text-white p-2 cursor-pointer">
               <FiMenu size={22} className="block group-open:hidden" />
-              <FiX size={22} className="hidden group-open:block" />
+              <FiMenu size={22} className="hidden group-open:block" />
             </div>
           </div>
         </summary>
@@ -188,3 +187,4 @@ export default function Navbar() {
     </div>
   );
 }
+
