@@ -10,7 +10,7 @@ export default function Footer() {
       {/* 1. Logo and Org Name Row */}
       <div className="logo-orgname-container flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-8 ">
         {/* Container for logo */}
-        <div className="logo-container flex flex-row gap-2">
+        <div className="logo-container flex flex-row gap-2 xs:gap-5 lg:gap-4">
           {/* AdDU Logo */}
           <Image
             src="/images/addu-logo-white.png"
