@@ -26,7 +26,7 @@ interface ReportCardProps
 
 export const ReportCard = React.forwardRef<HTMLDivElement, ReportCardProps>(
   (
-    { imageUrl, title, cardType, description, className, size, ...props },
+    { imageUrl, title, cardType, description, className, ...props },
     ref,
   ) => {
     const finalReportCardSize = cardType === 2 ? "large" : "default";

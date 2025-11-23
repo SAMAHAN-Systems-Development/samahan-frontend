@@ -30,7 +30,7 @@ function linkifyText(text: string) {
 
   return parts.map((part, index) => {
     if (part.match(urlRegex)) {
-      let href = part.startsWith('http') ? part : `http://${part}`;
+      const href = part.startsWith('http') ? part : `http://${part}`;
       
       return (
         <a 
