@@ -116,7 +116,7 @@ export default function Navbar() {
               fill
             />
           </Link>
-          <div className="flex items-center flex-nowrap  space-x-12 md:space-x-12 xl:space-x-16 2xl:space-x-24s">
+          <div className="flex items-center flex-nowrap space-x-20 lg:space-x-16 xl:space-x-26 2xl:space-x-20 3xl:space-x-32">
             {headLinks.map((l) => (
               <Link
                 key={l.href}
@@ -185,6 +185,9 @@ export default function Navbar() {
         </div>
       </div>
     </div>
+  );
+}
+
   );
 }
 
