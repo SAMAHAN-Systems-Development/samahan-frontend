@@ -20,7 +20,7 @@ function FAQAccordion({ FaqAccordionData }: FAQAccordionProps) {
             <AccordionItem
               key={i}
               value={`item-${i}`}
-              className="rounded-4xl bg-white overflow-hidden mb-5 "
+              className="rounded-4xl bg-[#EDEDED] overflow-hidden mb-5 "
             >
               <AccordionTrigger
                 className={
@@ -32,7 +32,7 @@ function FAQAccordion({ FaqAccordionData }: FAQAccordionProps) {
                 {accordion.AccordionTitle}
               </AccordionTrigger>
 
-              <AccordionContent className="px-6 pt-0 ml-4 mr-12 text-sm text-blue-900">
+              <AccordionContent className="px-6 pt-0 mt-2 lg:ml-4 lg:mr-12 text-sm text-blue-900">
                 {accordion.Accordioncontent}
               </AccordionContent>
             </AccordionItem>
