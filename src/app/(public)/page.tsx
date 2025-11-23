@@ -8,8 +8,7 @@ import DocumentRequestTabSection from "@/components/sections/document-request-ta
 export default function Home() {
   return (
     <>
-      {/* <HomePageClient />
-      HELLO */}
+      {/* <HomePageClient /> */}
       <DocumentRequestTabSection></DocumentRequestTabSection>
     </>
   );

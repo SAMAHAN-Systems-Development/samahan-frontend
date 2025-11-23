@@ -27,17 +27,17 @@ interface ReportCardProps
 export const ReportCard = React.forwardRef<HTMLDivElement, ReportCardProps>(
   (
     { imageUrl, title, cardType, description, className, size, ...props },
-    ref,
+    ref
   ) => {
-    const finalReportCardSize = cardType === 2 ? "large" : "default";
+    const finalReportCardSize = size ?? (cardType === 2 ? "large" : "default");
     const finalReportCardThumbnailTitleSize =
-      cardType === 2 ? "large" : "default";
+      size ?? (cardType === 2 ? "large" : "default");
 
     return (
       <article
         ref={ref}
         className={cn(
-          reportCardVariants({ size: finalReportCardSize, className }),
+          reportCardVariants({ size: finalReportCardSize, className })
         )}
         {...props}
       >
@@ -76,7 +76,7 @@ export const ReportCard = React.forwardRef<HTMLDivElement, ReportCardProps>(
         </div>
       </article>
     );
-  },
+  }
 );
 
 ReportCard.displayName = "ReportCard";
@@ -97,7 +97,7 @@ export const ReportCardDescription = React.forwardRef<
         ref={ref}
         className={cn(
           "font-formular-regular text-mainblue line-clamp-7 text-center text-xs leading-3.5",
-          className,
+          className
         )}
         {...props}
       >
@@ -121,7 +121,7 @@ const reportCardThumbnailTitleVariants = cva(
     defaultVariants: {
       size: "default",
     },
-  },
+  }
 );
 
 interface ReportCardThumbnailTitleProps

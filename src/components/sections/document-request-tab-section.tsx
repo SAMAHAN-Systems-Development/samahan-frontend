@@ -4,11 +4,11 @@ export default function DocumentRequestTabSection() {
   return (
     <div className="px-4 sm:px-8 md:px-16 lg:px-40 py-4 md:py-8">
       <TabHeader name="REQUEST FOR OFFICIAL DOCUMENTS"></TabHeader>
-      <div className="px-10 sm:px-8 md:px-16 lg:px-32 py-6 md:py-12 lg:py-16">
+      <div className="px-10 sm:px-10 md:px-16 lg:px-32 py-6 md:py-12 lg:py-16">
         <div className="pr-40 sm:pr-40 md:pr-14 lg:pr-20">
           {" "}
-          <p className="font-formular text-mainblue font-medium text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4">
-            REGISTRAR'S OFFICE:
+          <p className="font-formular text-mainblue font-medium text-[28px] sm:text-xl md:text-xl lg:text-2xl mb-3 sm:mb-4">
+            REGISTRAR&apos;S OFFICE:
           </p>
         </div>
         <div className="font-formular text-mainblue text-sm sm:text-sm md:text-base space-y-4 sm:space-y-3 md:space-y-4 pl-0 sm:pl-4 md:pl-8">
@@ -123,8 +123,8 @@ export default function DocumentRequestTabSection() {
             </li>
           </ol>
         </div>
-        <button className="bg-mainblue text-white px-8 py-3 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-3xl mt-6 sm:mt-6 md:mt-8 text-xs sm:text-sm md:text-base font-medium uppercase tracking-wide">
-          REQUEST REGISTRAR'S CERTIFICATE
+        <button className="bg-mainblue text-white px-8 py-3 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-2xl mt-6 sm:mt-6 md:mt-8 text-xs sm:text-sm md:text-base font-medium uppercase tracking-wide">
+          REQUEST REGISTRAR&apos;S CERTIFICATE
         </button>
         <h2 className="font-formular text-mainblue font-medium text-base sm:text-lg md:text-xl lg:text-2xl mt-8 sm:mt-10 md:mt-12">
           OFFICE OF THE STUDENT AFFAIRS:
@@ -140,9 +140,11 @@ export default function DocumentRequestTabSection() {
           a. Access the link to request the said document. Please note that the
           form is only intended for the utilization of the Undergraduate Unit.
         </div>
-        <button className="bg-mainblue text-white px-8 py-3 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-3xl mt-6 sm:mt-6 md:mt-8 text-xs sm:text-sm md:text-base font-medium uppercase tracking-wide">
-          REQUEST CERTIFICATE
-        </button>
+        <div className="pl-2 lg:pl-0">
+          <button className="bg-mainblue text-white px-8 py-3 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-2xl mt-6 sm:mt-6 md:mt-8 text-xs sm:text-sm md:text-base font-medium uppercase tracking-wide">
+            REQUEST CERTIFICATE
+          </button>
+        </div>
       </div>
     </div>
   );
