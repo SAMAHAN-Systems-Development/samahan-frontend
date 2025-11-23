@@ -29,14 +29,7 @@ export default function Navbar() {
       {/* Mobile: details/summary toggle (no hooks) */}
       <details className="lg:hidden group relative">
         <summary className="list-none">
-          <div className="bg-mainblue h-14 flex items-center justify-between px-4 sm:px-6 rounded-none">
-            <Link href="/" className="relative h-6 w-20 sm:w-32">
-              <Image
-                src="/images/on-the-move-logo.png"
-                alt="On The Move Logo"
-                fill
-              />
-            </Link>
+          <div className="bg-mainblue h-14 flex items-center justify-start px-4 sm:px-6 rounded-none">
             <div className="text-white p-2 cursor-pointer">
               <FiMenu size={22} className="block group-open:hidden" />
               <FiX size={22} className="hidden group-open:block" />
@@ -45,24 +38,35 @@ export default function Navbar() {
         </summary>
 
         {/* Mobile menu panel overlay */}
-        <div className="absolute left-0 right-0 top-14 mt-0 px-0 bg-mainblue text-white rounded-b-2xl shadow-md divide-y divide-white/10 z-40  overflow-y-auto">
+        <div className="absolute left-0 right-0 top-14 mt-0 px-6 bg-mainblue text-white rounded-b-4xl z-40 overflow-y-auto pb-6">
+          {/* Logo shown when menu is open */}
+          <div className="flex items-center justify-start pt-16 mb-4">
+            <Link href="/" className="relative h-8 w-24">
+              <Image
+                src="/images/on-the-move-logo.png"
+                alt="On The Move Logo"
+                fill
+              />
+            </Link>
+          </div>
+
           {headLinks.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="block px-4 py-3 font-formular-mono hover:bg-white/10"
+              className="block px-4 py-3 font-formular-mono hover:bg-white/10 rounded-md"
             >
               {l.label}
             </Link>
           ))}
 
           {/* Offices collapsible */}
-          <details className="px-2 py-1 group">
-            <summary className="w-full flex items-center justify-between px-2 py-2 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md">
+          <details className="py-1 [&[open]_summary>svg]:rotate-180">
+            <summary className="w-full flex items-center justify-between px-4 py-3 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md list-none">
               <span>Offices</span>
-              <FiChevronDown className="transition-transform group-open:rotate-180" />
+              <FiChevronDown className="transition-transform duration-400" />
             </summary>
-            <div className="pl-4 pb-2">
+            <div className="pl-8 pb-2">
               {offices.map((o) => (
                 <Link
                   key={o.href}
@@ -77,18 +81,18 @@ export default function Navbar() {
 
           <Link
             href="/faq"
-            className="block px-4 py-3 font-formular-mono hover:bg-white/10"
+            className="block px-4 py-3 font-formular-mono hover:bg-white/10 rounded-md"
           >
             FAQ
           </Link>
 
           {/* Information portal collapsible */}
-          <details className="px-2 py-1 group">
-            <summary className="w-full flex items-center justify-between px-2 py-2 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md">
+          <details className="py-1 [&[open]_summary>svg]:rotate-180">
+            <summary className="w-full flex items-center justify-between px-4 py-3 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md list-none">
               <span>Information Portal</span>
-              <FiChevronDown className="transition-transform group-open:rotate-180" />
+              <FiChevronDown className="transition-transform duration-400" />
             </summary>
-            <div className="pl-4 pb-2">
+            <div className="pl-8 pb-2">
               {infoPortal.map((i) => (
                 <Link
                   key={i.href}
@@ -131,7 +135,7 @@ export default function Navbar() {
                 className="flex items-center gap-1 text-white cursor-pointer font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
               >
                 Offices
-                <FiChevronDown className="text-white transition-transform duration-200 group-hover:rotate-180 ml-2 xl:ml-4" />
+                <FiChevronDown className="text-white transition-transform duration-400 group-hover:rotate-180 ml-2 xl:ml-4" />
               </button>
               <div className="absolute left-1/2 top-full -translate-x-1/2 hidden group-hover:block z-10">
                 <div className="min-w-48 bg-white border mt-4 border-mainblue rounded-b-md shadow-lg py-1">
@@ -162,7 +166,7 @@ export default function Navbar() {
                 className="flex items-center gap-1 text-white cursor-pointer font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
               >
                 Information Portal
-                <FiChevronDown className="text-white transition-transform duration-200 group-hover:rotate-180 ml-2 xl:ml-4" />
+                <FiChevronDown className="text-white transition-transform duration-400 group-hover:rotate-180 ml-2 xl:ml-4" />
               </button>
               <div className="absolute left-1/2 top-full -translate-x-1/2 hidden group-hover:block z-10">
                 <div className="min-w-60 bg-white border mt-4 border-mainblue rounded-b-md shadow-lg py-1">
