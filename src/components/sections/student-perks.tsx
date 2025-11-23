@@ -62,15 +62,15 @@ export default function StudentPerks() {
   return (
     <div className='font-formular-regular text-mainblue w-full sm:w-[90%] sm:mx-auto'>
       <TabHeader name='STUDENT PERKS'/>
-      <div className="mx-2 sm:mx-auto px-0 py-8 sm:px-8 sm:py-24 flex flex-col items-center gap-12">
+      <div className="mx-2 sm:mx-auto px-3 xs:px-5 py-8 sm:px-8 sm:py-24 flex flex-col items-center gap-12">
         {/* SPOTIFY - Left Card */}
-        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12">
+        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
           <Image 
             src="/images/student-perks/logo-spotify-perks-academix.png"
             alt="SPOTIFY"
             width={200}
             height={200}
-            className="mr-2 w-25 h-25 sm:mr-4 sm:w-30 sm:h-30 object-contain"
+            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
           <div className="flex-1 min-w-0 text-left">
             <a
@@ -97,7 +97,7 @@ export default function StudentPerks() {
         </div>
 
         {/* APPLE MUSIC - Right Card */}
-        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12">
+        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
           <div className="flex-1 min-w-0 text-left">
             <a
               href="https://support.apple.com/en-ph/106008"
@@ -125,18 +125,18 @@ export default function StudentPerks() {
             alt="APPLE MUSIC"
             width={200}
             height={200}
-            className="ml-2 w-25 h-25 sm:ml-4 sm:w-30 sm:h-30 object-contain"
+            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
         </div>
 
         {/* MICROSOFT OFFICE 365 - Left Card */}
-        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12">
+        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
           <Image 
             src="/images/student-perks/logo-microsoft365-perks-academix.png"
             alt="MICROSOFT OFFICE 365"
             width={200}
             height={200}
-            className="mr-2 w-25 h-25 sm:mr-4 sm:w-30 sm:h-30 object-contain"
+            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
           <div className="flex-1 min-w-0 text-left">
            <a
@@ -165,7 +165,7 @@ export default function StudentPerks() {
         </div>
 
         {/* GOOGLE WORKSPACE FOR EDUCATION - Right Card */}
-        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12">
+        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
           <div className="flex-1 min-w-0 text-left">
             <a
                 href="https://www.workspace.google.com"
@@ -198,18 +198,18 @@ export default function StudentPerks() {
             alt="GOOGLE WORKSPACE FOR EDUCATION"
             width={200}
             height={200}
-            className="ml-2 w-25 h-25 sm:ml-4 sm:w-30 sm:h-30 object-contain"
+            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
         </div>
 
         {/* GRAMMARLY PREMIUM - Left Card */}
-        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12">
+        <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
           <Image 
             src="/images/student-perks/logo-grammarly-perks-academix.png"
             alt="GRAMMARLY PREMIUM"
             width={200}
             height={200}
-            className="mr-2 w-25 h-25 sm:mr-4 sm:w-30 sm:h-30 object-contain"
+            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
           <div className="flex-1 min-w-0 text-left">
             <a
