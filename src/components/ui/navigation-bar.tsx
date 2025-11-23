@@ -26,7 +26,6 @@ const infoPortal = [
 export default function Navbar() {
   return (
     <div className="sticky top-0 z-50 py-4 px-4 sm:px-6 lg:px-8 xl:px-24 2xl:px-40 select-none">
-      {/* Mobile: details/summary toggle (no hooks) */}
       <details className="lg:hidden group relative">
         <summary className="list-none">
           <div className="bg-mainblue h-14 flex items-center justify-between px-4 sm:px-6 rounded-none">
@@ -44,7 +43,6 @@ export default function Navbar() {
           </div>
         </summary>
 
-        {/* Mobile menu panel overlay */}
         <div className="absolute left-0 right-0 top-14 mt-0 px-0 bg-mainblue text-white rounded-b-2xl shadow-md divide-y divide-white/10 z-40  overflow-y-auto">
           {headLinks.map((l) => (
             <Link
@@ -56,7 +54,6 @@ export default function Navbar() {
             </Link>
           ))}
 
-          {/* Offices collapsible */}
           <details className="px-2 py-1 group">
             <summary className="w-full flex items-center justify-between px-2 py-2 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md">
               <span>Offices</span>
@@ -82,7 +79,6 @@ export default function Navbar() {
             FAQ
           </Link>
 
-          {/* Information portal collapsible */}
           <details className="px-2 py-1 group">
             <summary className="w-full flex items-center justify-between px-2 py-2 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md">
               <span>Information Portal</span>
@@ -103,7 +99,6 @@ export default function Navbar() {
         </div>
       </details>
 
-      {/* Desktop nav (unchanged layout; mapped content) */}
       <div className="hidden lg:block">
         <div className="bg-mainblue h-14 flex items-center justify-between lg:px-6 xl:px-10 rounded-full">
           <Link href="/" className="relative h-6 w-20  xl:w-22">
@@ -124,7 +119,6 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {/* Offices dropdown (hover) */}
             <div className="relative inline-block align-middle group">
               <button
                 type="button"
@@ -155,7 +149,6 @@ export default function Navbar() {
               FAQ
             </Link>
 
-            {/* Information portal dropdown (hover) */}
             <div className="relative inline-block align-middle group">
               <button
                 type="button"
