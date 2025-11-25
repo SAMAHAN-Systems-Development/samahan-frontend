@@ -10,6 +10,7 @@ const headLinks = [
   { label: "SAMASYNCH", href: "/samasynch" },
 ];
 const offices = [
+  { label: "Central Board", href: "/offices/central-board" },
   { label: "OSP", href: "/offices/osp" },
   { label: "OSVP", href: "/offices/osvp" },
   { label: "OSG", href: "/offices/osg" },
