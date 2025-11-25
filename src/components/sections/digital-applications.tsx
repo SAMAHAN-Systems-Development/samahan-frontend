@@ -90,8 +90,8 @@ const DigitalApplications = () => {
 
   return (
     <section className="w-full pb-20">
-      <div className="mx-auto w-full max-w-screen-xl 2xl:max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="-mx-4 md:mx-0 md:rounded-3xl overflow-hidden">
+      <div className="mx-auto w-full">
+        <div >
           <TabHeader name="HELPFUL DIGITAL APPLICATION" />
         </div>
 

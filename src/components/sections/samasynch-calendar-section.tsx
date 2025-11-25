@@ -167,7 +167,7 @@ const SamaSynchCalendarSection = () => {
             <span className="font-semibold">SAMA&nbsp;Sync</span> calendar of
             events.
           </p>
-          <Button className=" font-formular-mono bg-mainblue hover:bg-mainblue/90 text-white text-sm sm:text-base px-6 py-2.5 rounded-lg shadow transition-all duration-300">
+          <Button className=" font-formular-mono bg-mainblue hover:bg-mainblue/90 text-white text-sm sm:text-base px-6 py-2.5 shadow transition-all duration-300">
             Download a Copy
           </Button>
         </section>
