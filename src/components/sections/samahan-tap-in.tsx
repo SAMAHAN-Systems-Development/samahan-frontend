@@ -52,7 +52,7 @@ export default function TapIn() {
     };
 
     return (
-        <div className="font-formular-regular text-mainblue w-full sm:w-[90%] sm:mx-auto">
+        <div className="font-formular-regular text-mainblue w-full">
             <TabHeader
                 name="SAMAHAN TAP-IN"
             />

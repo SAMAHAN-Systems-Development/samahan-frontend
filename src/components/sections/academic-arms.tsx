@@ -22,7 +22,7 @@ function renderWithFallbackFont(text: string) {
 
 export default function AcademicArms () {
     return (
-        <div className="sm:w-[86%] sm:mx-auto">
+        <div className="">
             <TabHeader name="GET TO KNOW YOUR CLUSTER ACADEMIC ARMS"/>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-8 gap-x-1 mt-8 text-mainblue font-formular-regular">
                 <div className="flex flex-col text-center items-center col-span-1 sm:col-span-3 max-w-[250px] w-full mx-auto my-4">

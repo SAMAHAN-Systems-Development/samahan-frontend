@@ -60,7 +60,7 @@ function processLine(line: string){
 
 export default function StudentPerks() {
   return (
-    <div className='font-formular-regular text-mainblue w-full sm:w-[90%] sm:mx-auto'>
+    <div className='font-formular-regular text-mainblue w-full'>
       <TabHeader name='STUDENT PERKS'/>
       <div className="mx-2 sm:mx-auto px-3 xs:px-5 py-8 sm:px-8 sm:py-24 flex flex-col items-center gap-12">
         {/* SPOTIFY - Left Card */}
