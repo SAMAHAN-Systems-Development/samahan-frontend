@@ -1,10 +1,10 @@
-import DevelopersPage from '@/components/pages/developers-page'
+import SCBPage from '@/components/pages/scb-page'
 import React from 'react'
 
 function Page() {
   return (
     <div>
-      <DevelopersPage />
+      <SCBPage />
     </div>
   )
 }
