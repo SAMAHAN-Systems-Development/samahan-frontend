@@ -14,9 +14,9 @@ const ProfileCard = ({ image, name, role }: ProfileCardProps) => {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-4 ">
         {/* Wrapper for card + floating profile */}
-        <div className="relative w-80 h-68">
+        <div className="relative w-80 h-68 ">
           {/* Background card */}
           <div className="w-full h-full rounded-3xl overflow-hidden">
             <Image
@@ -36,15 +36,16 @@ const ProfileCard = ({ image, name, role }: ProfileCardProps) => {
               className="object-contain"
             />
           </div>
+          <div className="flex flex-col items-center text-center mt-1 w-full px-2">
+            <h1 className="text-xl font-formular-bold uppercase text-mainblue leading-tight break-words">
+              {name}
+            </h1>
+
+            <p className="text-sm text-mainblue mt-1">{role}</p>
+          </div>
         </div>
 
         {/* Name + Role */}
-        <div className="flex flex-col items-center text-center mt-1">
-          <h1 className="text-xl  font-formular-bold uppercase text-mainblue">
-            {name}
-          </h1>
-          <p className="text-sm  text-mainblue">{role}</p>
-        </div>
       </div>
     </>
   );
