@@ -4,9 +4,9 @@ import { FAQAccordionData } from "@/data/FAQ-accordion-data";
 const FAQCategorySection = () => {
   return (
     <section className="flex justify-center px-4 mb-10">
-      <div className="bg-mainblue w-full max-w-6xl rounded-3xl p-6 md:p-12 flex flex-col gap-6 md:flex-row ">
+      <div className="bg-mainblue w-full max-w-6xl rounded-3xl p-6 mt-10 md:p-12 flex flex-col gap-6 md:flex-row ">
         {/* Left: title + text */}
-        <div className="flex flex-col gap-4  md:px-4 text-left justify-start md:gap-8 md:w-1/2">
+        <div className="flex flex-col gap-4 md:px-4 text-left justify-center md:gap-8 md:w-1/2">
           <h1 className="text-3xl md:text-4xl text-white font-trapix">
             University Info
           </h1>
