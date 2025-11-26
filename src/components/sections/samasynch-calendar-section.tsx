@@ -3,7 +3,7 @@ import CalendarPicker from "../ui/calendar-picker";
 import { useState } from "react";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 import CalendarEntry from "../ui/calendar-entry";
-import { Button } from "../ui/button";
+import DownloadSamasynch from "../ui/download-samasynch";
 import {
   ACADEMIC_YEAR_2025_2026,
   type MonthData,
@@ -158,19 +158,7 @@ const SamaSynchCalendarSection = () => {
         </section>
 
         {/* CTA CARD */}
-        <section className="relative z-10 w-full flex flex-col items-center justify-center text-center py-10 px-4 sm:px-8 bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-md max-w-3xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl font-bold text-mainblue mb-3 font-trapix">
-            Need a Copy?
-          </h1>
-          <p className="text-gray-600 max-w-md mb-6 text-sm sm:text-base ">
-            Download a copy of the official{" "}
-            <span className="font-semibold">SAMA&nbsp;Sync</span> calendar of
-            events.
-          </p>
-          <Button className=" font-formular-mono bg-mainblue hover:bg-mainblue/90 text-white text-sm sm:text-base px-6 py-2.5 shadow transition-all duration-300">
-            Download a Copy
-          </Button>
-        </section>
+          <DownloadSamasynch />
       </div>
     </div>
   );
