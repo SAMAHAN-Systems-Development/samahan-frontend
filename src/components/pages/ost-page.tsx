@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroBanner from '../ui/hero-banner'
+import OtherOffices from '../sections/other-offices'
 
 function OSTPage() {
   return (
@@ -10,6 +11,7 @@ function OSTPage() {
         header1="OFFICE OF THE"
         header2="TREASURER"
       />
+      <OtherOffices office="ost" />
     </div>
   )
 }

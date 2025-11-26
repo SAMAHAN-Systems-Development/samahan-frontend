@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroBanner from '../ui/hero-banner';
+import OtherOffices from '../sections/other-offices';
 
 function OSGPage() {
   return (
@@ -10,6 +11,7 @@ function OSGPage() {
         header1="OFFICE OF THE"
         header2="SECRETARY-GENERAL"
       />
+      <OtherOffices office="osg" />
     </div>
   )
 }
