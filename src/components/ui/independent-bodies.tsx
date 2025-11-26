@@ -44,11 +44,9 @@ const IndependentBodies = ({
             <h1 className="font-formular-black text-center text-xs text-mainblue md:text-base">
               {organizationName}
             </h1>
-            <div className="mt-1 flex w-full max-w-35 justify-center gap-2 text-blue1 md:max-w-50 xl:max-w-55">
-              <div className="">
-                <FaFacebook className="size-4 md:size-5" />
-              </div>
-              <p className="font-formular-regular grow text-center text-xs md:text-sm">
+            <div className="mt-1 flex items-start justify-center gap-2 text-blue1">
+              <FaFacebook className="size-4 md:size-5 flex-shrink-0" />
+              <p className="font-formular-regular text-center text-xs md:text-sm">
                 {facebookName}
               </p>
             </div>
