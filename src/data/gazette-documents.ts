@@ -256,4 +256,146 @@ export const gazetteDocuments: GazetteDocument[] = [
         date: undefined, // No date provided
         href: "/documents/gazette-documents/4th-student-assembly/bills/SAMAHAN Act No. 005-2425.docx.pdf"
     },
+
+    //4th Student Assembly - RESOLUTIONS
+    {
+        documentName: "RESOLUTION NO. 001-2425",
+        type: "Resolution",
+        description: "A Resolution Creating An Ad Hoc Committee To Convene The Members Of The Samahan Student Court",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 1,
+        year: 2024,
+        date: new Date("2024-09-11"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 001-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 002-2425",
+        type: "Resolution",
+        description: "A Resolution To Adopt The Magna Carta Of The Rights And Responsibilities Of The Undergraduate Students Of The Ateneo De Davao University And To Endorse It To The Office Of Student Affairs",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 2,
+        year: 2024,
+        date: new Date("2024-09-11"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 002-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 016-2425",
+        type: "Resolution",
+        description: "A Resolution Confirming The Appointment Of Jan A.G. Adrian Lariego As The Head Commissioner Of Commission On Audit",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 16,
+        year: 2024,
+        date: new Date("2024-10-05"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 016-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 017-2425",
+        type: "Resolution",
+        description: "A Resolution Endorsing The Cluster Participation Incentive Mechanism For Students In The Natural Sciences And Mathematics Cluster",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 17,
+        year: 2024,
+        date: new Date("2024-10-05"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 017-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 018-2425",
+        type: "Resolution",
+        description: "A Resolution Urging The Ateneo De Davao University Committee On Anti-Sexual Harassment That In Combating Sexual Harassment- To Strengthen Reporting Mechanisms And Support Systems For Ateneo De Davao University Students",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 18,
+        year: 2024,
+        date: new Date("2024-10-05"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 018-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 019-2425",
+        type: "Resolution",
+        description: "A Resolution Urging The Student Executive Councils (SECs) Of The Ateneo De Davao University To Strengthen Their Student Judicial Court Application Campaign And Modifying Applicant Qualifications",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 19,
+        year: 2024,
+        date: new Date("2024-10-16"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 019-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 020-2425",
+        type: "Resolution",
+        description: "A Resolution Urging The Physical Plant Technical Office (PPO) To Install Vending Machines For Menstrual Hygiene Products At Ateneo De Davao University",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 20,
+        year: 2024,
+        date: new Date("2024-11-13"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 020-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 021-2425",
+        type: "Resolution",
+        description: "A Resolution Urging The Ateneo De Davao University Administration To Institutionalize Annual Ramadan Practices And Integrate Them Into The Calendar Of Activities Of The Ateneo De Davao University",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 21,
+        year: 2024,
+        date: new Date("2024-11-24"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 021-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 022-2425",
+        type: "Resolution",
+        description: "A Resolution Urging The Samahan Central Board To Commence The Development Of The Samahan Local Government Code",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 22,
+        year: 2024,
+        date: new Date("2025-02-11"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 022-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 023-2425",
+        type: "Resolution",
+        description: "A Resolution Confirming The Appointment Of Adriel Lubuguin As The Accountancy Cluster Justice Of The Samahan Student Court",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 23,
+        year: 2024,
+        date: new Date("2025-02-11"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 023-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 024-2425",
+        type: "Resolution",
+        description: "A Resolution Confirming The Appointment Of Precious Mae Jardenil As The Business And Management Cluster Justice Of The Samahan Student Court",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 24,
+        year: 2024,
+        date: new Date("2025-02-11"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 024-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 025-2425",
+        type: "Resolution",
+        description: "A Resolution Confirming The Appointment Of Monique Lois Ambray As The Natural Sciences And Mathematics Cluster Justice Of The Samahan Student Court",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 25,
+        year: 2024,
+        date: new Date("2025-02-11"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 025-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 026-2425",
+        type: "Resolution",
+        description: "A Resolution Confirming The Appointment Of Ivan Gel Tizon As The Social Sciences Cluster Justice Of The Samahan Student Court",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 26,
+        year: 2024,
+        date: new Date("2025-02-11"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 026-2425.pdf"
+    },
+    {
+        documentName: "RESOLUTION NO. 027-2425",
+        type: "Resolution",
+        description: "A Resolution Urging The Samahan Commission On Student’s Rights, & Welfare (StRAW) To Strengthen Existing Qualifications On Forms Of Sexual Harassment, And For The University To Provide Case, Emotional, And Protective Assistance",
+        office: "Office Of The Legislative Secretary",
+        actNumber: 27,
+        year: 2024,
+        date: new Date("2025-05-06"),
+        href: "/documents/gazette-documents/4th-student-assembly/resolutions/Resolution No. 027-2425.pdf"
+    },
 ];
