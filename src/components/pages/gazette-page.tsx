@@ -100,7 +100,7 @@ function GazettePage() {
           </div>        
         </div>
         {/* 4. Render filtered documents here */}
-        <div className="document-entry w-full max-w-3xl mt-4 mx-auto self-center divide-y-2 divide-mainblue">
+        <div className="document-entry w-full max-w-3xl mt-4 mx-auto divide-y-2 divide-mainblue">
           {paginatedDocuments.map(doc => (
             <DocumentEntry
               key={doc.documentName}
@@ -115,6 +115,7 @@ function GazettePage() {
             />
           ))}
         </div>
+        {/* Paginator */}
         {totalPages > 1 && (
           <div className="flex justify-center items-center space-x-2 mt-6">
             <button

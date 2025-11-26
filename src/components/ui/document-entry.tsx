@@ -50,7 +50,7 @@ export default function DocumentEntry({ documentName, description, office, actNu
     }
 
     return (
-        <Link href={href} className="group container flex flex-col py-12 px-4 hover:bg-mainblue transition-colors duration-200  border-b-2 border-mainblue hover:border-mainblue">
+        <Link href={href} className="group container flex flex-col py-12 px-0 mx-0 sm:px-4 w-full sm:max-w-5xl mx-auto hover:bg-mainblue transition-colors duration-200  border-b-2 border-mainblue hover:border-mainblue">
             {/* Document Name */}
             <div className="document-name font-formular-black text-lg text-mainblue font-black group-hover:text-white">
                 {withFontFallback(documentName)}
