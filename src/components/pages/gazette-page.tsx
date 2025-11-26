@@ -4,12 +4,49 @@ import React from 'react'
 import ConstitutionFile from '../ConstitutionFile'
 import Dropdown from '../ui/Dropdown'
 import Searchbar from '../ui/Searchbar'
+import DocumentEntry from '../ui/document-entry'
+import { gazetteDocuments } from '../../data/gazette-documents'
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
+
+const ITEMS_PER_PAGE = 5;
 
 function GazettePage() {
   //Use states for search bar and dropdowns
   const [type, setType] = React.useState('Resolutions');
   const [year, setYear] = React.useState('2024');
   const [search, setSearch] = React.useState('');
+  const [page, setPage] = React.useState(1);
+
+  const typeMap: Record<string, string> = {
+    'Acts': 'Act',
+    'Resolutions': 'Resolution',
+    'Memorandum': 'Memorandum'
+  };
+
+  const filteredDocuments = React.useMemo(() => {
+    return gazetteDocuments.filter(doc => {
+      const matchesType = doc.type === typeMap[type];
+      const matchesYear = doc.year.toString() === year;
+      const matchesSearch = search
+        ? (
+            doc.documentName.toLowerCase().includes(search.toLowerCase()) ||
+            doc.description?.toLowerCase().includes(search.toLowerCase()) ||
+            doc.office.toLowerCase().includes(search.toLowerCase())
+          )
+        : true;
+      return matchesType && matchesYear && matchesSearch;
+    });
+  }, [type, year, search]);
+
+  const totalPages = Math.ceil(filteredDocuments.length / ITEMS_PER_PAGE);
+  const paginatedDocuments = filteredDocuments.slice(
+    (page - 1) * ITEMS_PER_PAGE,
+    page * ITEMS_PER_PAGE
+  );
+
+  React.useEffect(() => {
+    setPage(1);
+  }, [type, year, search]);
 
   return (
     <div className='flex flex-col justify-center items-center font-formular-regular text-mainblue p-4 lg:p-20'>
@@ -23,36 +60,37 @@ function GazettePage() {
           <Searchbar value={search} onChange={setSearch} className="w-full" />
           <div className="flex flex-row w-full min-w-0 px-0 space-x-2 items-end">
             <Dropdown
-            options={['Memorandum', 'Resolutions', 'Acts']}
-            value={type}
-            onChange={setType}
-            label='TYPE'
-            className='basis-3/4'
-          />
-          <Dropdown
-            options={['2025', '2024', '2023', '2022', '2021']}
-            value={year}
-            label='YEAR'
-            onChange={setYear}
-            className='basis-1/4'
-          />
+              options={['Memorandum', 'Resolutions', 'Acts']}
+              value={type}
+              onChange={setType}
+              label='TYPE'
+              className='basis-3/4'
+            />
+            <Dropdown
+              options={['2025', '2024', '2023', '2022', '2021']}
+              value={year}
+              label='YEAR'
+              onChange={setYear}
+              className='basis-1/4'
+            />
           </div>
         </div>
         {/* DESKTOP VIEW */}
         <div className='hidden lg:flex flex-row space-x-16 my-24'>
           <div className='flex flex-row space-x-8'>
             <Dropdown
-            options={['Memorandum', 'Resolutions', 'Acts']}
-            value={type}
-            onChange={setType}
-            label='TYPE'
-            className='w-65 min-w-[200px] flex-shrink-0'
+              options={['Memorandum', 'Resolutions', 'Acts']}
+              value={type}
+              onChange={setType}
+              label='TYPE'
+              className='w-65 min-w-[200px] flex-shrink-0'
             />
             <Dropdown
-            options={['2025', '2024', '2023', '2022', '2021']}
-            value={year}
-            label='YEAR'
-            onChange={setYear}/>
+              options={['2025', '2024', '2023', '2022', '2021']}
+              value={year}
+              label='YEAR'
+              onChange={setYear}
+            />
           </div>
           <div className="flex flex-row space-x-4 items-center flex-1">
             <Searchbar value={search} onChange={setSearch} className="flex-1" />
@@ -60,10 +98,57 @@ function GazettePage() {
               search
             </button>
           </div>        
-          </div>
-        <div className='h-10'>
-
         </div>
+        {/* 4. Render filtered documents here */}
+        <div className="document-entry w-full max-w-3xl mt-4 mx-auto self-center divide-y-2 divide-mainblue">
+          {paginatedDocuments.map(doc => (
+            <DocumentEntry
+              key={doc.documentName}
+              documentName={doc.documentName}
+              description={doc.description}
+              office={doc.office}
+              actNumber={doc.actNumber}
+              year={doc.year}
+              date={doc.date}
+              href={doc.href}
+              type={doc.type}
+            />
+          ))}
+        </div>
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center space-x-2 mt-6">
+            <button
+              className="px-3 py-1 border border-mainblue rounded disabled:opacity-50 text-mainblue"
+              onClick={() => setPage(page - 1)}
+              disabled={page === 1}
+              aria-label="Previous page"
+            >
+              <FiChevronLeft size={20} />
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i + 1}
+                className={`px-3 py-1 rounded border border-mainblue
+                  ${page === i + 1
+                    ? 'bg-mainblue text-white'
+                    : 'bg-white text-mainblue hover:bg-mainblue hover:text-white transition-colors duration-150'
+                  }`}
+                onClick={() => setPage(i + 1)}
+                aria-label={`Page ${i + 1}`}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <button
+              className="px-3 py-1 border border-mainblue rounded disabled:opacity-50 text-mainblue"
+              onClick={() => setPage(page + 1)}
+              disabled={page === totalPages}
+              aria-label="Next page"
+            >
+              <FiChevronRight size={20} />
+            </button>
+          </div>
+        )}
     </div>
   )
 }
