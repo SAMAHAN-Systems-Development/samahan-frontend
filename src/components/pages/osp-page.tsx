@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectCard from '../ui/ProjectCard'
-import OfficeCard from '../ui/OfficeCard'
 import HeroBanner from '../ui/hero-banner'
+import OtherOffices from '../sections/other-offices'
 
 function OSPPage() {
   return (
@@ -19,11 +19,7 @@ function OSPPage() {
           url='/'
       />
       <div className='h-20'></div>
-      <OfficeCard 
-          imageUrl='/images/placeholder.png'
-          officeName='Office of the Vice President'
-          href='/'
-      />
+      <OtherOffices office="osp" />
       <div className='h-20'></div>
     </div>
   )
