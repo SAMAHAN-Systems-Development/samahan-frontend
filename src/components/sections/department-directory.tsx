@@ -7,11 +7,7 @@ export default function DepartmentDirectorySection() {
       <TabHeader name="DEPARTMENT CHARIPERSONS AND SCHOOL DEANS"></TabHeader>
 
       <div className="bg-mainblue py-8 md:py-12 px-6 md:px-22 rounded-xl justify-self-center mt-0 md:mt-12">
-        <div className="md:hidden mb-6">
-          <p className="font-trapix text-center text-2xl md:text-5xl text-white uppercase">
-            Department Chairpersons and School Deans
-          </p>
-        </div>
+        
 
         <p className="font-trapix text-center text-3xl md:text-5xl text-white">
           Meet Your Academic Leaders
