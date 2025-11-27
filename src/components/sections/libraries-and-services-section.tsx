@@ -1,20 +1,9 @@
 import TabHeader from "../ui/tab-header";
 import { libarariesAndServicesData } from "@/data/libraries-and-services-data";
-import Image from "next/image";
 
 const LibrariesAndServicesSection = () => {
   return (
     <div className="relative w-full overflow-hidden pb-30">
-      <div className="absolute inset-0 -z-10 w-full hidden md:block">
-        <Image
-          src="/images/tape-design/tape-1.png"
-          alt="Tape Design"
-          fill
-          quality={100}
-          priority
-          className="object-contain translate-y-125 scale-x-115"
-        />
-      </div>
 
       <div className="relative w-full md:max-w-7xl mx-auto">
         {/* Header */}
