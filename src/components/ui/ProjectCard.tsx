@@ -16,24 +16,26 @@ const ProjectCard = ({
   url,
 }: ProjectCardProps) => {
   return (
-    <div className="w-full max-w-xs sm:max-w-xs h-auto m-4 rounded-2xl overflow-hidden bg-gradient-to-b from-mainblue from-60% to-blue2 flex flex-col">
-      <div className="relative w-full sm:h-60 h-48">
+    <div className="w-full h-auto rounded-2xl overflow-hidden bg-gradient-to-b from-mainblue from-60% to-blue2 flex flex-col">
+      <div className="relative w-full h-48 sm:h-56 lg:h-60">
         <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" />
       </div>
 
-      <div className="pt-8 px-4 pb-6 sm:px-4 flex flex-col gap-5 sm:gap-4 flex-grow">
-        <h3 className={`${trapix.className} text-3xl text-white uppercase`}>
+      <div className="pt-6 lg:pt-8 px-6 lg:px-4 pb-6 flex flex-col gap-4 flex-grow">
+        <h3
+          className={`${trapix.className} text-2xl lg:text-3xl text-white uppercase`}
+        >
           {title}
         </h3>
         <p
-          className={`${formularRegular.className} text-sm text-white  max-h-20 sm:max-h-none overflow-hidden`}
+          className={`${formularRegular.className} text-sm text-white line-clamp-3 lg:line-clamp-none overflow-hidden`}
         >
           {description}
         </p>
 
         <Link
           href={url}
-          className={`${formularRegular.className} font-normal mt-2 inline-block self-center rounded-full border border-white px-2 sm:px-6 py-2 text-xs sm:text-sm text-white transition-colors hover:bg-white hover:text-mainblue`}
+          className={`${formularRegular.className} font-normal mt-2 inline-block self-center rounded-full border border-white px-4 lg:px-6 py-2 text-xs lg:text-sm text-white transition-colors hover:bg-white hover:text-mainblue`}
         >
           View More ▸
         </Link>
