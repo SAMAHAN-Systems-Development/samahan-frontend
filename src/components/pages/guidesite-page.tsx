@@ -6,6 +6,7 @@ import { Button } from '../ui/button';
 import TapIn from '../sections/samahan-tap-in';
 import IcomppEquipment from '../sections/icompp-equipment';
 import DocumentRequestTabSection from '../sections/request-document-tab-section';
+import OnTrack from '../sections/samahan-on-track';
 
 // Define tabs data structure
 const tabOptions = [
@@ -123,7 +124,7 @@ function GuidesitePage() {
             {activeTab === "tap-in" && <TapIn />}
             {activeTab === "booking" && <IcomppEquipment />}
             {activeTab === "documents" && <DocumentRequestTabSection />}
-            {/*{activeTab === "on-track" && <OnTrack />}*/}
+            {activeTab === "on-track" && <OnTrack />}
         </div>
       </div>
     </div>
