@@ -26,7 +26,7 @@ const LibrariesAndServicesSection = () => {
         </div>
 
         {/* Desktop Version */}
-        <div className="hidden md:block overflow-x-auto my-12 px-4">
+        <div className="hidden md:block overflow-x-auto my-12 ">
           <table className="border-2 border-mainblue w-full bg-white">
             <thead>
               <tr className="text-mainblue">
