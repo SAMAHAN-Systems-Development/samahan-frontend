@@ -108,7 +108,7 @@ export const sdgData: SDGCardData[] = [
   {
     cardNumber: 17,
     name: "PARTNERSHIPS FOR THE GOALS",
-    cardColor: "bg-mainblue",
+    cardColor: "bg-blue1",
     imageUrl: "/images/sdg-icons/partnerships-for-the-goals-icon.png",
   },
 ];

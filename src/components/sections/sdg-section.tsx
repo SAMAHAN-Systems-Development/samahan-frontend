@@ -8,7 +8,7 @@ export default function SDGSection() {
   const getResponsiveColor = (index: number) => {
     // --- Mobile Logic (2 Columns) ---
     let mobileClass = "bg-mainblue";
-    
+
     // Check pattern for indices > 0
     if (index > 0) {
       const pairIndex = Math.floor((index - 1) / 2);
@@ -30,52 +30,50 @@ export default function SDGSection() {
       <p className="font-trapix mt-1 text-center text-lg leading-none text-mainblue md:text-2xl lg:mt-2 lg:text-3xl xl:text-5xl">
         SUSTAINABLE DEVELOPMENT GOALS
       </p>
-      
+
       <div className="mt-4 grid grid-cols-2 gap-x-3 gap-y-3 lg:mt-10 lg:grid-cols-3 xl:grid-cols-5">
-        
         {/* CARDS 1-15 */}
         {sdgData.slice(0, 15).map((card, index) => (
-          <SDGCard 
-            key={card.cardNumber} 
-            {...card} 
+          <SDGCard
+            key={card.cardNumber}
+            {...card}
             // Apply the combined logic function
             cardColor={getResponsiveColor(index)}
           />
         ))}
 
         {/* ============ MOBILE ONLY WRAPPERS (Cards 16 & 17) ============ */}
-        
+
         <div className="lg:hidden">
-          <SDGCard 
-            {...sdgCard16} 
+          <SDGCard
+            {...sdgCard16}
             // Index 15 -> Pair 7 (Odd) -> Mobile: MainBlue
-            cardColor="bg-mainblue" 
-          />
-        </div>
-
-        <div className="col-span-2 flex justify-center lg:hidden">
-          <SDGCard 
-            {...sdgCard17} 
-            // Index 16 -> Mobile Override: Blue1 (as per previous request)
-            cardColor="bg-blue1" 
-          />
-        </div>
-
-        {/* ============ DESKTOP ONLY WRAPPER (Cards 16 & 17) ============ */}
-            
-        <div className="hidden justify-center gap-x-3 lg:col-span-3 lg:flex xl:col-span-5">
-          <SDGCard 
-            {...sdgCard16} 
-            // Index 15 (Odd) -> Desktop: Blue1
-            cardColor="bg-blue1"
-          />
-          <SDGCard 
-            {...sdgCard17} 
-            // Index 16 (Even) -> Desktop: MainBlue
             cardColor="bg-mainblue"
           />
         </div>
 
+        <div className="col-span-2 flex justify-center lg:hidden">
+          <SDGCard
+            {...sdgCard17}
+            // Index 16 -> Mobile Override: Blue1 (as per previous request)
+            cardColor="bg-blue1"
+          />
+        </div>
+
+        {/* ============ DESKTOP ONLY WRAPPER (Cards 16 & 17) ============ */}
+
+        <div className="hidden justify-center gap-x-3 lg:col-span-3 lg:flex xl:col-span-5">
+          <SDGCard
+            {...sdgCard16}
+            // Index 15 (Odd) -> Desktop: Blue1
+            cardColor="bg-blue1"
+          />
+          <SDGCard
+            {...sdgCard17}
+            // Index 16 (Even) -> Desktop: MainBlue
+            cardColor="bg-blue1"
+          />
+        </div>
       </div>
     </section>
   );
