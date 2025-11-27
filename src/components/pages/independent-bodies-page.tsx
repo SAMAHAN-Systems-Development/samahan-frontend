@@ -1,15 +1,20 @@
-import React from 'react'
-import IndependentBodiesSection from '../sections/independent-bodies-section'
-
+import IndependentBodiesSection from "../sections/independent-bodies-section";
+import HeroBanner from "../ui/hero-banner";
 
 function IndependentBodiesPage() {
   return (
-    <div className='flex flex-col justify-center items-center'>
-        <div className='h-20'></div>
-        <IndependentBodiesSection />
-        <div className='h-20'></div>
-    </div>
-  )
+    <main className="flex flex-col min-h-screen relative">
+      <HeroBanner
+        imageSrc="/images/hero-images/OSP-INDEPENDENT-Hero.png"
+        imageAlt="Independent Bodies Page Hero"
+        header2="INDEPENDENT BODIES"
+      />
+        <div className="flex flex-col justify-center items-center">
+          <IndependentBodiesSection />
+        </div>
+      
+    </main>
+  );
 }
 
-export default IndependentBodiesPage
+export default IndependentBodiesPage;

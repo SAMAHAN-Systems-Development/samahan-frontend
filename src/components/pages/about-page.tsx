@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image";
+import HeroBanner from '../ui/hero-banner';
 
 function AboutPage() {
   return (
@@ -48,24 +49,12 @@ function AboutPage() {
       </div>
 
 
-      {/* Hero Section */}
-      <div className="relative w-full h-56 xs:h-64 md:h-72 lg:h-96 2xl:h-[600px] -mt-22 z-10">
-        <Image
-          src="/images/ABOUT-Hero.png"
-          alt="About Page Hero"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 lg:gap-y-2">
-          <div>
-            <span className="text-white font-formular-black text-lg xs:text-xl lg:text-4xl 2xl:text-6xl">SAMAHAN</span>
-          </div>
-          <div>
-            <span className="text-white font-trapix text-xl xs:text-2xl lg:text-5xl 2xl:text-7xl">ABOUT</span>
-          </div>
-        </div>
-      </div>
+      <HeroBanner
+        imageSrc="/images/hero-images/ABOUT-Hero.png"
+        imageAlt="About Page Hero"
+        header1='SAMAHAN'
+        header2="ABOUT"
+      />
 
       {/* Content Wrapper */}
       <div className='flex flex-col items-center relative z-10'>

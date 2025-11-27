@@ -1,12 +1,14 @@
-import OfficesPage from '@/components/pages/offices-page'
+import OSPPage from '@/components/pages/osp-page'
+import ProjectCarouselSection from "@/components/sections/project-carousel-section";
 import React from 'react'
 
 function Page() {
   return (
     <div>
-      <OfficesPage />
+      <OSPPage />
+      <ProjectCarouselSection />
     </div>
-  )
+  );
 }
 
-export default Page
+export default Page;

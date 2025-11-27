@@ -1,5 +1,6 @@
 import TabHeader from "@/components/ui/tab-header";
 import { icomppEquipmentData } from "@/data/icompp-equipment-data";
+import { Button } from "../ui/button";
 
 export default function IcomppEquipment() {
   return (
@@ -34,10 +35,13 @@ export default function IcomppEquipment() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-8 md:mt-10">
-          <button className="bg-mainblue hover:bg-blue1 transition-colors duration-300 text-white font-formular text-sm md:text-base px-8 py-3 md:px-10 md:py-4 rounded-3xl uppercase shadow-lg hover:shadow-xl">
+        <div className="flex justify-center mt-8 md:mt-10 lg:mt-14">
+          <Button 
+            className="cursor-pointer py-3 px-6 rounded-2xl"
+            onClick={() => window.open("https://forms.gle/icompp-booking-form", "_blank")}
+          >
             BOOK ICOMPP EQUIPMENT
-          </button>
+          </Button>
         </div>
       </div>
     </div>

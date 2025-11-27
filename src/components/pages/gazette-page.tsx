@@ -7,6 +7,7 @@ import Searchbar from '../ui/Searchbar'
 import DocumentEntry from '../ui/document-entry'
 import { gazetteDocuments } from '../../data/gazette-documents'
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
+import HeroBanner from '../ui/hero-banner'
 
 const ITEMS_PER_PAGE = 5;
 
@@ -64,7 +65,13 @@ function GazettePage() {
   }, [type, year]);
 
   return (
-    <div className='flex flex-col justify-center items-center font-formular-regular text-mainblue p-4 xs:px-10 sm:px-14 pb-20 md:p-20'>
+    <div className='flex flex-col min-h-screen relative'>
+      <HeroBanner
+        imageSrc="/images/hero-images/GAZETTE-Hero.png"
+        imageAlt="Gazette Page Hero"
+        header2="GAZETTE"
+      />
+      <div className='flex flex-col justify-center items-center font-formular-regular text-mainblue p-4 xs:px-10 sm:px-14 pb-20 md:p-20'>
         <div className='text-center mb-10'>
           <h2 className='font-formular-black text-2xl md:text-5xl font-bold'>GOVERNING DOCUMENTS</h2>
           <p className='mt-4 text-sm md:text-lg'>View and download the latest Constitution of the Undergraduate students of the Ateneo de Davao University.</p>
@@ -187,7 +194,9 @@ function GazettePage() {
             </button>
           </div>
         )}
+      </div>
     </div>
+    
   )
 }
 
