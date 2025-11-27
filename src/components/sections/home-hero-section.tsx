@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Waveform from "../svgs/Waveform";
+import Waveform from "../svg/Waveform";
 
 export default function HomeHeroSection() {
   return (
@@ -36,7 +36,7 @@ export default function HomeHeroSection() {
             <Waveform className="absolute -bottom-45 -left-65 md:bottom-5 md:-left-90 lg:bottom-20 lg:-left-120 xl:bottom-15 xl:-left-145" />
             <Waveform
               className="absolute -right-65 bottom-30 md:-right-80 lg:-right-105 lg:bottom-45 xl:-right-130 xl:bottom-50"
-              reverse={true}
+              reverse={1}
             />
           </div>
           <Image
@@ -72,7 +72,7 @@ export default function HomeHeroSection() {
           <Waveform className="absolute bottom-5 -left-62 w-100 rotate-40 md:bottom-20 md:-left-95 lg:bottom-35 lg:-left-125 xl:bottom-52 xl:-left-155 2xl:bottom-63" />
           <Waveform
             className="absolute -right-75 -bottom-17 z-10 w-100 md:-right-110 md:-bottom-15 lg:-right-140 lg:-bottom-10 xl:-right-175 xl:-bottom-5 2xl:bottom-5"
-            reverse={true}
+            reverse={1}
           />
         </div>
       </section>
