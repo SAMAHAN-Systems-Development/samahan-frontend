@@ -43,8 +43,8 @@ const LibrariesAndServicesSection = () => {
             </thead>
 
             <tbody>
-              {libarariesAndServicesData.map((data) => (
-                <tr key={data.libary} className="bg-white">
+              {libarariesAndServicesData.map((data, i) => (
+                <tr key={i} className="bg-white">
                   <td className="border-2 border-mainblue text-mainblue px-6 py-4 text-center">
                     {data.link ? (
                       <a
@@ -77,9 +77,9 @@ const LibrariesAndServicesSection = () => {
 
         {/* Mobile Version */}
         <div className="md:hidden px-4 py-6 space-y-4">
-          {libarariesAndServicesData.map((data) => (
+          {libarariesAndServicesData.map((data, i) => (
             <div
-              key={data.libary}
+              key={i}
               className="border-2 border-mainblue rounded-lg p-4 bg-white"
             >
               <div className="mb-3">
