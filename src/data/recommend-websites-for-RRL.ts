@@ -5,7 +5,7 @@ interface RecommendedWebsitesForRRL {
 }
 export const recommendedWebsitesForRRL: RecommendedWebsitesForRRL[] = [
   {
-    link: "https://www.google.com/search?q=google+scholar&oq=google+scholar&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhA0gEIMzQ4MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
+    link: "https://scholar.google.com/",
     source: "Google Scholar",
     description:
       "Google Scholar provides a simple way to broadly search for scholarly literature across many disciplines and sources: articles, theses, books, abstracts and court opinions, from academic publishers, professional societies, online repositories, universities and other web sites.",
