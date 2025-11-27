@@ -34,7 +34,7 @@ export default function ProjectCarousel({
     return projects.slice(startIndex, endIndex);
   };
 
-  const visibleCards = getCurrentPageCards();
+  //const visibleCards = getCurrentPageCards();
   const canGoPrev = currentPage > 0;
   const canGoNext = currentPage < totalPages - 1;
 
