@@ -10,6 +10,17 @@ export interface CalendarEntryProps {
   className?: string;
 }
 
+// Helper function to parse event names with ^TAG^ format
+const parseEventName = (text: string) => {
+  const parts = text.split(/(\^[^^]+\^)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("^") && part.endsWith("^")) {
+      return <sup key={i}>{part.slice(1, -1)}</sup>;
+    }
+    return part;
+  });
+};
+
 export default function CalendarEntry({
   startDate,
   endDate,
@@ -37,7 +48,7 @@ export default function CalendarEntry({
       <p className="w-16 text-end">
         {startDate && endDate ? `${startDate} - ${endDate}` : startDate}
       </p>
-      <p className="flex-grow">{eventName.toString()}</p>
+      <p className="flex-grow">{parseEventName(eventName)}</p>
     </div>
   );
 }
