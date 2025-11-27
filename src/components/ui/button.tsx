@@ -19,6 +19,12 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        semester:
+          "border-2 border-mainblue font-formular-mono text-base rounded-2xl px-10 py-6 transition-all",
+      },
+      active: {
+        true: "bg-white text-mainblue",
+        false: "bg-mainblue text-white",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
@@ -40,6 +46,7 @@ function Button({
   className,
   variant,
   size,
+  active,
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
@@ -51,7 +58,7 @@ function Button({
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, className, active }))}
       {...props}
     />
   )
