@@ -6,6 +6,7 @@ import { Button } from '../ui/button';
 import StudentPerks from '../sections/student-perks';
 import DigitalApplications from '../sections/digital-applications';
 import AcademicArms from '../sections/academic-arms';
+import RecommendedWebsites from '../sections/recommended-websites';
 
 // 1. Define tabs based on your attached image
 const tabOptions = [
@@ -124,7 +125,7 @@ function AcademixPage() {
             {activeTab === "perks" && <StudentPerks />}
             {/* {activeTab === "directory" && <div>Directory Content</div>} */}
             {/* {activeTab === "libraries" && <div>Libraries Content</div>} */}
-            {/* {activeTab === "research" && <div>Research Content</div>} */}
+            {activeTab === "research" && <RecommendedWebsites />}
             {activeTab === "apps" && <DigitalApplications />}
             {activeTab === "clusters" && <AcademicArms />}
         </div>
