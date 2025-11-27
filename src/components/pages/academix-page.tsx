@@ -9,6 +9,7 @@ import AcademicArms from '../sections/academic-arms';
 import RecommendedWebsites from '../sections/recommended-websites';
 import ResourceGuide from '../sections/resource-guide';
 import Image from "next/image";
+import LibrariesAndServicesSection from '../sections/libraries-and-services-section';
 
 const tabOptions = [
   { id: "guide", label: "GUIDE" },
@@ -131,7 +132,7 @@ function AcademixPage() {
             {activeTab === "guide" && <ResourceGuide />}
             {activeTab === "perks" && <StudentPerks />}
             {/* {activeTab === "directory" && <div>Directory Content</div>} */}
-            {/* {activeTab === "libraries" && <div>Libraries Content</div>} */}
+            {activeTab === "libraries" && <LibrariesAndServicesSection />}
             {activeTab === "research" && <RecommendedWebsites />}
             {activeTab === "apps" && <DigitalApplications />}
             {activeTab === "clusters" && <AcademicArms />}
