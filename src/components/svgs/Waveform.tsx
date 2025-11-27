@@ -35,7 +35,7 @@ export default function Waveform({
     pathOffset: 0,
   };
 
-  const transitionMotion: Transition<any> | undefined = {
+  const transitionMotion: Transition | undefined = {
     duration: 1.25,
     ease: "easeInOut",
   };
