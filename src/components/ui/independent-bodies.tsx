@@ -44,13 +44,16 @@ const IndependentBodies = ({
             <h1 className="font-formular-black text-center text-xs text-mainblue md:text-base">
               {organizationName}
             </h1>
-            <div className="mt-1 flex w-full max-w-35 justify-center gap-2 text-blue1 md:max-w-50 xl:max-w-55">
-              <div className="">
+            <div className="mt-1 flex w-full max-w-40 items-start justify-center gap-1 text-blue1 md:max-w-50 xl:max-w-55">
+              <div className="flex w-5 shrink-0 justify-center md:w-6">
                 <FaFacebook className="size-4 md:size-5" />
               </div>
-              <p className="font-formular-regular grow text-center text-xs md:text-sm">
-                {facebookName}
-              </p>
+              <div className="flex-1">
+                <p className="font-formular-regular text-center text-xs md:text-sm">
+                  {facebookName}
+                </p>
+              </div>
+              <div className="w-5 shrink-0 md:w-6"></div>
             </div>
           </CardContent>
         </Card>

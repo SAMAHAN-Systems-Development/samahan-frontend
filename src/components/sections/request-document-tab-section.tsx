@@ -1,8 +1,9 @@
 "use client";
+import { Button } from "../ui/button";
 import TabHeader from "../ui/tab-header";
 export default function DocumentRequestTabSection() {
   return (
-    <div className="py-4 md:py-8">
+    <>
       <TabHeader name="REQUEST FOR OFFICIAL DOCUMENTS"></TabHeader>
       <div className="px-5 sm:px-10 md:px-16 lg:px-32 py-6 md:py-12 lg:py-16">
         <div className="">
@@ -123,9 +124,12 @@ export default function DocumentRequestTabSection() {
             </li>
           </ol>
         </div>
-        <button className="bg-mainblue text-white w-full sm:w-max py-3 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-2xl mt-6 sm:mt-6 md:mt-8 text-xs sm:text-sm md:text-base font-medium uppercase tracking-wide">
-          REQUEST REGISTRAR&apos;S CERTIFICATE
-        </button>
+        <Button 
+          className="cursor-pointer py-3 px-6 rounded-2xl mt-6 sm:mt-6 md:mt-8"
+          onClick={() => window.open("https://forms.gle/icompp-booking-form", "_blank")}
+        >
+          REQUEST REGISTRAR CERTIFICATE
+        </Button>
         <h2 className="font-formular text-mainblue font-medium text-[18px] sm:text-xl md:text-xl lg:text-2xl mb-3 sm:mb-4 mt-8 sm:mt-10 md:mt-12">
           OFFICE OF THE STUDENT AFFAIRS:
         </h2>
@@ -139,10 +143,13 @@ export default function DocumentRequestTabSection() {
         <div className="px-6 sm:px-10 md:px-14 font-formular text-mainblue text-sm sm:text-sm md:text-base mt-2">
           a. Access the link to request the said document. Please note that the form is only intended for the utilization of the Undergraduate Unit.
         </div>
-        <button className="bg-mainblue text-white w-full sm:w-max py-3 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-2xl mt-6 sm:mt-6 md:mt-8 text-xs sm:text-sm md:text-base font-medium uppercase tracking-wide">
+        <Button 
+          className="cursor-pointer py-3 px-6 rounded-2xl mt-6 sm:mt-6 md:mt-8"
+          onClick={() => window.open("https://forms.gle/icompp-booking-form", "_blank")}
+        >
           REQUEST CERTIFICATE
-        </button>
+        </Button>
       </div>
-    </div>
+    </>
   );
 }
