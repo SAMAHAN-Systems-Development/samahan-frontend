@@ -2,7 +2,12 @@
 
 import Image from "next/image";
 import { X } from "lucide-react";
-import { Dialog, DialogContent, DialogOverlay } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogOverlay,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
 interface AdvocasixModalProps {
@@ -71,29 +76,31 @@ export default function AdvocasixModal({
 
         "
         >
-          <h1
-            className="
+          <DialogTitle asChild>
+            <h1
+              className="
               font-formular-black leading-tight
               text-2xl sm:text-3xl md:text-4xl lg:text-5xl
               text-mainblue
               uppercase
                    w-full
             "
-          >
-            {title}
-          </h1>
+            >
+              {title}
+            </h1>
+          </DialogTitle>
 
           <p
             className="
             mt-1.5 sm:mt-2 md:mt-2.5
-            font-formular-regular
+            font-formular
             text-mainblue
             text-[11px] sm:text-xs md:text-sm
             leading-[1.25] md:leading-snug
             w-full max-w-none           
             mx-0 
             px-8    md:px-12   lg:px-18
-            text-left
+            text-justify
           "
           >
             {content}
