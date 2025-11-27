@@ -6,6 +6,7 @@ import { Button } from '../ui/button';
 import StudentPerks from '../sections/student-perks';
 import DigitalApplications from '../sections/digital-applications';
 import AcademicArms from '../sections/academic-arms';
+import RecommendedWebsites from '../sections/recommended-websites';
 import ResourceGuide from '../sections/resource-guide';
 import Image from "next/image";
 import LibrariesAndServicesSection from '../sections/libraries-and-services-section';
@@ -132,7 +133,7 @@ function AcademixPage() {
             {activeTab === "perks" && <StudentPerks />}
             {/* {activeTab === "directory" && <div>Directory Content</div>} */}
             {activeTab === "libraries" && <LibrariesAndServicesSection />}
-            {/* {activeTab === "research" && <div>Research Content</div>} */}
+            {activeTab === "research" && <RecommendedWebsites />}
             {activeTab === "apps" && <DigitalApplications />}
             {activeTab === "clusters" && <AcademicArms />}
         </div>
