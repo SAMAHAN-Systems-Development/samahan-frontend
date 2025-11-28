@@ -12,8 +12,8 @@ interface WaveformProps {
 export default function Waveform({
   className,
   reverse = 0,
-  delayChildren = 0.3,
-  drawingDuration = 0.5,
+  delayChildren = 0.8,
+  drawingDuration = 3,
 }: WaveformProps) {
   const svg: Variants = {
     visible: {
@@ -40,7 +40,10 @@ export default function Waveform({
         initial="hidden"
         animate="visible"
         variants={svg}
-        className={cn("w-120 md:w-155 lg:w-200 xl:w-250", className)}
+        className={cn(
+          "w-160 h-36 md:w-200 md:h-48 lg:w-250 lg:h-60 xl:w-330 xl:h-100", 
+          className
+        )}
         width="1001"
         height="236"
         viewBox="0 0 1001 236"
