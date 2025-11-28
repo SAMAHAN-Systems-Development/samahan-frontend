@@ -1,5 +1,6 @@
 import { otherSamahanOfficesData } from "@/data/other-samahan-offices-data";
 import OfficeCard from "../ui/OfficeCard";
+
 interface OtherOfficesProps {
   office: "osp" | "osvp" | "osg" | "ost";
 }
@@ -9,6 +10,7 @@ export default function OtherOffices({ office }: OtherOfficesProps) {
   );
   return (
     <div className="px-6 md:px-8 lg:px-12">
+      {/* Increased Size */}
       <h1 className="font-formular-black text-center text-3xl text-mainblue md:text-5xl">
         OTHER SAMAHAN OFFICES
       </h1>
