@@ -9,7 +9,7 @@ export default function OtherOffices({ office }: OtherOfficesProps) {
   );
   return (
     <div className="px-6 md:px-8 lg:px-12">
-      <h1 className="font-formular-black text-center text-xl text-mainblue md:text-3xl">
+      <h1 className="font-formular-black text-center text-3xl text-mainblue md:text-5xl">
         OTHER SAMAHAN OFFICES
       </h1>
       <div className="mx-auto mt-4 md:mt-7 lg:mt-10 mb-20 grid max-w-4xl grid-cols-1 justify-items-center gap-6 lg:grid-cols-3">
