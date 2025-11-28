@@ -37,27 +37,6 @@ function AboutPage() {
         height={1293}
       />
 
-      {/* <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-0 h-[1500px] w-full overflow-hidden">
-        <div className="absolute bottom-120 -left-25 h-[310px] w-[132px] rotate-25 md:bottom-[400px] lg:bottom-[200px] lg:h-[697px] lg:w-[296px] 2xl:bottom-[-80px] 2xl:h-[996px] 2xl:w-[423px]">
-          <Image
-            src="/images/h-curvy-lines.png"
-            alt="Decorative element"
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        <div className="absolute -right-0 -bottom-16 h-[315px] w-[169px] overflow-x-hidden lg:bottom-[-100px] lg:h-[706px] lg:w-[378px] 2xl:bottom-[-200px] 2xl:h-[1008px] 2xl:w-[540px]">
-          <Image
-            src="/images/n-curvy-lines.png"
-            alt="Decorative element"
-            width="973"
-            height="1293"
-            className="object-cover"
-          />
-        </div>
-      </div> */}
-
       <HeroBanner
         imageSrc="/images/hero-images/ABOUT-Hero.png"
         imageAlt="About Page Hero"
