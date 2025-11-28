@@ -31,7 +31,7 @@ export default function CalendarEntry({
 }: CalendarEntryProps) {
   const styles = {
     inactive:
-      "text-mainblue bg-white hover:bg-mainblue/10 active:bg-mainblue active:text-white",
+      "text-mainblue bg-white hover:bg-gray-200 active:bg-mainblue active:text-white",
     active: "text-white bg-mainblue",
   };
 
