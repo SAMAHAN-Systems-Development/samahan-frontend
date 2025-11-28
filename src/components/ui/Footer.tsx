@@ -116,8 +116,9 @@ export default function Footer() {
             <div className="font-trapix text-lg mb-2 lg:px-4">Address</div>
             <ul className="list-none space-y-2 font-formular-mono text-xs lg:px-4 mt-4 max-w-xs">
               <li>
-                Mezzanine Level, Martin Building, Ateneo de Davao University
-                E.Jacinto Street, Davao City 8000
+                Mezzanine Level, Martin Building, Ateneo de Davao University E.{" "}
+                <br />
+                Jacinto Street, Davao City 8000
               </li>
             </ul>
           </div>
