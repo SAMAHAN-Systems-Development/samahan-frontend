@@ -1,4 +1,3 @@
-import { Card, CardFooter, CardContent } from "./card";
 import Image from "next/image";
 
 interface ProfileCardProps {
@@ -14,8 +13,8 @@ const ProfileCard = ({ image }: ProfileCardProps) => {
     <div
       className="
     relative
-    w-[60vw]          
-    aspect-[3/4]     
+    w-[45vw]          
+    aspect-[5/7]
 
     sm:w-64     
     md:w-72         
@@ -27,7 +26,8 @@ const ProfileCard = ({ image }: ProfileCardProps) => {
         alt={imageAlt}
         fill
         quality={100}
-        className="object-contain"
+        className="object-bottom object-cover pointer-events-none" 
+        draggable={false}
       />
     </div>
   );
