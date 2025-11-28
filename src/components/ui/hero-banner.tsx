@@ -8,24 +8,34 @@ interface HeroBannerProps {
   header2?: string;
 }
 
-const HeroBanner: React.FC<HeroBannerProps> = ({ imageSrc, imageAlt, header1, header2 }) => (
+const HeroBanner: React.FC<HeroBannerProps> = ({
+  imageSrc,
+  imageAlt,
+  header1,
+  header2,
+}) => (
   <div className="relative w-full h-56 xs:h-64 md:h-72 lg:h-96 2xl:h-[600px] -mt-22 z-10">
     <Image
       src={imageSrc}
       alt={imageAlt}
       fill
+      quality={100}
       className="object-cover"
       priority
     />
     <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-y-2">
       {header1 && (
         <div>
-          <span className="text-white font-formular-black text-lg xs:text-xl lg:text-4xl 2xl:text-6xl">{header1}</span>
+          <span className="text-white font-formular-black text-lg xs:text-xl lg:text-4xl 2xl:text-6xl">
+            {header1}
+          </span>
         </div>
       )}
       {header2 && (
         <div>
-          <span className="text-white font-trapix text-xl xs:text-2xl lg:text-5xl 2xl:text-7xl">{header2}</span>
+          <span className="text-white font-trapix text-xl xs:text-2xl lg:text-5xl 2xl:text-7xl">
+            {header2}
+          </span>
         </div>
       )}
     </div>

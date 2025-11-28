@@ -2,7 +2,7 @@ import React from "react";
 
 interface ProfileGroupProps {
   groupTitle: string;
-  description: string;
+  description?: string;
   children: React.ReactNode;
 }
 

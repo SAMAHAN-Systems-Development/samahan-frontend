@@ -91,7 +91,7 @@ const DigitalApplications = () => {
   return (
     <section className="w-full pb-20">
       <div className="mx-auto w-full">
-        <div >
+        <div>
           <TabHeader name="HELPFUL DIGITAL APPLICATION" />
         </div>
 
@@ -112,13 +112,14 @@ const DigitalApplications = () => {
                     key={appIndex}
                     className="flex flex-col items-center gap-3"
                   >
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center">
+                    <div className="w-16 h-16 md:w-30 md:h-30 rounded-lg flex items-center justify-center">
                       <Image
                         src={app.icon}
                         alt={app.name}
                         width={60}
                         height={60}
-                        className="w-30 h-30 md:w-24 md:h-24 object-contain"
+                        quality={100}
+                        className="w-30 h-30 md:w-30 md:h-30 object-contain"
                       />
                     </div>
                     <span className="font-formular text-xs md:text-sm font-semibold text-mainblue uppercase">
