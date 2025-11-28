@@ -53,7 +53,7 @@ function IndependentBodiesSection() {
           imgSource: "/images/independent-bodies/ccp.png",
           imgAlt: "SAMAHAN Council of Class Presidents Logo",
         }}
-        organizationName="SAMAHAN Council of Class Presidents"
+        organizationName="Council of Class Presidents"
         facebookName="ADDU Council of Class Presidents"
         facebookLink={"https://www.facebook.com/adduccp"}
       />
