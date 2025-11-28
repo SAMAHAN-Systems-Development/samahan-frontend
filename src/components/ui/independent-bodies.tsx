@@ -41,7 +41,7 @@ const IndependentBodies = ({
             </div>
           </CardHeader>
           <CardContent className="flex flex-col items-center p-0">
-            <h1 className="font-formular-black text-center text-xs text-mainblue md:text-base">
+            <h1 className="font-formular-black uppercase text-center text-xs text-mainblue md:text-base">
               {organizationName}
             </h1>
             <div className="mt-1 flex w-full max-w-40 items-start justify-center gap-1 text-blue1 md:max-w-50 xl:max-w-55">
