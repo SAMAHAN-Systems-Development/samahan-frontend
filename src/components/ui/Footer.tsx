@@ -68,9 +68,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/placeholder" className="hover:underline">
+                <a
+                  href="https://sites.google.com/addu.edu.ph/addu-strategic-plan/fortiores-2030?authuser=0"
+                  className="hover:underline"
+                  target="_blank"
+                >
                   Fortiores 2030
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -105,7 +109,7 @@ export default function Footer() {
             <div className="font-trapix text-lg mb-2 lg:px-4">Policies</div>
             <ul className="list-none space-y-4 font-formular-mono text-xs lg:px-4 mt-4">
               <li>
-                <Link href="/placeholder" className="hover:underline">
+                <Link href="/privacy-policy" className="hover:underline">
                   Privacy Policy
                 </Link>
               </li>
