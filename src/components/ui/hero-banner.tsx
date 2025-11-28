@@ -19,6 +19,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       src={imageSrc}
       alt={imageAlt}
       fill
+      quality={100}
       className="object-cover"
       priority
     />

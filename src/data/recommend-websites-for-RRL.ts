@@ -89,7 +89,7 @@ export const recommendedWebsitesForRRL: RecommendedWebsitesForRRL[] = [
       "The Philippine E-Journals (PEJ) is an online collection of academic publications of different higher education institutions and professional organizations. Its sophisticated database allows users to easily locate abstracts, full journal articles, and links to related research areas.",
   },
   {
-    link: "https://www.pcaarrd.dost.gov.ph/home/portal/index.php/quick-information-links/1695-elibrary",
+    link: "https://elibrary.pcaarrd.dost.gov.ph/home",
     source: "DOST-PCAARRD eLibrary",
     description:
       "An electronic library by the Department of Science and Technology in the Philippines, offering resources on agriculture, aquatic, and natural resources research, essential for researches in these fields.",

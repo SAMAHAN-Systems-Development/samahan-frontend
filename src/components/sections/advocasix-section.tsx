@@ -13,17 +13,17 @@ export default function AdvocasixSection() {
 
   return (
     <>
-      <section className="mt-10 flex w-full flex-col px-8 xxs:w-80 md:w-120 lg:w-204 xl:w-268">
+      <section className="mt-10 md:mt-14 flex w-full flex-col px-8 xxs:w-80 md:w-120 lg:w-204 xl:w-268">
         <h1 className="font-formular-black text-center text-xl text-mainblue md:text-3xl lg:text-4xl xl:text-6xl">
           ADVOCASIX
         </h1>
-        <p className="font-formular-regular mt-6 text-justify text-xs text-mainblue md:text-base">
+        <p className="font-formular mt-6 text-justify text-sm text-mainblue md:text-base">
           Guided by its principles as a Jesuit, Filipino, and Mindanaoan
           autonomous student government, the Samahan ng mga Mag-aaral ng
           Pamantasan ng Ateneo de Davao set the goal of championing the
           identified AdvocaSIX for the incoming 6 years that started on 2022 and
           aims to cultivate until 2028. With that, SAMAHAN shall hereby champion
-          the following advocacies for the term of 2024-2025:
+          the following advocacies for the term of 2025-2026:
         </p>
         <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-y-8 xl:gap-x-6">
           {advocasixData.map((card) => (
