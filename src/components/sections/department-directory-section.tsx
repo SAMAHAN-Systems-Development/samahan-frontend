@@ -38,7 +38,7 @@ export default function DepartmentDirectorySection() {
         <div className="absolute inset-0 flex justify-center items-center px-4 md:px-0">
           <div className="relative w-full max-w-[340px] h-[280px] md:max-w-6xl md:h-[470px]">
             <Image
-              src={"/images/academix-images/directory-academix.jpg"}
+              src={"/images/department-directory/directory-academix.jpg"}
               alt="Directory Academix"
               fill
               className="object-cover rounded-lg"
