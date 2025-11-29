@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { FiChevronDown, FiMenu } from "react-icons/fi";
+import { useState } from "react"; 
+import { FiChevronDown, FiMenu } from "react-icons/fi"; 
 
-// Data sources test
 const headLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
@@ -25,93 +25,108 @@ const infoPortal = [
 ];
 
 export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <div className="sticky top-0 z-50 py-4 px-4 sm:px-6 lg:px-10 xl:px-24 2xl:px-40 select-none">
-      <details className="lg:hidden group relative">
-        <summary className="list-none">
-          <div className="flex items-center justify-start px-4 sm:px-6 group-open:bg-mainblue  group-open:h-14">
-            <div className="text-white group-open:text-white p-2 cursor-pointer">
-              <FiMenu size={22} className="block group-open:hidden" />
-              <FiMenu size={22} className="hidden group-open:block" />
-            </div>
-          </div>
-        </summary>
+    <div className="sticky top-0 z-50 py-4 px-4 sm:px-6 lg:px-10 xl:px-24 2xl:px-40 pointer-events-none">
+      <div className="lg:hidden relative">
+        <div
+          className={`flex items-center justify-start px-4 sm:px-6 h-14  ${
+            isMobileMenuOpen ? "bg-mainblue rounded-t-xl" : ""
+          }`}
+        >
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={`p-2 cursor-pointer transition-colors pointer-events-auto ${
+              isMobileMenuOpen ? "text-white" : "text-white"
+            }`}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <FiMenu size={22} /> : <FiMenu size={22} />}
+          </button>
+        </div>
 
         {/* Mobile menu panel overlay */}
-        <div className="absolute left-0 right-0 top-14 mt-0 px-10 bg-mainblue  text-white rounded-b-4xl z-40 overflow-y-auto pb-6">
-          {/* Logo shown when menu is open */}
-          <div className="flex items-center justify-start pt-16 mb-4">
-            <Link href="/" className="relative h-8 w-24">
-              <Image
-                src="/images/on-the-move-logo.png"
-                alt="On The Move Logo"
-                fill
-              />
-            </Link>
-          </div>
+        {isMobileMenuOpen && (
+          <div className="absolute left-0 right-0 top-14 mt-0 px-10 bg-mainblue text-white rounded-b-4xl z-40 overflow-y-auto pb-6 shadow-xl pointer-events-auto">
+            {/* Logo shown when menu is open */}
+            <div className="flex items-center justify-start pt-16 mb-4">
+              <Link href="/" className="relative h-8 w-24">
+                <Image
+                  src="/images/on-the-move-logo.png"
+                  alt="On The Move Logo"
+                  fill
+                />
+              </Link>
+            </div>
 
-          {headLinks.map((l) => (
+            {headLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="block px-4 py-3 font-formular-mono hover:bg-white/10 rounded-md"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {l.label}
+              </Link>
+            ))}
+
+            {/* Offices collapsible */}
+            <details className="py-1 [&[open]_summary>svg]:rotate-180">
+              <summary className="w-full flex items-center justify-between px-4 py-3 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md list-none">
+                <span>Offices</span>
+                <FiChevronDown className="transition-transform duration-400" />
+              </summary>
+              <div className="pl-8 pb-2">
+                {offices.map((o) => (
+                  <Link
+                    key={o.href}
+                    href={o.href}
+                    className="block px-2 py-2 hover:bg-white/10 rounded-md"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {o.label}
+                  </Link>
+                ))}
+              </div>
+            </details>
+
             <Link
-              key={l.href}
-              href={l.href}
+              href="/faq"
               className="block px-4 py-3 font-formular-mono hover:bg-white/10 rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              {l.label}
+              FAQ
             </Link>
-          ))}
 
-          {/* Offices collapsible */}
-          <details className="py-1 [&[open]_summary>svg]:rotate-180">
-            <summary className="w-full flex items-center justify-between px-4 py-3 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md list-none">
-              <span>Offices</span>
-              <FiChevronDown className="transition-transform duration-400" />
-            </summary>
-            <div className="pl-8 pb-2">
-              {offices.map((o) => (
-                <Link
-                  key={o.href}
-                  href={o.href}
-                  className="block px-2 py-2 hover:bg-white/10 rounded-md"
-                >
-                  {o.label}
-                </Link>
-              ))}
-            </div>
-          </details>
+            {/* Information portal collapsible */}
+            <details className="py-1 [&[open]_summary>svg]:rotate-180">
+              <summary className="w-full flex items-center justify-between px-4 py-3 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md list-none">
+                <span>Information Portal</span>
+                <FiChevronDown className="transition-transform duration-400" />
+              </summary>
+              <div className="pl-8 pb-2">
+                {infoPortal.map((i) => (
+                  <Link
+                    key={i.href}
+                    href={i.href}
+                    className="block px-2 py-2 hover:bg-white/10 rounded-md"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {i.label}
+                  </Link>
+                ))}
+              </div>
+            </details>
+          </div>
+        )}
+      </div>
 
-          <Link
-            href="/faq"
-            className="block px-4 py-3 font-formular-mono hover:bg-white/10 rounded-md"
-          >
-            FAQ
-          </Link>
-
-          {/* Information portal collapsible */}
-          <details className="py-1 [&[open]_summary>svg]:rotate-180">
-            <summary className="w-full flex items-center justify-between px-4 py-3 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md list-none">
-              <span>Information Portal</span>
-              <FiChevronDown className="transition-transform duration-400" />
-            </summary>
-            <div className="pl-8 pb-2">
-              {infoPortal.map((i) => (
-                <Link
-                  key={i.href}
-                  href={i.href}
-                  className="block px-2 py-2 hover:bg-white/10 rounded-md"
-                >
-                  {i.label}
-                </Link>
-              ))}
-            </div>
-          </details>
-        </div>
-      </details>
-
-      {/* Desktop nav (unchanged layout; mapped content) */}
+      {/* Desktop nav */}
       <div className="hidden lg:block">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-mainblue/80 h-14 py-7 flex items-center justify-between lg:px-4 xl:px-8 rounded-full border border-blue1/70">
-            <Link href="/" className="relative  h-6 w-20 xl:w-22">
+          <div className="bg-mainblue/95 h-14 py-7 flex items-center justify-between lg:px-4 xl:px-8 rounded-full border border-blue1/90 pointer-events-auto">
+            <Link href="/" className="relative h-6 w-20 xl:w-22">
               <Image
                 src="/images/on-the-move-logo.png"
                 alt="On The Move Logo"
