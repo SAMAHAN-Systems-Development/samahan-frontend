@@ -1,9 +1,7 @@
 import TabHeader from '@/components/ui/tab-header'
 import Image from 'next/image'
 
-// Helper: Replace only special characters with Arial, keep the rest in Formular
 function renderWithFallbackFont(text: string) {
-  // Regex matches only the listed special characters
   return text.split(/([~!@#$%^&*()_+{}\[\]:"<>?;',.\/\\])/).map((segment, idx) => {
     if (segment && /[~!@#$%^&*()_+{}\[\]:"<>?;',.\/\\]/.test(segment)) {
       return (
@@ -22,10 +20,12 @@ function renderWithFallbackFont(text: string) {
 
 export default function AcademicArms () {
     return (
-        <div className="">
+        <div className="flex flex-col items-center">
             <TabHeader name="GET TO KNOW YOUR CLUSTER ACADEMIC ARMS"/>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-8 gap-x-1 mt-8 text-mainblue font-formular-regular">
-                <div className="flex flex-col text-center items-center col-span-1 sm:col-span-3 max-w-[250px] w-full mx-auto my-4">
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-1 md:gap-x-14 mt-8 text-mainblue font-formular-regular w-full max-w-6xl">
+                
+                <div className="flex flex-col text-center items-center col-span-1 sm:col-span-2 md:col-span-3 max-w-[250px] w-full mx-auto my-4">
                     <Image
                         src='/images/academic-arms/main-logo-academix.png'
                         alt='main'
@@ -38,6 +38,7 @@ export default function AcademicArms () {
                         {renderWithFallbackFont('SAMAHAN Department of Academic Affairs')}
                     </div>
                 </div>
+
                 <div className="flex flex-col text-center items-center max-w-[250px] w-full mx-auto my-4">
                     <Image
                         src='/images/academic-arms/accountancy-logo-academix.png'
@@ -142,7 +143,7 @@ export default function AcademicArms () {
                         {renderWithFallbackFont('Social Sciences Committee of Academic Leaders (SCALES)')}
                     </div>
                 </div> 
-                <div className="flex flex-col text-center items-center max-w-[250px] w-full mx-auto my-4">
+                <div className="flex flex-col text-center items-center max-w-[250px] w-full mx-auto my-4 sm:col-span-2 md:col-span-1">
                     <Image
                         src='/images/academic-arms/SEA-logo-academix.png'
                         alt='sea'
