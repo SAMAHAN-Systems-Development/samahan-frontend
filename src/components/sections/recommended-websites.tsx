@@ -12,7 +12,7 @@ export default function RecommendedWebsites() {
 
       <div className="hidden md:block overflow-x-auto max-w-5xl mx-auto my-12">
         <table className="border-2 border-mainblue">
-          <thead>
+          <thead className="bg-white">
             <tr className="text-mainblue">
               <th className="border-2 border-mainblue text-mainblue px-3 py-2 text-center font-semibold text-sm w-1/4">
                 Source
