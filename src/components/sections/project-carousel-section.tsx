@@ -19,7 +19,7 @@ export default function ProjectCarouselSection() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center px-4">
-        <h1 className="font-formular text-mainblue font-black text-3xl sm:text-4xl lg:text-5xl text-center mb-8 lg:mb-10">
+        <h1 className="font-formular-black text-center text-2xl uppercase text-mainblue md:text-3xl lg:text-4xl mb-8 lg:mb-10">
           ACHIEVEMENTS AND PROJECTS
         </h1>
         <ProjectCarousel projects={presidentProjects} />
