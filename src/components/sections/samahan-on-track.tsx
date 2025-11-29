@@ -1541,13 +1541,6 @@ export default function OnTrack() {
             </div>
 
           </div>
-
-          <div className={`${indent_1} text-xl lg:text-lg lg:font-semibold mt-3`}>
-              KUKANG Report
-          </div>
-          <div className={`ml-5.5 lg:ml-11 mt-1`}>
-            The KUKANG Event Report, which stands for Kinsa, Unsa, Kanus-a, Ngano, Gi-unsa, is a component of the post-event protocol for all organizations within the Ateneo de Davao University. This report is the final step in the implementation of activities and is designed to encapsulate the essence and impact of each event.
-          </div>
         </div>
         <div>
           <div className='mt-7 lg:mt-12 font-formular-medium lg:hidden lg:uppercase text-2xl lg:text-3xl'>Student Activities</div>

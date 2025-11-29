@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ResourceGuide() {
   return (
-    <section className="flex w-full flex-col items-center overflow-x-clip px-6 pt-3 pb-12 md:px-8 md:pb-16 lg:pb-12">
+    <section className="flex w-full flex-col items-center overflow-x-clip px-6 pt-3 pb-12 md:px-8 md:pb-16 lg:pb-20">
       <div className="w-full max-w-6xl">
         <h1 className="font-formular-black text-center text-xl text-mainblue md:text-3xl lg:text-4xl xl:text-6xl">
           STUDENT RESOURCE GUIDE
@@ -34,9 +34,9 @@ export default function ResourceGuide() {
       </div>
 
       <div className="relative mt-12 md:mt-16">
-        <div className="md:hidden pointer-events-none absolute left-1/2 top-1/2 z-0 h-[900px] w-[200vw] -translate-x-1/2 -translate-y-1/2 md:h-[700px] md:w-[1400px] lg:h-[800px] lg:w-[1600px] scale-125 sm:scale-100 -rotate-45 xs:rotate-0">
+        <div className="md:hidden pointer-events-none absolute left-1/2 top-1/2 z-0 h-[500px] w-[200vw] -translate-x-1/2 -translate-y-1/2 md:h-[700px] md:w-[1400px] lg:h-[800px] lg:w-[1600px] scale-125">
           <Image
-            src="/images/tape-design/tape-1.png"
+            src="/images/tape-design/tape-1.svg"
             alt="Decorative tape design"
             fill
             className="object-contain"
