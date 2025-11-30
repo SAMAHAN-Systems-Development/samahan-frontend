@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react"; 
-import { FiChevronDown, FiMenu } from "react-icons/fi"; 
+import { useState } from "react";
+import { FiChevronDown, FiMenu } from "react-icons/fi";
 
 const headLinks = [
   { label: "Home", href: "/" },
@@ -28,16 +28,16 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-50 py-4 px-4 sm:px-6 lg:px-10 xl:px-24 2xl:px-40 pointer-events-none">
-      <div className="lg:hidden relative">
+    <div className="pointer-events-none sticky top-0 z-50 px-4 py-4 sm:px-6 lg:px-10 xl:px-24 2xl:px-40">
+      <div className="relative lg:hidden">
         <div
-          className={`flex items-center justify-start px-4 sm:px-6 h-14  ${
+          className={`flex h-14 items-center justify-start px-4 sm:px-6 ${
             isMobileMenuOpen ? "bg-mainblue rounded-t-xl" : ""
           }`}
         >
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`p-2 cursor-pointer transition-colors pointer-events-auto ${
+            className={`pointer-events-auto cursor-pointer p-2 transition-colors ${
               isMobileMenuOpen ? "text-white" : "text-white"
             }`}
             aria-label="Toggle menu"
@@ -48,9 +48,9 @@ export default function Navbar() {
 
         {/* Mobile menu panel overlay */}
         {isMobileMenuOpen && (
-          <div className="absolute left-0 right-0 top-14 mt-0 px-10 bg-mainblue text-white rounded-b-4xl z-40 overflow-y-auto pb-6 shadow-xl pointer-events-auto">
+          <div className="bg-mainblue pointer-events-auto absolute top-14 right-0 left-0 z-40 mt-0 overflow-y-auto rounded-b-4xl px-10 pb-6 text-white shadow-xl">
             {/* Logo shown when menu is open */}
-            <div className="flex items-center justify-start pt-16 mb-4">
+            <div className="mb-4 flex items-center justify-start pt-16">
               <Link href="/" className="relative h-8 w-24">
                 <Image
                   src="/images/on-the-move-logo.png"
@@ -64,7 +64,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="block px-4 py-3 font-formular-mono hover:bg-white/10 rounded-md"
+                className="font-formular-mono block rounded-md px-4 py-3 hover:bg-white/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {l.label}
@@ -73,16 +73,16 @@ export default function Navbar() {
 
             {/* Offices collapsible */}
             <details className="py-1 [&[open]_summary>svg]:rotate-180">
-              <summary className="w-full flex items-center justify-between px-4 py-3 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md list-none">
+              <summary className="font-formular-mono flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
                 <span>Offices</span>
                 <FiChevronDown className="transition-transform duration-400" />
               </summary>
-              <div className="pl-8 pb-2">
+              <div className="pb-2 pl-8">
                 {offices.map((o) => (
                   <Link
                     key={o.href}
                     href={o.href}
-                    className="block px-2 py-2 hover:bg-white/10 rounded-md"
+                    className="block rounded-md px-2 py-2 hover:bg-white/10"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {o.label}
@@ -93,7 +93,7 @@ export default function Navbar() {
 
             <Link
               href="/faq"
-              className="block px-4 py-3 font-formular-mono hover:bg-white/10 rounded-md"
+              className="font-formular-mono block rounded-md px-4 py-3 hover:bg-white/10"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
@@ -101,16 +101,16 @@ export default function Navbar() {
 
             {/* Information portal collapsible */}
             <details className="py-1 [&[open]_summary>svg]:rotate-180">
-              <summary className="w-full flex items-center justify-between px-4 py-3 font-formular-mono cursor-pointer hover:bg-white/10 rounded-md list-none">
+              <summary className="font-formular-mono flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
                 <span>Information Portal</span>
                 <FiChevronDown className="transition-transform duration-400" />
               </summary>
-              <div className="pl-8 pb-2">
+              <div className="pb-2 pl-8">
                 {infoPortal.map((i) => (
                   <Link
                     key={i.href}
                     href={i.href}
-                    className="block px-2 py-2 hover:bg-white/10 rounded-md"
+                    className="block rounded-md px-2 py-2 hover:bg-white/10"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {i.label}
@@ -124,8 +124,8 @@ export default function Navbar() {
 
       {/* Desktop nav */}
       <div className="hidden lg:block">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-mainblue/95 h-14 py-7 flex items-center justify-between lg:px-4 xl:px-8 rounded-full border border-blue1/90 pointer-events-auto">
+        <div className="mx-auto max-w-7xl">
+          <div className="bg-mainblue/95 border-blue1/90 pointer-events-auto flex h-14 items-center justify-between rounded-full border py-7 lg:px-4 xl:px-8">
             <Link href="/" className="relative h-6 w-20 xl:w-22">
               <Image
                 src="/images/on-the-move-logo.png"
@@ -133,33 +133,33 @@ export default function Navbar() {
                 fill
               />
             </Link>
-            <div className="flex items-center flex-nowrap space-x-20 lg:space-x-16 2xl:space-x-20 3xl:space-x-32">
+            <div className="3xl:space-x-32 flex flex-nowrap items-center space-x-20 lg:space-x-16 2xl:space-x-20">
               {headLinks.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
-                  className="text-white font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
+                  className="font-formular-mono whitespace-nowrap text-white lg:text-sm xl:text-base"
                 >
                   {l.label}
                 </Link>
               ))}
 
               {/* Offices dropdown (hover) */}
-              <div className="relative inline-block align-middle group">
+              <div className="group relative inline-block align-middle">
                 <button
                   type="button"
-                  className="flex items-center gap-1 text-white cursor-pointer font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
+                  className="font-formular-mono flex cursor-pointer items-center gap-1 whitespace-nowrap text-white lg:text-sm xl:text-base"
                 >
                   Offices
-                  <FiChevronDown className="text-white transition-transform duration-400 group-hover:rotate-180 ml-2 xl:ml-4" />
+                  <FiChevronDown className="ml-2 text-white transition-transform duration-400 group-hover:rotate-180 xl:ml-4" />
                 </button>
-                <div className="absolute left-1/2 top-full -translate-x-1/2 hidden group-hover:block z-10">
-                  <div className="min-w-48 bg-white border mt-4 border-mainblue rounded-b-md shadow-lg py-1">
+                <div className="absolute top-full left-1/2 z-10 hidden -translate-x-1/2 group-hover:block">
+                  <div className="border-mainblue mt-4 min-w-48 rounded-b-md border bg-white py-1 shadow-lg">
                     {offices.map((o) => (
                       <Link
                         key={o.href}
                         href={o.href}
-                        className="block px-4 py-2 text-mainblue hover:bg-mainblue hover:text-white"
+                        className="text-mainblue hover:bg-mainblue block px-4 py-2 hover:text-white"
                       >
                         {o.label}
                       </Link>
@@ -170,27 +170,27 @@ export default function Navbar() {
 
               <Link
                 href="/faq"
-                className="text-white font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
+                className="font-formular-mono whitespace-nowrap text-white lg:text-sm xl:text-base"
               >
                 FAQ
               </Link>
 
               {/* Information portal dropdown (hover) */}
-              <div className="relative inline-block align-middle group">
+              <div className="group relative inline-block align-middle">
                 <button
                   type="button"
-                  className="flex items-center gap-1 text-white cursor-pointer font-formular-mono whitespace-nowrap lg:text-sm xl:text-base"
+                  className="font-formular-mono flex cursor-pointer items-center gap-1 whitespace-nowrap text-white lg:text-sm xl:text-base"
                 >
                   Information Portal
-                  <FiChevronDown className="text-white transition-transform duration-400 group-hover:rotate-180 ml-2 xl:ml-4" />
+                  <FiChevronDown className="ml-2 text-white transition-transform duration-400 group-hover:rotate-180 xl:ml-4" />
                 </button>
-                <div className="absolute left-1/2 top-full -translate-x-1/2 hidden group-hover:block z-10">
-                  <div className="min-w-60 bg-white border mt-4 border-mainblue rounded-b-md shadow-lg py-1">
+                <div className="absolute top-full left-1/2 z-10 hidden -translate-x-1/2 group-hover:block">
+                  <div className="border-mainblue mt-4 min-w-60 rounded-b-md border bg-white py-1 shadow-lg">
                     {infoPortal.map((i) => (
                       <Link
                         key={i.href}
                         href={i.href}
-                        className="block px-4 py-2 text-mainblue hover:bg-mainblue hover:text-white"
+                        className="text-mainblue hover:bg-mainblue block px-4 py-2 hover:text-white"
                       >
                         {i.label}
                       </Link>
