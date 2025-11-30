@@ -147,7 +147,7 @@ export default function StudentPerks() {
           />
           <div className="flex-1 min-w-0 text-left">
             <a
-              href="http://www.office.com/getOffice365"
+              href="https://www.microsoft.com/en/microsoft-365?market=af"
               target="_blank"
               rel="noopener noreferrer"
               className="font-trapix text-xl sm:text-3xl mb-2 text-mainblue group"
@@ -176,7 +176,7 @@ export default function StudentPerks() {
         <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
           <div className="flex-1 min-w-0 text-left">
             <a
-              href="https://www.workspace.google.com"
+              href="https://workspace.google.com/intl/en_ph/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-trapix text-xl sm:text-3xl mb-2 text-mainblue group"

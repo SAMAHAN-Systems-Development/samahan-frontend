@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react"; 
-import { FiChevronDown, FiMenu } from "react-icons/fi"; 
+import { useState } from "react";
+import { FiChevronDown, FiMenu } from "react-icons/fi";
 
 const headLinks = [
   { label: "Home", href: "/" },
