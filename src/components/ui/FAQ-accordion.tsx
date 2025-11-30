@@ -31,7 +31,7 @@ function FAQAccordion({ FaqAccordionData }: FAQAccordionProps) {
               >
                 {accordion.AccordionTitle}
               </AccordionTrigger>
-              <AccordionContent className="px-4 pt-0 mt-2 lg:px-4 sm:px-8 text-sm text-blue-900">
+              <AccordionContent className="px-6 pt-0 mt-2 lg:ml-4 lg:mr-12 text-sm text-blue-900">
                 <span
                   className="block"
                   dangerouslySetInnerHTML={{
