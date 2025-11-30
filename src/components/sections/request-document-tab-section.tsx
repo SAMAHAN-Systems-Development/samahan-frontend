@@ -20,7 +20,7 @@ export default function DocumentRequestTabSection() {
           </p>
           <p className="leading-relaxed">
             Access the{" "}
-            <a href="URL_HERE" className="text-mainblue underline font-medium">
+            <a href="https://www.addu.edu.ph/registrar/" className="text-mainblue underline font-medium">
               link
             </a>{" "}
             if you intend to request for any of the following documents:
