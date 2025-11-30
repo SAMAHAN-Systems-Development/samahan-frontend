@@ -14,26 +14,25 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   header1,
   header2,
 }) => (
-  <div className="relative w-full h-56 xs:h-64 md:h-72 lg:h-96 2xl:h-[600px] -mt-22 z-10">
+  <div className="xs:h-64 relative z-10 h-56 w-full md:h-72 lg:h-96 2xl:h-[600px]">
     <Image
       src={imageSrc}
       alt={imageAlt}
       fill
-      quality={100}
       className="object-cover"
       priority
     />
-    <div className="absolute inset-0 flex flex-col items-center justify-center z-10 gap-y-2">
+    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-y-2">
       {header1 && (
         <div>
-          <span className="text-white font-formular-black text-lg xs:text-xl lg:text-4xl 2xl:text-6xl">
+          <span className="font-formular-black xs:text-xl text-lg text-white lg:text-4xl 2xl:text-6xl">
             {header1}
           </span>
         </div>
       )}
       {header2 && (
         <div>
-          <span className="text-white font-trapix text-xl xs:text-2xl lg:text-5xl 2xl:text-7xl">
+          <span className="font-trapix xs:text-2xl text-xl text-white lg:text-5xl 2xl:text-7xl">
             {header2}
           </span>
         </div>

@@ -20,37 +20,37 @@ export default function DocumentRequestTabSection() {
           </p>
           <p className="leading-relaxed">
             Access the{" "}
-            <a href="URL_HERE" className="text-mainblue underline font-medium">
+            <a href="https://www.addu.edu.ph/registrar/" className="text-mainblue underline font-medium">
               link
             </a>{" "}
             if you intend to request for any of the following documents:
             Transcript of Records (TOR) for Board Exam (Please upload 2x2
-            picture) -- Required for licensure examinations.
+            picture) – Required for licensure examinations.
           </p>
         </div>
 
         <div className="mt-4 px-4 sm:px-8 md:px-12 lg:px-20">
           <ol className="text-mainblue text-sm sm:text-sm md:text-base leading-tight space-y-1 sm:space-y-2 list-decimal marker:font-bold pl-5 sm:pl-6">
             <li>
-              <strong>Diploma, (Certified True Copy)</strong> -- A certified
+              <strong>Diploma, (Certified True Copy)</strong> – A certified
               replica of your diploma.
             </li>
             <li>
-              <strong>Diploma, Original</strong> -- (Issued only once and
+              <strong>Diploma, Original</strong> – (Issued only once and
               Subject to verification).
             </li>
             <li>
-              <strong>Diploma (Second Copy)</strong> -- May be denied release
+              <strong>Diploma (Second Copy)</strong> – May be denied release
               for cause. Affidavits of explanation justifying the request must
               be sent as part of your response to the confirmation email which
               you will receive subsequently.
             </li>
             <li>
-              <strong>Reissued LLB to Juris Doctor Diploma</strong> -- A
+              <strong>Reissued LLB to Juris Doctor Diploma</strong> – A
               replacement or re-issuance of LLB your diploma, per LLB circular.
             </li>
             <li>
-              <strong>Honorable Dismissal (Subject to verification)</strong> --
+              <strong>Honorable Dismissal (Subject to verification)</strong> –
               Only one copy allowed for release (issued only once). This is
               requested as part of the credentials for students/graduates who
               desire to transfer to other schools.
@@ -68,7 +68,7 @@ export default function DocumentRequestTabSection() {
               </strong>
             </li>
             <li>
-              <strong>Certification: Bona Fide Student</strong> -- Certifies the
+              <strong>Certification: Bona Fide Student</strong> – Certifies the
               period of attendance of the requesting party as an incumbent
               student of their specific program.
             </li>
@@ -83,19 +83,19 @@ export default function DocumentRequestTabSection() {
               </strong>
             </li>
             <li>
-              <strong>Certification: Enrollment</strong> -- Specify school year
+              <strong>Certification: Enrollment</strong> – Specify school year
               and semester in the details.
             </li>
             <li>
-              <strong>Certification: Grades</strong> -- Please indicate in the
+              <strong>Certification: Grades</strong> – Please indicate in the
               details the school year, semester, and number of copies.
             </li>
             <li>
-              <strong>Certification: Graduation</strong> -- Certifies the
+              <strong>Certification: Graduation</strong> – Certifies the
               details relative to the grant of the degree by a graduate.
             </li>
             <li>
-              <strong>Certification: Medium of Instruction (MOI)</strong> --
+              <strong>Certification: Medium of Instruction (MOI)</strong> –
               Indicates that the medium of instruction by the University is
               English, unless otherwise required by law.
             </li>
@@ -106,19 +106,19 @@ export default function DocumentRequestTabSection() {
               <strong>Certification: QPI / GWPA</strong>
             </li>
             <li>
-              <strong>Course Description</strong> -- (Processing time: 2 weeks.
+              <strong>Course Description</strong> – (Processing time: 2 weeks.
               Please specify in the details if requesting specific courses
               (subjects) or all)
             </li>
             <li>
-              <strong>Letter of no Objection</strong> -- Subject to
+              <strong>Letter of no Objection</strong> – Subject to
               verification.
             </li>
             <li>
               <strong>
                 Australian Health Practitioner Regulation Agency Documents
               </strong>{" "}
-              -- 2 CTC Diploma, Original TOR abroad with 2 authentications, 2
+              – 2 CTC Diploma, Original TOR abroad with 2 authentications, 2
               Letter of Confirmation, Autonomous Certificate (cert. of fee),
               Certificate of AHPRA, 1 long brown envelope.
             </li>

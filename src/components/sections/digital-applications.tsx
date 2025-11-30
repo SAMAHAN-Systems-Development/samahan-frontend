@@ -92,7 +92,7 @@ const DigitalApplications = () => {
     <section className="w-full pb-20">
       <div className="mx-auto w-full">
         <div>
-          <TabHeader name="HELPFUL DIGITAL APPLICATION" />
+          <TabHeader name="HELPFUL DIGITAL APPLICATIONS" />
         </div>
 
         <div className="mt-15 space-y-15 lg:space-y-32">

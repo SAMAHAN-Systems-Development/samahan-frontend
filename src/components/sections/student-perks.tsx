@@ -1,6 +1,6 @@
-import React from 'react';
-import TabHeader from '@/components/ui/tab-header';
-import Image from 'next/image';
+import React from "react";
+import TabHeader from "@/components/ui/tab-header";
+import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 
 const urlRegex = /(https?:\/\/[^\s/$.?#].[^\s]*|www\.[^\s/$.?#].[^\s]*)/gi;
@@ -11,7 +11,7 @@ function renderWithFallbackFont(text: string) {
     // Only wrap if it's a non-alphanumeric, non-space character
     if (segment && /[^\w\d\s]/.test(segment)) {
       return (
-        <span key={idx} style={{ fontFamily: 'Arial, sans-serif' }}>
+        <span key={idx} style={{ fontFamily: "Arial, sans-serif" }}>
           {segment}
         </span>
       );
@@ -30,15 +30,15 @@ function linkifyText(text: string) {
 
   return parts.map((part, index) => {
     if (part.match(urlRegex)) {
-      const href = part.startsWith('http') ? part : `http://${part}`;
-      
+      const href = part.startsWith("http") ? part : `http://${part}`;
+
       return (
-        <a 
-          key={index} 
-          href={href} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-mainblue hover:underline" 
+        <a
+          key={index}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-mainblue hover:underline"
         >
           {renderWithFallbackFont(part)}
         </a>
@@ -48,29 +48,34 @@ function linkifyText(text: string) {
   });
 }
 
-function processLine(line: string){
-    const linkifiedParts = linkifyText(line);
+function processLine(line: string) {
+  const linkifiedParts = linkifyText(line);
 
-    return linkifiedParts.map((part, index) => {
-        if(typeof part === 'string') {
-            return <React.Fragment key={index}>{renderWithFallbackFont(part)}</React.Fragment>;
-        } return part;
-    });
+  return linkifiedParts.map((part, index) => {
+    if (typeof part === "string") {
+      return (
+        <React.Fragment key={index}>
+          {renderWithFallbackFont(part)}
+        </React.Fragment>
+      );
+    }
+    return part;
+  });
 }
 
 export default function StudentPerks() {
   return (
-    <div className='font-formular-regular text-mainblue w-full'>
-      <TabHeader name='STUDENT PERKS'/>
+    <div className="font-formular-regular text-mainblue w-full">
+      <TabHeader name="STUDENT PERKS" />
       <div className="mx-2 sm:mx-auto px-3 xs:px-5 py-8 sm:px-8 sm:py-24 flex flex-col items-center gap-12">
         {/* SPOTIFY - Left Card */}
         <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
-          <Image 
+          <Image
             src="/images/student-perks/logo-spotify-perks-academix.png"
             alt="SPOTIFY"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-25 w-25 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
           <div className="flex-1 min-w-0 text-left">
             <a
@@ -85,14 +90,15 @@ export default function StudentPerks() {
               </span>
             </a>
             <p className="text-base text-[10px] sm:text-lg leading-snug">
-                {`50% Off Student Discount\nEnjoy your favorite music ad-free at half the price! Sign up at https://www.spotify.com/ph/student/ using your AdDU email to get 50% off your Spotify Premium subscription.`
-                .split('\n').map((line, idx) => (
-                <React.Fragment key={idx}>
-                {processLine(line)}
-                <br />
-                </React.Fragment>
+              {`50% Off Student Discount\nEnjoy your favorite music ad-free at half the price! Sign up at https://www.spotify.com/ph/student/ using your AdDU email to get 50% off your Spotify Premium subscription.`
+                .split("\n")
+                .map((line, idx) => (
+                  <React.Fragment key={idx}>
+                    {processLine(line)}
+                    <br />
+                  </React.Fragment>
                 ))}
-             </p>
+            </p>
           </div>
         </div>
 
@@ -112,7 +118,8 @@ export default function StudentPerks() {
             </a>
             <p className="text-base text-[10px] sm:text-lg leading-snug">
               {`50% Off Student Discount\nStream millions of songs ad-free for half the price! Sign up with your AdDU email to enjoy 50% off your Apple Music subscription.`
-                .split('\n').map((line, idx) => (
+                .split("\n")
+                .map((line, idx) => (
                   <React.Fragment key={idx}>
                     {renderWithFallbackFont(line)}
                     <br />
@@ -120,45 +127,46 @@ export default function StudentPerks() {
                 ))}
             </p>
           </div>
-          <Image 
+          <Image
             src="/images/student-perks/logo-appplemusic-perks-academix.png"
             alt="APPLE MUSIC"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-25 w-25 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
         </div>
 
         {/* MICROSOFT OFFICE 365 - Left Card */}
         <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
-          <Image 
+          <Image
             src="/images/student-perks/logo-microsoft365-perks-academix.png"
             alt="MICROSOFT OFFICE 365"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-25 w-25 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
           <div className="flex-1 min-w-0 text-left">
-           <a
-            href="http://www.office.com/getOffice365"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-trapix text-xl sm:text-3xl mb-2 text-mainblue group"
+            <a
+              href="https://www.microsoft.com/en/microsoft-365?market=af"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-trapix text-xl sm:text-3xl mb-2 text-mainblue group"
             >
-            <span className="inline-flex flex-wrap items-center gap-2">
-                <span className="group-hover:underline">MICROSOFT OFFICE</span>{' '}
+              <span className="inline-flex flex-wrap items-center gap-2">
+                <span className="group-hover:underline">MICROSOFT OFFICE</span>{" "}
                 <span className="inline-flex items-center group-hover:underline">
-                365 <MdArrowOutward className="ml-1 block sm:hidden" />
-                </span>  
-            </span>
+                  365 <MdArrowOutward className="ml-1 block sm:hidden" />
+                </span>
+              </span>
             </a>
             <p className="text-base text-[10px] sm:text-lg leading-snug">
               {`1 TB Cloud Storage\nGet free access to Word, Excel, PowerPoint, Outlook, OneNote, and 1TB of cloud storage! Sign up at http://www.office.com/getOffice365 using your AdDU email to activate your subscription and download the apps.`
-                .split('\n').map((line, idx) => (
-                <React.Fragment key={idx}>
-                {processLine(line)}
-                <br />
-                </React.Fragment>
+                .split("\n")
+                .map((line, idx) => (
+                  <React.Fragment key={idx}>
+                    {processLine(line)}
+                    <br />
+                  </React.Fragment>
                 ))}
             </p>
           </div>
@@ -168,48 +176,49 @@ export default function StudentPerks() {
         <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
           <div className="flex-1 min-w-0 text-left">
             <a
-                href="https://www.workspace.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-trapix text-xl sm:text-3xl mb-2 text-mainblue group"
-                >
-                <span className="inline-block">
-                    <span className="group-hover:underline">
-                    GOOGLE WORKSPACE FOR{' '}
-                    </span>
-                    <span className="inline-flex items-center whitespace-nowrap group-hover:underline">
-                    EDUCATION
-                    <MdArrowOutward className="ml-1 block sm:hidden flex-shrink-0" />
-                    </span>
+              href="https://workspace.google.com/intl/en_ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-trapix text-xl sm:text-3xl mb-2 text-mainblue group"
+            >
+              <span className="inline-block">
+                <span className="group-hover:underline">
+                  GOOGLE WORKSPACE FOR{" "}
                 </span>
+                <span className="inline-flex items-center whitespace-nowrap group-hover:underline">
+                  EDUCATION
+                  <MdArrowOutward className="ml-1 block sm:hidden flex-shrink-0" />
+                </span>
+              </span>
             </a>
             <p className="text-base text-[10px] sm:text-lg leading-snug">
               {`20 GB Per User\nUse Google Classroom with unlimited originality reports, document approvals, and 20GB cloud storage. Host Google Meet sessions with 500 participants, breakout rooms, polls, Q&A, and live streaming up to 100k viewers.`
-                .split('\n').map((line, idx) => (
-                <React.Fragment key={idx}>
-                {processLine(line)}
-                <br />
-                </React.Fragment>
+                .split("\n")
+                .map((line, idx) => (
+                  <React.Fragment key={idx}>
+                    {processLine(line)}
+                    <br />
+                  </React.Fragment>
                 ))}
             </p>
           </div>
-          <Image 
+          <Image
             src="/images/student-perks/logo-google-perks-academix.png"
             alt="GOOGLE WORKSPACE FOR EDUCATION"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-25 w-25 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
         </div>
 
         {/* GRAMMARLY PREMIUM - Left Card */}
         <div className="flex items-center w-full max-w-[550px] mx-auto mb-12 gap-x-2 sm:gap-x-4 md:gap-x-10 lg:gap-x-12">
-          <Image 
+          <Image
             src="/images/student-perks/logo-grammarly-perks-academix.png"
             alt="GRAMMARLY PREMIUM"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-24 w-24 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
           <div className="flex-1 min-w-0 text-left">
             <a
@@ -228,21 +237,22 @@ export default function StudentPerks() {
               </span>
               {/* Desktop: one line */}
               <span className="hidden sm:inline-flex items-center">
-                GRAMMARLY PREMIUM <MdArrowOutward className="ml-1 block sm:hidden" />
+                GRAMMARLY PREMIUM{" "}
+                <MdArrowOutward className="ml-1 block sm:hidden" />
               </span>
             </a>
             <p className="text-base text-[10px] sm:text-lg leading-snug">
               {`1 TB Cloud Storage\nWrite with confidence using Grammarly Premium for free! Sign up at https://grammarly.com/enterprise/signup using your AdDU email and enjoy advanced grammar, style, and clarity suggestions.`
-                .split('\n').map((line, idx) => (
-                <React.Fragment key={idx}>
-                {processLine(line)}
-                <br />
-                </React.Fragment>
+                .split("\n")
+                .map((line, idx) => (
+                  <React.Fragment key={idx}>
+                    {processLine(line)}
+                    <br />
+                  </React.Fragment>
                 ))}
             </p>
           </div>
         </div>
-
       </div>
     </div>
   );
