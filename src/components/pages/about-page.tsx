@@ -3,9 +3,15 @@ import Image from "next/image";
 import HeroBanner from '../ui/hero-banner';
 
 function AboutPage() {
+  const emphasisStyle = "font-formular-medium font-medium";
+
   // Formular is missing glyphs for smart punctuation, so we use Arial as a fallback.
   const RSQUO = <span className="font-['Arial']">&rsquo;</span>;
   const MDASH = <span className="font-['Arial']">&mdash;</span>;
+  const COLON = <span className="font-['Arial']">:</span>;
+  const SEMICOLON = <span className="font-['Arial']">;</span>;
+  const PLUS = <span className="font-['Arial']">+</span>;
+  const BOLD_MDASH = <span className="font-['Arial'] font-bold">&mdash;</span>;
 
   return (
     <div className="flex flex-col min-h-screen relative bg-white">
@@ -91,37 +97,37 @@ function AboutPage() {
 
           <div className='mt-7 lg:mt-10 flex flex-col gap-y-3.5 lg:gap-y-6 text-justify text-sm lg:text-base 2xl:text-lg font-formular-regular text-mainblue'>
             <div>
-              In a world where doing more is often mistaken for being more, it{RSQUO}s easy to just keep going, to chase the next, and to run after whatever lies ahead. And so they say, it takes no force to keep moving, because momentum can carry you even when meaning no longer does. 
+              In a world where doing more is often mistaken for being more, <strong className={emphasisStyle}><em>it{RSQUO}s easy to just keep going, to chase the next, and to run after whatever lies ahead.</em></strong> And so they say, it takes no force to keep moving, because momentum can carry you even when meaning no longer does. 
             </div>
             <div>
-              But perhaps movement was never meant to be about achieving everything. Not in how far we go, but in who we bring with us, in why we started, and in whether the direction still leads us home. 
+              <strong className={emphasisStyle}><em>But perhaps movement was never meant to be about achieving everything.</em></strong> Not in how far we go, but in <strong className={emphasisStyle}>who we bring with us,</strong> in <strong className={emphasisStyle}>why we started,</strong> and in <strong className={emphasisStyle}>whether the direction still leads us home.</strong>
             </div>
             <div>
-              This year, as we journey through this defining moment, we stride together as one SAMAHAN On the Move {MDASH} a community built with the boldest aspirations to bring every Atenean to the farthest of all we can become: to reimagine a system that serves, to redefine leadership that listens, and to rebuild a future where student governance is truly present, grounded, and relentlessly engaged. 
+              This year, as we journey through this defining moment, we stride together as one <span className="font-formular-bold text-xl">SAMAHAN On the Move</span> {BOLD_MDASH} a community built with the boldest aspirations to bring every Atenean to the farthest of all we can become{COLON} to <strong className={emphasisStyle}>reimagine a system <em>that serves,</em></strong> to <strong className={emphasisStyle}>redefine leadership <em>that listens,</em></strong> and to <strong className={emphasisStyle}>rebuild a future <em>where student governance is truly present, grounded, and relentlessly engaged.</em></strong>
             </div>
             <div>
-              As we move to begin this 2025, we take the first step in bringing SAMAHAN closer to the Ateneo future we have long been imagining {MDASH} one that responds to the needs of the present and is intentional in pursuing the changes that truly matter.
+              As we move to begin this 2025, <strong className={emphasisStyle}>we take the first step in bringing SAMAHAN closer to the Ateneo future we have long been imagining</strong> {MDASH} one that responds to the needs of the present and is intentional in pursuing the changes that truly matter.
             </div>
             <div>
-              Stepping in the direction true to our collective ambition, we are on the move as we cultivate vibrant student spaces, advance student-centered reforms, and champion a student governance that is sustainable, inclusive, and representative.
+              Stepping in the direction true to our collective ambition, we are on the move as we <strong className={emphasisStyle}>cultivate <em>vibrant student spaces,</em> advance <em>student-centered reforms,</em></strong> and <strong className={emphasisStyle}>champion <em>a student governance that is sustainable, inclusive, and representative.</em></strong>
             </div>
             <div>
-              Because staying still is to deny the possibility of something more. Here, we move not just out of necessity, but from hope that beyond what is, lies what could be. Yet none of this matters if we{RSQUO}re only moving just to say we are. Because in this SAMAHAN, we move with meaning, with intention, and above all:
+              <strong className={emphasisStyle}>Because staying still is to deny the possibility of something more.</strong> Here, we move not just out of necessity, <strong className={emphasisStyle}><em>but from hope that beyond what is, lies what could be.</em></strong> Yet none of this matters if we{RSQUO}re only moving just to say we are. Because in this SAMAHAN, we move with <strong className={emphasisStyle}><em>meaning</em></strong>, with <strong className={emphasisStyle}><em>intention,</em></strong> and above all{COLON}
             </div>
             <div>
-              We move with every student who dares to dream louder {MDASH} with our scholars, born from stories of sacrifice and giving back; with our student leaders, advocates, and activists who always carry others as they go. 
+              We move with every student who dares to dream louder {MDASH} with our scholars, born from stories of sacrifice and giving back{SEMICOLON} with our student leaders, advocates, and activists who always carry others as they go. 
             </div>
             <div>
               We move with our student-athletes who lead with heart and discipline, with our campus journalists who speak truth when it{RSQUO}s hardest, and with our performers whose passion becomes something greater than themselves. 
             </div>
             <div>
-              We move with those who root us in identity and conviction {MDASH} with our Lumad and Moro communities who remind us where we stand, with our Christian and Muslim brothers and sisters whose faith inspires what we believe in, and with our LGBTQ+ community whose courage teaches us to love louder and stand prouder.
+              We move with those who root us in identity and conviction {MDASH} with our Lumad and Moro communities who remind us where we stand, with our Christian and Muslim brothers and sisters whose faith inspires what we believe in, and with our LGBTQ{PLUS} community whose courage teaches us to love louder and stand prouder.
             </div>
             <div>
-              And more than anything, we move with every Atenean, whether walking ahead or walking beside, whose presence powers this movement forward.
+              And more than anything, we move with every <strong className={emphasisStyle}>Atenean,</strong> whether walking ahead or walking beside, <strong className={emphasisStyle}><em>whose presence powers this movement forward.</em></strong>
             </div>
             <div>
-              This is SAMAHAN On the Move{MDASH}where every move matters if it is taken with you. Samahan niyo kami sa SAMAHAN. Because this worth moving journey is yours, too.
+              This is <strong className={emphasisStyle}>SAMAHAN On the Move{MDASH}<em>where every move matters if it is taken with you.</em></strong> Samahan niyo kami sa <strong className={emphasisStyle}>SAMAHAN.</strong> Because this worth moving journey is yours, too.
             </div>
           </div>
 
