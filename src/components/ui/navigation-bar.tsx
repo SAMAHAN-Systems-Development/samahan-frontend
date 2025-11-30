@@ -28,7 +28,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="pointer-events-none sticky top-0 z-50 px-4 py-4 sm:px-6 lg:px-10 xl:px-24 2xl:px-40">
+    <div className="pointer-events-none fixed top-0 z-50 w-full px-4 py-4 sm:px-6 lg:px-10 xl:px-24 2xl:px-40">
       <div className="relative lg:hidden">
         <div
           className={`flex h-14 items-center justify-start px-4 sm:px-6 ${
