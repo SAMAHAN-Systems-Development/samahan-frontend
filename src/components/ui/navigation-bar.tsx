@@ -125,7 +125,7 @@ export default function Navbar() {
       {/* Desktop nav */}
       <div className="hidden lg:block">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-mainblue/80 h-14 py-7 flex items-center justify-between lg:px-4 xl:px-8 rounded-full border border-blue1/90 pointer-events-auto">
+          <div className="bg-mainblue/95 h-14 py-7 flex items-center justify-between lg:px-4 xl:px-8 rounded-full border border-blue1/90 pointer-events-auto">
             <Link href="/" className="relative h-6 w-20 xl:w-22">
               <Image
                 src="/images/on-the-move-logo.png"
