@@ -40,7 +40,7 @@ const ProfileCard = ({ image, variant = "default" }: ProfileCardProps) => {
      heightVariables = "[--extra-height:30px] xs:[--extra-height:40px] md:[--extra-height:50px] xl:[--extra-height:60px]";
   } else if (isTaller) {
      // CASE: Just Taller (Aesthetic variation)
-     heightVariables = "[--extra-height:12px] xs:[--extra-height:21px] md:[--extra-height:20px] xl:[--extra-height:30px]";
+     heightVariables = "[--extra-height:13.5px] xs:[--extra-height:17px] xs-sm:[--extra-height:20px] sm:[--extra-height:23px] md:[--extra-height:26px] xl:[--extra-height:30px]";
   }
 
   return (

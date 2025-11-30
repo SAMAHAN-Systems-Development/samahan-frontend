@@ -4,6 +4,7 @@
 @theme {
   --breakpoint-xxs: 20rem;
   --breakpoint-xs: 425px;
+  --breakpoint-xs-sm: 530px;
   --color-mainblue: #002075;
   --color-blue1: #002AA0;
   --color-blue2: #083BA9;
