@@ -39,7 +39,7 @@ export default function IcommpEquipment() {
           <Button
             className="cursor-pointer py-3 px-6 rounded-2xl"
             onClick={() =>
-              window.open("https://forms.gle/icompp-booking-form", "_blank")
+              window.open("https://docs.google.com/forms/d/e/1FAIpQLSfZECyMcQ7dCiQUr8dosFKrdfuoExv_9AxDNQzMZ8oWzimhHQ/viewform?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNDM3NjI2MzE2OTczNzg4AAEeexPb-ZH5b4p36Om79y6vj_Tol7CLhZ5VdH7RC2p5JT3q22aOidesAKKeFt0_aem_uo7KDdOJ-vb2FmqguV959Q", "_blank")
             }
           >
             BOOK ICOMMP EQUIPMENT
