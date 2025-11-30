@@ -4,15 +4,15 @@ export interface EquipmentItem {
   note?: string;
 }
 
-export const icomppEquipmentData: EquipmentItem[] = [
+export const icommpEquipmentData: EquipmentItem[] = [
   {
     id: 1,
-    name: "ICOMPP Studio 1 (Blog Room)",
+    name: "ICOMMP Studio 1 (Blog Room)",
     note: "The studio also offers DSLR, Tripod, and Lights upon your request.",
   },
   {
     id: 2,
-    name: "ICOMPP Studio 2",
+    name: "ICOMMP Studio 2",
     note: "The studio also offers DSLR, Tripod, and Lights upon your request.",
   },
   {

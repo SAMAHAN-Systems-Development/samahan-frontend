@@ -1,11 +1,11 @@
 import TabHeader from "@/components/ui/tab-header";
-import { icomppEquipmentData } from "@/data/icompp-equipment-data";
+import { icommpEquipmentData } from "@/data/icompp-equipment-data";
 import { Button } from "../ui/button";
 
-export default function IcomppEquipment() {
+export default function IcommpEquipment() {
   return (
     <div className="w-full">
-      <TabHeader name="ICOMPP EQUIPMENT AND STUDIOS BOOKING" />
+      <TabHeader name="ICOMMP EQUIPMENT AND STUDIOS BOOKING" />
 
       <div className="mt-6 md:mt-8 px-4 md:px-8 lg:px-12">
         <p className="font-formular-regular text-sm md:text-base text-mainblue mb-6 md:mb-8">
@@ -16,7 +16,7 @@ export default function IcomppEquipment() {
 
       <div className="px-4 md:px-8 md:ml-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          {icomppEquipmentData.map((item) => (
+          {icommpEquipmentData.map((item) => (
             <div key={item.id} className="flex gap-3">
               <span className="font-formular text-mainblue text-sm md:text-base flex-shrink-0">
                 {item.id}.
@@ -36,11 +36,13 @@ export default function IcomppEquipment() {
         </div>
 
         <div className="flex justify-center mt-8 md:mt-10 lg:mt-14">
-          <Button 
+          <Button
             className="cursor-pointer py-3 px-6 rounded-2xl"
-            onClick={() => window.open("https://forms.gle/icompp-booking-form", "_blank")}
+            onClick={() =>
+              window.open("https://forms.gle/icompp-booking-form", "_blank")
+            }
           >
-            BOOK ICOMPP EQUIPMENT
+            BOOK ICOMMP EQUIPMENT
           </Button>
         </div>
       </div>
