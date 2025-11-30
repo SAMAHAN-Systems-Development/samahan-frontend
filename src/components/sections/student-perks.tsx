@@ -75,7 +75,7 @@ export default function StudentPerks() {
             alt="SPOTIFY"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-25 w-25 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
           <div className="flex-1 min-w-0 text-left">
             <a
@@ -132,7 +132,7 @@ export default function StudentPerks() {
             alt="APPLE MUSIC"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-25 w-25 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
         </div>
 
@@ -143,7 +143,7 @@ export default function StudentPerks() {
             alt="MICROSOFT OFFICE 365"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-25 w-25 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
           <div className="flex-1 min-w-0 text-left">
             <a
@@ -207,7 +207,7 @@ export default function StudentPerks() {
             alt="GOOGLE WORKSPACE FOR EDUCATION"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-25 w-25 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
         </div>
 
@@ -218,7 +218,7 @@ export default function StudentPerks() {
             alt="GRAMMARLY PREMIUM"
             width={200}
             height={200}
-            className="h-22 w-22 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
+            className="h-24 w-24 md:size-50 lg:h-60 lg:w-60 xs:w-25 xs:h-25 sm:w-30 sm:h-30 object-contain"
           />
           <div className="flex-1 min-w-0 text-left">
             <a
