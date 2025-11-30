@@ -1,7 +1,9 @@
 import React from 'react'
+import Image from "next/image" // Import Image
 import HeroBanner from '../ui/hero-banner'
 import ProfileGroup from '../sections/profile-group'
 import ProfileCard from '../ui/profile-card'
+import Link from 'next/link'
 
 function CentralBoardPage() {
   return (
@@ -13,12 +15,74 @@ function CentralBoardPage() {
         header2="CENTRAL BOARD"
       />
 
+      <div className="w-full max-w-7xl mx-auto px-8 mt-7 md:mt-16 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 justify-items-center">
+          
+          {/* 1. Hannah Aquino */}
+          
+            <div className="w-full max-w-[400px] lg:max-w-[588px]">
+              <Link href={"/offices/osp"} className='w-full'>
+                <Image
+                  src="/images/scb/hannah-aquino.png"
+                  alt="Hannah Aquino"
+                  width={657}
+                  height={430}
+                  className="w-full h-auto object-contain"
+                  priority
+                  quality={100}
+                />
+              </Link>
+              
+            </div>
+
+          {/* 2. Ken Ryle Hinojales */}
+          <div className="w-full max-w-[400px] lg:max-w-[588px]">
+            <Link href={"/offices/osvp"} className='w-full'>
+              <Image
+                src="/images/scb/ken-hinojales.png"
+                alt="Ken Ryle Hinojales"
+                width={657}
+                height={430}
+                className="w-full h-auto object-contain"
+                priority
+                quality={100}
+              />
+            </Link>
+          </div>
+
+          {/* 3. Philipina Gutierrez */}
+          <div className="w-full max-w-[400px] lg:max-w-[588px]">
+            <Link href={"/offices/osg"} className='w-full'>
+              <Image
+                src="/images/scb/philipina-gutierrez.png"
+                alt="Philipina Gutierrez"
+                width={657}
+                height={430}
+                className="w-full h-auto object-contain"
+              />
+            </Link>
+          </div>
+
+          {/* 4. Mickyla Loriene Almadin */}
+          <div className="w-full max-w-[400px] lg:max-w-[588px]">
+            <Link href={"/offices/ost"} className='w-full'>
+              <Image
+                src="/images/scb/mickyla-almadin.png"
+                alt="Mickyla Loriene Almadin"
+                width={657}
+                height={430}
+                className="w-full h-auto object-contain"
+              />
+            </Link>
+          </div>
+
+        </div>
+      </div>
+
       <ProfileGroup 
         groupTitle='CLUSTER REPRESENTATIVES' 
         description='The Cluster Representatives are the voice of the student body from their respective schools and clusters.'
       >
-        {/* GRID CONTAINER */}
-        {/* Mobile: 2 columns | Desktop: 3 columns */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           
           {/* 1. Filfred Kaizzer Calma */}
