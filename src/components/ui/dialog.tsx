@@ -84,6 +84,7 @@ function DialogContent({
               "shadow-sm",
               
               // Interactive states
+              "cursor-pointer",
               "opacity-90 hover:opacity-100",
               "transition-all duration-200",
               "hover:scale-110",
