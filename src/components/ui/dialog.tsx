@@ -1,9 +1,7 @@
 "use client";
-
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { XIcon } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 
 function Dialog({
@@ -69,9 +67,33 @@ function DialogContent({
         {showCloseButton && (
           <DialogPrimitive.Close
             data-slot="dialog-close"
-            className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+            className={cn(
+              // Positioning - industry standard top-right with consistent spacing
+              "absolute right-3 top-3",
+              "sm:right-4 sm:top-4",
+              
+              // Size - scales properly across breakpoints
+              "h-8 w-8",
+              "sm:h-9 sm:w-9",
+              "md:h-10 md:w-10",
+              
+              // Visual styling
+              "flex items-center justify-center rounded-full",
+              "bg-mainblue text-white",
+              "shadow-sm",
+              
+              // Interactive states
+              "opacity-90 hover:opacity-100",
+              "transition-all duration-200",
+              "hover:scale-110",
+              "focus:outline-none focus:ring-2 focus:ring-mainblue focus:ring-offset-2",
+              
+              // Disabled state
+              "disabled:pointer-events-none disabled:opacity-50"
+            )}
+            aria-label="Close dialog"
           >
-            <XIcon />
+            <XIcon className="h-5 w-5 sm:h-5.5 sm:w-5.5 md:h-6 md:w-6" />
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
         )}
