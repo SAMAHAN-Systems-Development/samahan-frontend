@@ -36,7 +36,7 @@ export default function AdvocasixModal({
           "fixed left-[50%] top-[50%] z-50 flex flex-col gap-0 rounded-xl border-2 border-mainblue bg-white p-0 shadow-2xl duration-200 translate-x-[-50%] translate-y-[-50%]",
 
           // Sizing Logic (Frame)
-          "h-auto max-h-[85vh]",
+          "h-auto min-h-[500px] max-h-[65vh] sm:max-h-[85vh]",
           "w-[95vw]",
           "sm:w-[90vw] sm:max-w-full",
           "md:w-[85vw] md:max-w-full",
@@ -69,11 +69,9 @@ export default function AdvocasixModal({
               "relative w-full shrink-0 overflow-hidden border-b-2 border-b-mainblue", // Removed rounded-t-xl here as parent clips it
               // Height Breakpoints
               "h-[256px]",
-              "sm:h-[320px]",
-              "md:h-[256px]",
-              "lg:h-[256px]",
-              "xl:h-[300px]",
-              "2xl:h-[380px]"
+              "sm:h-[380px]",
+              "md:h-[420px]",
+              "lg:h-[320px]"
             )}
           >
             <Image
