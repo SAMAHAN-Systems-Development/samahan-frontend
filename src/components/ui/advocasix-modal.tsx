@@ -34,96 +34,104 @@ export default function AdvocasixModal({
         className={cn(
           // Positioning & Centering
           "fixed left-[50%] top-[50%] z-50 flex flex-col gap-0 rounded-xl border-2 border-mainblue bg-white p-0 shadow-2xl duration-200 translate-x-[-50%] translate-y-[-50%]",
-          
-          // Sizing Logic
+
+          // Sizing Logic (Frame)
           "h-auto max-h-[85vh]",
           "w-[95vw]",
           "sm:w-[90vw] sm:max-w-full",
           "md:w-[85vw] md:max-w-full",
           "lg:w-[60vw] lg:max-w-[920px]",
-          "overflow-y-auto", 
+          "overflow-hidden",
 
-          // Scroll Logic
-          "overflow-y-auto",
-          // Hide for Firefox
-          "[scrollbar-width:none]", 
-          // Hide for IE and Edge
-          "[-ms-overflow-style:none]", 
-          // Hide for Chrome, Safari and Opera
-          "[&::-webkit-scrollbar]:hidden",
-          
           className
         )}
       >
-        {/* IMAGE SECTION */}
+        {/* SCROLL WRAPPER */}
         <div
           className={cn(
-            // Base Layout
-            "relative w-full shrink-0 overflow-hidden rounded-t-xl border-b-2 border-b-mainblue",
-            // Height Breakpoints
-            "h-[256px]",
-            "sm:h-[320px]",
-            "md:h-[256px]",
-            "lg:h-[256px]",
-            "xl:h-[300px]",
-            "2xl:h-[380px]"
-          )}
-        >
-          <Image
-            className="h-full w-full object-cover"
-            src={image.imgSource}
-            alt={image.imageAlt}
-            width={1200}
-            height={800}
-            priority
-          />
-        </div>
-
-        {/* TEXT CONTENT AREA */}
-        <div
-          className={cn(
-            // Base Layout
-            "flex flex-col items-center", 
+            // Make this take up all available space in the modal
+            "flex flex-col h-full w-full",
             
-            // Padding Breakpoints
-            "px-10 py-10",
-            "sm:px-20 sm:py-12",
-            "md:px-19 md:py-10",
-            "lg:px-20",
-            "xl:px-30 xl:py-13",
-            "2xl:px-30 2xl:pt-14 2xl:pb-15"
+            // Scroll Logic
+            "overflow-y-auto",
+            // Hide for Firefox
+            "[scrollbar-width:none]",
+            // Hide for IE and Edge
+            "[-ms-overflow-style:none]",
+            // Hide for Chrome, Safari and Opera
+            "[&::-webkit-scrollbar]:hidden"
           )}
         >
-          <DialogTitle asChild>
-            <h1
-              className={cn(
-                // Base Typography
-                "font-formular-black w-full text-center uppercase leading-tight text-mainblue",
-                // Size Breakpoints
-                "text-lg",
-                "sm:text-2xl",
-                "md:text-3xl",
-                "lg:text-3xl",
-                "xl:text-4xl",
-                "2xl:text-5xl"
-              )}
-            >
-              {title}
-            </h1>
-          </DialogTitle>
+          {/* IMAGE SECTION */}
           <div
             className={cn(
-              // Base Typography & Layout
-              "w-full text-justify leading-relaxed text-mainblue/90",
-              // Margin & Text Size Breakpoints
-              "mt-4 text-sm",
-              "sm:text-base",
-              "lg:mt-3 lg:text-base",
-              "xl:mt-4",
-              "2xl:text-lg"
+              // Base Layout
+              "relative w-full shrink-0 overflow-hidden border-b-2 border-b-mainblue", // Removed rounded-t-xl here as parent clips it
+              // Height Breakpoints
+              "h-[256px]",
+              "sm:h-[320px]",
+              "md:h-[256px]",
+              "lg:h-[256px]",
+              "xl:h-[300px]",
+              "2xl:h-[380px]"
             )}
           >
-            {content}
+            <Image
+              className="h-full w-full object-cover"
+              src={image.imgSource}
+              alt={image.imageAlt}
+              width={1200}
+              height={800}
+              priority
+            />
+          </div>
+
+          {/* TEXT CONTENT AREA */}
+          <div
+            className={cn(
+              // Base Layout
+              "flex flex-col items-center",
+
+              // Padding Breakpoints
+              "px-10 py-10",
+              "sm:px-20 sm:py-12",
+              "md:px-19 md:py-10",
+              "lg:px-20",
+              "xl:px-30 xl:py-13",
+              "2xl:px-30 2xl:pt-14 2xl:pb-15"
+            )}
+          >
+            <DialogTitle asChild>
+              <h1
+                className={cn(
+                  // Base Typography
+                  "font-formular-black w-full text-center uppercase leading-tight text-mainblue",
+                  // Size Breakpoints
+                  "text-lg",
+                  "sm:text-2xl",
+                  "md:text-3xl",
+                  "lg:text-3xl",
+                  "xl:text-4xl",
+                  "2xl:text-5xl"
+                )}
+              >
+                {title}
+              </h1>
+            </DialogTitle>
+            <div
+              className={cn(
+                // Base Typography & Layout
+                "w-full text-justify leading-relaxed text-mainblue/90",
+                // Margin & Text Size Breakpoints
+                "mt-4 text-sm",
+                "sm:text-base",
+                "lg:mt-3 lg:text-base",
+                "xl:mt-4",
+                "2xl:text-lg"
+              )}
+            >
+              {content}
+            </div>
           </div>
         </div>
       </DialogContent>
