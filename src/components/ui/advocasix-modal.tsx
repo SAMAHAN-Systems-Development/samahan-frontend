@@ -41,6 +41,17 @@ export default function AdvocasixModal({
           "sm:w-[90vw] sm:max-w-full",
           "md:w-[85vw] md:max-w-full",
           "lg:w-[60vw] lg:max-w-[920px]",
+          "overflow-y-auto", 
+
+          // Scroll Logic
+          "overflow-y-auto",
+          // Hide for Firefox
+          "[scrollbar-width:none]", 
+          // Hide for IE and Edge
+          "[-ms-overflow-style:none]", 
+          // Hide for Chrome, Safari and Opera
+          "[&::-webkit-scrollbar]:hidden",
+          
           className
         )}
       >
@@ -50,11 +61,12 @@ export default function AdvocasixModal({
             // Base Layout
             "relative w-full shrink-0 overflow-hidden rounded-t-xl border-b-2 border-b-mainblue",
             // Height Breakpoints
-            "h-[168px]",
-            "sm:h-[168px]",
-            "lg:h-[192px]",
-            "xl:h-[224px]",
-            "2xl:h-[256px]"
+            "h-[256px]",
+            "sm:h-[320px]",
+            "md:h-[256px]",
+            "lg:h-[256px]",
+            "xl:h-[300px]",
+            "2xl:h-[380px]"
           )}
         >
           <Image
@@ -71,14 +83,15 @@ export default function AdvocasixModal({
         <div
           className={cn(
             // Base Layout
-            "flex flex-1 min-h-0 flex-col items-center overflow-y-auto",
+            "flex flex-col items-center", 
+            
             // Padding Breakpoints
-            "px-6 py-8",
-            "sm:px-16 sm:py-8",
-            "md:px-19",
+            "px-10 py-10",
+            "sm:px-20 sm:py-12",
+            "md:px-19 md:py-10",
             "lg:px-20",
-            "xl:py-10",
-            "2xl:px-26 2xl:pt-12 2xl:pb-13"
+            "xl:px-30 xl:py-13",
+            "2xl:px-30 2xl:pt-14 2xl:pb-15"
           )}
         >
           <DialogTitle asChild>
@@ -88,10 +101,11 @@ export default function AdvocasixModal({
                 "font-formular-black w-full text-center uppercase leading-tight text-mainblue",
                 // Size Breakpoints
                 "text-lg",
-                "md:text-xl",
-                "lg:text-2xl",
-                "xl:text-3xl",
-                "2xl:text-4xl"
+                "sm:text-2xl",
+                "md:text-3xl",
+                "lg:text-3xl",
+                "xl:text-4xl",
+                "2xl:text-5xl"
               )}
             >
               {title}
@@ -103,6 +117,7 @@ export default function AdvocasixModal({
               "w-full text-justify leading-relaxed text-mainblue/90",
               // Margin & Text Size Breakpoints
               "mt-4 text-sm",
+              "sm:text-base",
               "lg:mt-3 lg:text-base",
               "xl:mt-4",
               "2xl:text-lg"
