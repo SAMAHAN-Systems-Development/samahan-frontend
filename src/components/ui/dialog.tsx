@@ -86,7 +86,7 @@ function DialogContent({
               "opacity-90 hover:opacity-100",
               "transition-all duration-200",
               "hover:scale-110",
-              "focus:outline-none focus:ring-2 focus:ring-mainblue focus:ring-offset-2",
+              "focus:outline-none focus-visible:ring-2 focus-visible:ring-mainblue focus-visible:ring-offset-2",
               
               // Disabled state
               "disabled:pointer-events-none disabled:opacity-50"
