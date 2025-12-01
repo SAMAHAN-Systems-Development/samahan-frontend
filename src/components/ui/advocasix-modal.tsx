@@ -37,10 +37,10 @@ export default function AdvocasixModal({
           
           // Sizing Logic
           "h-auto max-h-[85vh]",
-          "w-[95vw] sm:max-w-full",
+          "w-[95vw]",
           "sm:w-[90vw] sm:max-w-full",
-          "md:w-[85vw]",
-          "lg:w-[65vw] lg:max-w-[920px]",
+          "md:w-[85vw] md:max-w-full",
+          "lg:w-[60vw] lg:max-w-[920px]",
           className
         )}
       >
