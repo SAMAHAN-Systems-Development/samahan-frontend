@@ -76,6 +76,7 @@ function DialogContent({
               "h-8 w-8",
               "sm:h-9 sm:w-9",
               "md:h-10 md:w-10",
+              "xl:h-12 md:w-12",
               
               // Visual styling
               "flex items-center justify-center rounded-full",
