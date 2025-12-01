@@ -1,7 +1,5 @@
 "use client";
-
 import Image from "next/image";
-import { X } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -29,41 +27,89 @@ export default function AdvocasixModal({
 }: AdvocasixModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogOverlay className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
+      <DialogOverlay className="fixed inset-0 bg-black/40 backdrop-blur-sm animate-in fade-in-0" />
       <DialogContent
         onInteractOutside={(e) => e.preventDefault()}
+        showCloseButton={true}
         className={cn(
-          "flex h-svh max-h-fit w-full max-w-70 flex-col gap-0 overflow-y-auto rounded-xl border-2 border-mainblue p-0 shadow-2xl sm:max-w-120 sm:rounded-2xl md:max-w-150 lg:max-w-200",
-          className,
+          // Positioning & Centering
+          "fixed left-[50%] top-[50%] z-50 flex flex-col gap-0 rounded-xl border-2 border-mainblue bg-white p-0 shadow-2xl duration-200 translate-x-[-50%] translate-y-[-50%]",
+          
+          // Sizing Logic
+          "h-auto max-h-[85vh]",
+          "w-[95vw] sm:max-w-full",
+          "sm:w-[90vw] sm:max-w-full",
+          "md:w-[85vw]",
+          "lg:w-[65vw] lg:max-w-[920px]",
+          className
         )}
       >
-        <button
-          onClick={() => onOpenChange(false)}
-          aria-label="Close"
-          className="absolute top-3 right-3 z-10 grid h-9 w-9 cursor-pointer place-items-center rounded-full bg-mainblue text-white transition-all ease-in hover:scale-105 sm:h-10 sm:w-10 md:h-11 md:w-11"
+        {/* IMAGE SECTION */}
+        <div
+          className={cn(
+            // Base Layout
+            "relative w-full shrink-0 overflow-hidden rounded-t-xl border-b-2 border-b-mainblue",
+            // Height Breakpoints
+            "h-[168px]",
+            "sm:h-[168px]",
+            "lg:h-[192px]",
+            "xl:h-[224px]",
+            "2xl:h-[256px]"
+          )}
         >
-          <X className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />
-        </button>
+          <Image
+            className="h-full w-full object-cover"
+            src={image.imgSource}
+            alt={image.imageAlt}
+            width={1200}
+            height={800}
+            priority
+          />
+        </div>
 
-        <Image
-          className="max-h-40 min-h-40 w-full rounded-t-xl border-b-2 border-b-mainblue object-cover sm:max-h-56 sm:min-h-56 md:h-72 md:min-h-72 lg:h-80 lg:min-h-80 xl:h-96 xl:min-h-96"
-          src={image.imgSource}
-          alt={image.imageAlt}
-          width={1920}
-          height={1080}
-          priority
-        />
-
-        <div className="flex w-full flex-col items-center py-5 text-center sm:py-7 md:py-8 lg:py-16">
+        {/* TEXT CONTENT AREA */}
+        <div
+          className={cn(
+            // Base Layout
+            "flex flex-1 min-h-0 flex-col items-center overflow-y-auto",
+            // Padding Breakpoints
+            "px-6 py-8",
+            "sm:px-16 sm:py-8",
+            "md:px-19",
+            "lg:px-20",
+            "xl:py-10",
+            "2xl:px-26 2xl:pt-12 2xl:pb-13"
+          )}
+        >
           <DialogTitle asChild>
-            <h1 className="font-formular-black w-full text-2xl leading-tight text-mainblue uppercase sm:text-3xl md:text-4xl lg:text-5xl">
+            <h1
+              className={cn(
+                // Base Typography
+                "font-formular-black w-full text-center uppercase leading-tight text-mainblue",
+                // Size Breakpoints
+                "text-lg",
+                "md:text-xl",
+                "lg:text-2xl",
+                "xl:text-3xl",
+                "2xl:text-4xl"
+              )}
+            >
               {title}
             </h1>
           </DialogTitle>
-
-          <p className="font-formular mx-0 mt-1.5 w-full max-w-none px-8 text-justify text-[11px] leading-[1.25] text-mainblue sm:mt-2 sm:text-xs md:mt-2.5 md:px-12 md:text-sm md:leading-snug lg:px-18">
+          <div
+            className={cn(
+              // Base Typography & Layout
+              "w-full text-justify leading-relaxed text-mainblue/90",
+              // Margin & Text Size Breakpoints
+              "mt-4 text-sm",
+              "lg:mt-3 lg:text-base",
+              "xl:mt-4",
+              "2xl:text-lg"
+            )}
+          >
             {content}
-          </p>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
