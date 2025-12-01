@@ -38,13 +38,13 @@ export default function CalendarEntry({
     <div
       onClick={onClick}
       className={cn(
-        `border-mainblue font-formular-regular flex w-full flex-row items-center gap-3 rounded-xl border-2 p-2`,
+        `border-mainblue font-formular-regular flex w-full flex-row items-center gap-2 md:gap-3 rounded-xl border-2 p-2`,
         `transition-colors duration-100 hover:cursor-pointer`,
         `${active ? styles.active : styles.inactive}`,
         className
       )}
     >
-      <p className="w-16 text-end">
+      <p className="min-w-14 md:min-w-16 text-end">
         {startDate && endDate ? `${startDate} - ${endDate}` : startDate}
       </p>
       <p className="flex-grow">{parseEventName(eventName)}</p>
