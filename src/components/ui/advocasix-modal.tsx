@@ -1,7 +1,5 @@
 "use client";
-
 import Image from "next/image";
-import { X } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -29,41 +27,110 @@ export default function AdvocasixModal({
 }: AdvocasixModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogOverlay className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
+      <DialogOverlay className="fixed inset-0 bg-black/40 backdrop-blur-sm animate-in fade-in-0" />
       <DialogContent
         onInteractOutside={(e) => e.preventDefault()}
+        showCloseButton={true}
         className={cn(
-          "flex h-svh max-h-fit w-full max-w-70 flex-col gap-0 overflow-y-auto rounded-xl border-2 border-mainblue p-0 shadow-2xl sm:max-w-120 sm:rounded-2xl md:max-w-150 lg:max-w-200",
-          className,
+          // Positioning & Centering
+          "fixed left-[50%] top-[50%] z-50 flex flex-col gap-0 rounded-xl border-2 border-mainblue bg-white p-0 shadow-2xl duration-200 translate-x-[-50%] translate-y-[-50%]",
+
+          // Sizing Logic (Frame)
+          "h-auto min-h-[500px] max-h-[65vh] sm:max-h-[85vh]",
+          "w-[95vw]",
+          "sm:w-[90vw] sm:max-w-full",
+          "md:w-[85vw] md:max-w-full",
+          "lg:w-[60vw] lg:max-w-[920px]",
+          "overflow-hidden",
+
+          className
         )}
       >
-        <button
-          onClick={() => onOpenChange(false)}
-          aria-label="Close"
-          className="absolute top-3 right-3 z-10 grid h-9 w-9 cursor-pointer place-items-center rounded-full bg-mainblue text-white transition-all ease-in hover:scale-105 sm:h-10 sm:w-10 md:h-11 md:w-11"
+        {/* SCROLL WRAPPER */}
+        <div
+          className={cn(
+            // Make this take up all available space in the modal
+            "flex flex-col h-full w-full",
+            
+            // Scroll Logic
+            "overflow-y-auto",
+            // Hide for Firefox
+            "[scrollbar-width:none]",
+            // Hide for IE and Edge
+            "[-ms-overflow-style:none]",
+            // Hide for Chrome, Safari and Opera
+            "[&::-webkit-scrollbar]:hidden"
+          )}
         >
-          <X className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />
-        </button>
+          {/* IMAGE SECTION */}
+          <div
+            className={cn(
+              // Base Layout
+              "relative w-full shrink-0 overflow-hidden border-b-2 border-b-mainblue", // Removed rounded-t-xl here as parent clips it
+              // Height Breakpoints
+              "h-[256px]",
+              "sm:h-[380px]",
+              "md:h-[420px]",
+              "lg:h-[320px]"
+            )}
+          >
+            <Image
+              className="h-full w-full object-cover"
+              src={image.imgSource}
+              alt={image.imageAlt}
+              width={1200}
+              height={800}
+              priority
+            />
+          </div>
 
-        <Image
-          className="max-h-40 min-h-40 w-full rounded-t-xl border-b-2 border-b-mainblue object-cover sm:max-h-56 sm:min-h-56 md:h-72 md:min-h-72 lg:h-80 lg:min-h-80 xl:h-96 xl:min-h-96"
-          src={image.imgSource}
-          alt={image.imageAlt}
-          width={1920}
-          height={1080}
-          priority
-        />
+          {/* TEXT CONTENT AREA */}
+          <div
+            className={cn(
+              // Base Layout
+              "flex flex-col items-center",
 
-        <div className="flex w-full flex-col items-center py-5 text-center sm:py-7 md:py-8 lg:py-16">
-          <DialogTitle asChild>
-            <h1 className="font-formular-black w-full text-2xl leading-tight text-mainblue uppercase sm:text-3xl md:text-4xl lg:text-5xl">
-              {title}
-            </h1>
-          </DialogTitle>
-
-          <p className="font-formular mx-0 mt-1.5 w-full max-w-none px-8 text-justify text-[11px] leading-[1.25] text-mainblue sm:mt-2 sm:text-xs md:mt-2.5 md:px-12 md:text-sm md:leading-snug lg:px-18">
-            {content}
-          </p>
+              // Padding Breakpoints
+              "px-10 py-10",
+              "sm:px-20 sm:py-12",
+              "md:px-19 md:py-10",
+              "lg:px-20",
+              "xl:px-30 xl:py-13",
+              "2xl:px-30 2xl:pt-14 2xl:pb-15"
+            )}
+          >
+            <DialogTitle asChild>
+              <h1
+                className={cn(
+                  // Base Typography
+                  "font-formular-black w-full text-center uppercase leading-tight text-mainblue",
+                  // Size Breakpoints
+                  "text-lg",
+                  "sm:text-2xl",
+                  "md:text-3xl",
+                  "lg:text-3xl",
+                  "xl:text-4xl",
+                  "2xl:text-5xl"
+                )}
+              >
+                {title}
+              </h1>
+            </DialogTitle>
+            <div
+              className={cn(
+                // Base Typography & Layout
+                "w-full text-justify leading-relaxed text-mainblue/90",
+                // Margin & Text Size Breakpoints
+                "mt-4 text-sm",
+                "sm:text-base",
+                "lg:mt-3 lg:text-base",
+                "xl:mt-4",
+                "2xl:text-lg"
+              )}
+            >
+              {content}
+            </div>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
