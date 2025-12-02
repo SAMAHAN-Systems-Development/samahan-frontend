@@ -56,9 +56,9 @@ const SamaSynchCalendarSection = () => {
 
   return (
     <div className="col-span-full flex justify-center mt-10">
-      <div className="relative flex flex-col items-center gap-16 w-full pt-10 pb-100 px-6 sm:px-10 lg:px-16">
+      <div className="relative flex flex-col items-center md:gap-16 w-full md:pt-10 pb-25 lg:pb-100 px-6 sm:px-10 lg:px-16">
         {/* BACKGROUND IMAGE */}
-        <div className="absolute left-1/2 bottom-90 md:bottom-40 -translate-x-1/2 h-[75vh]  md:h-[70vh] lg:h-[75vh] -z-10 pointer-events-none">
+        <div className="absolute left-1/2 bottom-10  md:bottom-40 -translate-x-1/2 h-[75vh]  md:h-[70vh] lg:h-[75vh] -z-10 pointer-events-none">
           <div className="relative w-[90vw] h-full">
             <Image
               alt="SamaSynch Background"
@@ -94,16 +94,15 @@ const SamaSynchCalendarSection = () => {
         </section>
 
         {/* CALENDAR + ENTRIES */}
-        <section className="flex flex-col md:flex-row items-center md:items-start justify-center md:gap-10 w-full max-w-6xl z-10">
+        <section className="flex flex-col md:flex-row items-center md:items-start justify-center md:gap-10 w-full max-w-6xl z-10 mb-10">
           {/* Calendar */}
-          <div className="flex justify-center md:justify-start px-4 max-w-[315px] ">
+          <div className="flex justify-center items-center md:justify-start px-4 max-w-[315px] sm:mb-5">
             <div
               className="
       transform
       scale-[0.75]
       sm:scale-[0.85]
       md:scale-100
-      origin-top
     "
             >
               <CalendarPicker
@@ -118,7 +117,7 @@ const SamaSynchCalendarSection = () => {
           </div>
 
           {/* Entries */}
-          <div className="flex flex-col gap-4 w-full  md:flex-1 md:max-w-[800px] px-4 sm:px-8 -mt-10 md:mt-0 ">
+          <div className="flex flex-col gap-4 w-full  md:flex-1 md:max-w-[800px] px-4 sm:px-8 h-full justify-center">
             {monthData.calendarEntry?.length ? (
               monthData.calendarEntry.map((sem, index) => {
                 const isActive = activeCalendarEntry.index === index;
@@ -152,7 +151,7 @@ const SamaSynchCalendarSection = () => {
                 );
               })
             ) : (
-              <p className="text-gray-500 text-center sm:mt-10">No events this month.</p>
+              <p className="text-gray-500 text-center">No events this month.</p>
             )}
           </div>
         </section>
