@@ -114,6 +114,7 @@ function GuidesitePage() {
                 variant="tab"
                 active={activeTab === tab.id}
                 onClick={() => setActiveTab(tab.id)}
+                className="xl:h-12 2xl:h-14"
               >
                 {tab.label}
               </Button>
