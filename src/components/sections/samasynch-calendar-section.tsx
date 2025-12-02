@@ -152,7 +152,7 @@ const SamaSynchCalendarSection = () => {
                 );
               })
             ) : (
-              <p className="text-gray-500 text-center">No events this month.</p>
+              <p className="text-gray-500 text-center sm:mt-10">No events this month.</p>
             )}
           </div>
         </section>
