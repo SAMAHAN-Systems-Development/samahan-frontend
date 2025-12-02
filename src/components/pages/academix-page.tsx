@@ -60,7 +60,7 @@ function AcademixPage() {
 
       {shouldShowBackground && (
         <div className="absolute inset-0 z-0 w-full h-full pointer-events-none overflow-hidden hidden md:block">
-          <div className={`absolute left-1/2 ${activePositionClass} z-0 h-[900px] w-[200vw] -translate-x-1/2 -translate-y-1/2 md:h-[700px] md:w-[1400px] lg:h-[800px] lg:w-[1750px] 2xl:h-[900px] 2xl:w-[130vw] scale-125 sm:scale-100 -rotate-45 xs:rotate-0`}>
+          <div className={`absolute left-1/2 ${activePositionClass} z-0 h-[900px] w-[200vw] -translate-x-1/2 -translate-y-1/2 md:-translate-y-1/3 md:h-[700px] md:w-[1400px] lg:h-[800px] lg:w-[1750px] 2xl:h-[900px] 2xl:w-[130vw] scale-125 sm:scale-100 -rotate-45 xs:rotate-0`}>
             <Image
               src="/images/tape-design/tape-1.svg"
               alt="Decorative tape design"
