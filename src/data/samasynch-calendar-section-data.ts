@@ -1,4 +1,3 @@
-// samasynch-calendar-section-data.ts
 import { CalendarEntryProps } from "@/components/ui/calendar-entry";
 
 export interface MonthData {
@@ -54,7 +53,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       {
         startDate: 10,
         endDate: 11,
-        eventName: "Ang Panukala: Student Assembly Capacity Building ^[OSVP]^",
+        eventName: "Ang Panukala: Student Assembly Capacity Building <span style=\"font-family: Arial, sans-serif;\">[</span>OSVP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 13,
@@ -68,7 +67,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       {
         startDate: 14,
         eventName:
-          "SAMAHAN Department of External Affairs Officers' Onboarding ^[DEA]^",
+          "SAMAHAN Department of External Affairs Officers' Onboarding <span style=\"font-family: Arial, sans-serif;\">[</span>DEA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 19,
@@ -76,7 +75,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       },
       {
         startDate: 19,
-        eventName: "Rise4Education State of the Youth Address ^[DAA]^",
+        eventName: "Rise4Education State of the Youth Address <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 21,
@@ -86,7 +85,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       {
         startDate: 21,
         endDate: 23,
-        eventName: "First Week of Excellence Atenean Help Desk ^[DAA]^",
+        eventName: "First Week of Excellence Atenean Help Desk <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 21,
@@ -95,7 +94,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       },
       {
         startDate: 26,
-        eventName: "Adopt-A-Riverbank Program Ocular Visitation ^[ESU]^",
+        eventName: "Adopt-A-Riverbank Program Ocular Visitation <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 30,
@@ -133,55 +132,55 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       {
         startDate: 1,
         eventName:
-          "Sparrow: Sponsorship Protocol & Regulation Workshop ^[SAS]^",
+          "Sparrow: Sponsorship Protocol & Regulation Workshop <span style=\"font-family: Arial, sans-serif;\">[</span>SAS<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 4,
-        eventName: "SAMAHAN Upskill ^[OSG]^",
+        eventName: "SAMAHAN Upskill <span style=\"font-family: Arial, sans-serif;\">[</span>OSG<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 4,
-        eventName: "NSM General Assembly ^[NSM]^",
+        eventName: "NSM General Assembly <span style=\"font-family: Arial, sans-serif;\">[</span>NSM<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 6,
-        eventName: "SAMAHAN SysDev General Assembly ^[SYSDEV]^",
+        eventName: "SAMAHAN SysDev General Assembly <span style=\"font-family: Arial, sans-serif;\">[</span>SYSDEV<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 6,
-        eventName: "SAMAHAN Ecoteneo Student Unit General Assembly ^[ESU]^",
+        eventName: "SAMAHAN Ecoteneo Student Unit General Assembly <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 6,
         endDate: 14,
         eventName:
-          "ATENEO ALL-ACCESS: The Resource Vault Survey Release ^[OST]^",
+          "ATENEO ALL-ACCESS: The Resource Vault Survey Release <span style=\"font-family: Arial, sans-serif;\">[</span>OST<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 8,
         eventName:
-          "SAMAHAN Department of Academic Affairs General Assembly & Capacity Building ^[DAA]^",
+          "SAMAHAN Department of Academic Affairs General Assembly & Capacity Building <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 8,
-        eventName: "ASP Host Pool Workshop ^[ASP]^",
+        eventName: "ASP Host Pool Workshop <span style=\"font-family: Arial, sans-serif;\">[</span>ASP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 9,
-        eventName: "School of Education General Assembly ^[SOE]^",
+        eventName: "School of Education General Assembly <span style=\"font-family: Arial, sans-serif;\">[</span>SOE<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 9,
         eventName:
-          "School of Engineering & Architecture General Assembly ^[SOEA]^",
+          "School of Engineering & Architecture General Assembly <span style=\"font-family: Arial, sans-serif;\">[</span>SOEA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 11,
-        eventName: "Business & Management General Assembly ^[B&M]^",
+        eventName: "Business & Management General Assembly <span style=\"font-family: Arial, sans-serif;\">[</span>B&M<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 13,
-        eventName: "DAA Prelim Tutorials ^[DAA]^",
+        eventName: "DAA Prelim Tutorials <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 14,
@@ -189,37 +188,37 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       },
       {
         startDate: 16,
-        eventName: "Adopt-A-Riverbank Program 1st Visitation^[ESU]^",
+        eventName: "Adopt-A-Riverbank Program 1st Visitation<span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 18,
         eventName:
-          "SAMAComms General Assembly and Training and Development ^[SAMACOMMSS]^",
+          "SAMAComms General Assembly and Training and Development <span style=\"font-family: Arial, sans-serif;\">[</span>SAMACOMMSS<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 25,
-        eventName: "SAMAComms Branding Release ^[SAMACOMMSS]^",
+        eventName: "SAMAComms Branding Release <span style=\"font-family: Arial, sans-serif;\">[</span>SAMACOMMSS<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 27,
-        eventName: "Social Sciences General Assembly ^[SS]^",
+        eventName: "Social Sciences General Assembly <span style=\"font-family: Arial, sans-serif;\">[</span>SS<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 28,
         endDate: 29,
-        eventName: "The Ateneo Caravan: Adulting On The Move ^[OSP]^",
+        eventName: "The Ateneo Caravan: Adulting On The Move <span style=\"font-family: Arial, sans-serif;\">[</span>OSP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 29,
-        eventName: "Humanities & Letters General Assembly ^[HUMLET]^",
+        eventName: "Humanities & Letters General Assembly <span style=\"font-family: Arial, sans-serif;\">[</span>HUMLET<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 29,
-        eventName: "Knights At The Roundtable 4 ^[SPAED]^",
+        eventName: "Knights At The Roundtable 4 <span style=\"font-family: Arial, sans-serif;\">[</span>SPAED<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 30,
-        eventName: "School of Nursing General Assembly ^[SON]^",
+        eventName: "School of Nursing General Assembly <span style=\"font-family: Arial, sans-serif;\">[</span>SON<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 30,
@@ -228,7 +227,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       {
         startDate: 26,
         endDate: 30,
-        eventName: "ALL_ACCESS Resource Vault & Free Ink Services ^[OST]^",
+        eventName: "ALL_ACCESS Resource Vault & Free Ink Services <span style=\"font-family: Arial, sans-serif;\">[</span>OST<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 26,
@@ -267,16 +266,16 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
         startDate: 1,
         endDate: 3,
         eventName:
-          "Build Forward: A SysDev Learning Series (Part 1) ^[SYSDEV]^",
+          "Build Forward: A SysDev Learning Series (Part 1) <span style=\"font-family: Arial, sans-serif;\">[</span>SYSDEV<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 3,
-        eventName: "Ready, Set, Future! X DAA-logue ^[DAA]^",
+        eventName: "Ready, Set, Future! X DAA-logue <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 6,
         eventName:
-          "Waste Management Committee: MiRCA Partnership Field ^[ESU]^",
+          "Waste Management Committee: MiRCA Partnership Field <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 12,
@@ -284,33 +283,33 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       },
       {
         startDate: 15,
-        eventName: "DEA KITutubo: Educational Kits for Atenean IPs ^[DEA]^",
+        eventName: "DEA KITutubo: Educational Kits for Atenean IPs <span style=\"font-family: Arial, sans-serif;\">[</span>DEA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 19,
-        eventName: "Launching of Multi-Sectoral Council ^[OSVP]^",
+        eventName: "Launching of Multi-Sectoral Council <span style=\"font-family: Arial, sans-serif;\">[</span>OSVP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 19,
-        eventName: "DAA Midterms Tutorial ^[DAA]^",
+        eventName: "DAA Midterms Tutorial <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 19,
-        eventName: "Periodt: A Menstrual Kit Project Launch ^[OSP]^",
+        eventName: "Periodt: A Menstrual Kit Project Launch <span style=\"font-family: Arial, sans-serif;\">[</span>OSP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 20,
-        eventName: "Adopt-A-Riverbank Program 2nd Visitation ^[ESU]^",
+        eventName: "Adopt-A-Riverbank Program 2nd Visitation <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 27,
         eventName:
-          "Marine and Watershed Conservation Committee: Sea You There ^[ESU]^",
+          "Marine and Watershed Conservation Committee: Sea You There <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 21,
         endDate: 26,
-        eventName: "Ang Ating Panata Movement: Beyond the Ballot ^[OSP]^",
+        eventName: "Ang Ating Panata Movement: Beyond the Ballot <span style=\"font-family: Arial, sans-serif;\">[</span>OSP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
     ],
   },
@@ -335,7 +334,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
     calendarEntry: [
       {
         startDate: 1,
-        eventName: "DEA Midterms Fuel: Gamot Para sa Abalang Atenean ^[DEA]^",
+        eventName: "DEA Midterms Fuel: Gamot Para sa Abalang Atenean <span style=\"font-family: Arial, sans-serif;\">[</span>DEA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 6,
@@ -346,7 +345,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
         startDate: 6,
         endDate: 8,
         eventName:
-          "Build Forward: A SysDev Learning Series (Part 2) ^[SYSDEV]^",
+          "Build Forward: A SysDev Learning Series (Part 2) <span style=\"font-family: Arial, sans-serif;\">[</span>SYSDEV<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 9,
@@ -355,23 +354,23 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       },
       {
         startDate: 15,
-        eventName: "Multi-sectoral Dialogue ^[OSVP]^",
+        eventName: "Multi-sectoral Dialogue <span style=\"font-family: Arial, sans-serif;\">[</span>OSVP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 18,
-        eventName: "Adopt-A-Riverbank Program 3rd Visitation ^[ESU]^",
+        eventName: "Adopt-A-Riverbank Program 3rd Visitation <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 18,
-        eventName: "PasaPayong: Rent an Umbrella Project Launch ^[OSP]^",
+        eventName: "PasaPayong: Rent an Umbrella Project Launch <span style=\"font-family: Arial, sans-serif;\">[</span>OSP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 22,
-        eventName: "RE:Start - Ateneo Research Workshop ^[DAA]^",
+        eventName: "RE:Start - Ateneo Research Workshop <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 22,
-        eventName: "Bring Your Own Challenge ^[ESU]^",
+        eventName: "Bring Your Own Challenge <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 22,
@@ -379,15 +378,15 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       },
       {
         startDate: 26,
-        eventName: "SAMAHAN Ecoteneo Student Unit Anniversary ^[ESU]^",
+        eventName: "SAMAHAN Ecoteneo Student Unit Anniversary <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 29,
-        eventName: "DAA Pre-Finals Tutorials ^[DAA]^",
+        eventName: "DAA Pre-Finals Tutorials <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 29,
-        eventName: "Ang Ating Panata Movement: Beyond the Ballot ^[OSP]^",
+        eventName: "Ang Ating Panata Movement: Beyond the Ballot <span style=\"font-family: Arial, sans-serif;\">[</span>OSP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
     ],
   },
@@ -411,7 +410,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       {
         startDate: 26,
         endDate: 30,
-        eventName: "Ang Ating Plansta Movement: Beyond the Ballot ^[OSP]^",
+        eventName: "Ang Ating Plansta Movement: Beyond the Ballot <span style=\"font-family: Arial, sans-serif;\">[</span>OSP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
     ],
   },
@@ -432,21 +431,21 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
     calendarEntry: [
       {
         startDate: 6,
-        eventName: "B&M: Himaya Pinning Ceremony ^[B&M]^",
+        eventName: "B&M: Himaya Pinning Ceremony <span style=\"font-family: Arial, sans-serif;\">[</span>B&M<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 9,
-        eventName: "World AIDS Day ^[DCA]^",
+        eventName: "World AIDS Day <span style=\"font-family: Arial, sans-serif;\">[</span>DCA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 9,
         endDate: 12,
         eventName:
-          "Jumpstart x Mindanao Peace Celebration x AdDUvocacy ^[OST] [OSP]^",
+          "Jumpstart x Mindanao Peace Celebration x AdDUvocacy <span style=\"font-family: Arial, sans-serif;\">[</span>OST<span style=\"font-family: Arial, sans-serif;\">]</span> <span style=\"font-family: Arial, sans-serif;\">[</span>OSP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 12,
-        eventName: "Political Semestral Dialogue ^[SPAED]^",
+        eventName: "Political Semestral Dialogue <span style=\"font-family: Arial, sans-serif;\">[</span>SPAED<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 13,
@@ -484,38 +483,38 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       {
         startDate: 5,
         endDate: 9,
-        eventName: "HUMLET Week ^[HUMLET]^",
+        eventName: "HUMLET Week <span style=\"font-family: Arial, sans-serif;\">[</span>HUMLET<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 9,
-        eventName: "EduBox: Educational Resources Project Launch ^[OSP]^",
+        eventName: "EduBox: Educational Resources Project Launch <span style=\"font-family: Arial, sans-serif;\">[</span>OSP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 12,
         endDate: 14,
-        eventName: "Skills Cabin 2.0 ^[OSG]^",
+        eventName: "Skills Cabin 2.0 <span style=\"font-family: Arial, sans-serif;\">[</span>OSG<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 14,
-        eventName: "DAA Prelims Tutorials ^[DAA]^",
+        eventName: "DAA Prelims Tutorials <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 14,
         endDate: 21,
-        eventName: "NSM Week ^[NSM]^",
+        eventName: "NSM Week <span style=\"font-family: Arial, sans-serif;\">[</span>NSM<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 19,
-        eventName: "Bus Services Project Launch ^[OSP]^",
+        eventName: "Bus Services Project Launch <span style=\"font-family: Arial, sans-serif;\">[</span>OSP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 23,
         endDate: 24,
-        eventName: "The Ateneo Parliament Year 3 ^[OSVP]^",
+        eventName: "The Ateneo Parliament Year 3 <span style=\"font-family: Arial, sans-serif;\">[</span>OSVP<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 24,
-        eventName: "Adopt-A-Riverbank Program 4th Visitation ^[ESU]^",
+        eventName: "Adopt-A-Riverbank Program 4th Visitation <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
     ],
   },
@@ -541,20 +540,20 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       {
         startDate: 2,
         endDate: 7,
-        eventName: "Computer Studies IT Week ^[CS]^",
+        eventName: "Computer Studies IT Week <span style=\"font-family: Arial, sans-serif;\">[</span>CS<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 7,
-        eventName: "SON Day ^[SON]^",
+        eventName: "SON Day <span style=\"font-family: Arial, sans-serif;\">[</span>SON<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 9,
         endDate: 13,
-        eventName: "Eco-Booths / Sari Sa-Restore ^[ESU]^",
+        eventName: "Eco-Booths / Sari Sa-Restore <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 14,
-        eventName: "Adopt-A-Riverbank Program 5th Visitation ^[ESU]^",
+        eventName: "Adopt-A-Riverbank Program 5th Visitation <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 20,
@@ -563,7 +562,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       },
       {
         startDate: 27,
-        eventName: "DAA Midterms Tutorials ^[DAA]^",
+        eventName: "DAA Midterms Tutorials <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
     ],
   },
@@ -597,12 +596,12 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       {
         startDate: 6,
         endDate: 10,
-        eventName: "DAA Skills Festival X Ready, Set Future! Series 1 ^[DEA]^",
+        eventName: "DAA Skills Festival X Ready, Set Future! Series 1 <span style=\"font-family: Arial, sans-serif;\">[</span>DEA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 16,
         endDate: 20,
-        eventName: "SOE Week ^[SOE]^",
+        eventName: "SOE Week <span style=\"font-family: Arial, sans-serif;\">[</span>SOE<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 20,
@@ -611,11 +610,11 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       },
       {
         startDate: 21,
-        eventName: "Adopt-A-Riverbank Program 6th Visitation ^[ESU]^",
+        eventName: "Adopt-A-Riverbank Program 6th Visitation <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 25,
-        eventName: "DEA Abot-Kamay: Uniform Drive for Muslim Students ^[DEA]^",
+        eventName: "DEA Abot-Kamay: Uniform Drive for Muslim Students <span style=\"font-family: Arial, sans-serif;\">[</span>DEA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 23,
@@ -644,24 +643,24 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
     calendarEntry: [
       {
         startDate: 10,
-        eventName: "DAA Pre-Finals Tutorials ^[DAA]^",
+        eventName: "DAA Pre-Finals Tutorials <span style=\"font-family: Arial, sans-serif;\">[</span>DAA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 11,
-        eventName: "Adopt-A-Riverbank Program 7th Visitation ^[ESU]^",
+        eventName: "Adopt-A-Riverbank Program 7th Visitation <span style=\"font-family: Arial, sans-serif;\">[</span>ESU<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 13,
-        eventName: "SAMAHAN NewsFeed ^[SAMACOMMSS]^",
+        eventName: "SAMAHAN NewsFeed <span style=\"font-family: Arial, sans-serif;\">[</span>SAMACOMMSS<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 20,
-        eventName: "DEA Hunger-Free Zone: Snack Support for Exams ^[DEA]^",
+        eventName: "DEA Hunger-Free Zone: Snack Support for Exams <span style=\"font-family: Arial, sans-serif;\">[</span>DEA<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 23,
         endDate: 28,
-        eventName: "SS Week ^[SS]^",
+        eventName: "SS Week <span style=\"font-family: Arial, sans-serif;\">[</span>SS<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
       {
         startDate: 29,
@@ -669,7 +668,7 @@ export const ACADEMIC_YEAR_2025_2026: Record<string, MonthData> = {
       },
       {
         startDate: 29,
-        eventName: "Political Semestral Dialogue ^[SPAED]^",
+        eventName: "Political Semestral Dialogue <span style=\"font-family: Arial, sans-serif;\">[</span>SPAED<span style=\"font-family: Arial, sans-serif;\">]</span>",
       },
     ],
   },
