@@ -1,13 +1,11 @@
-'use client'
-import React, { useState, useMemo, useEffect, useRef } from 'react'
-import { ChevronDown } from 'lucide-react' // Added ChevronDown import
-import HeroBanner from '../ui/hero-banner'
-import ReportCarousel from '../ui/report-carousel'
+"use client";
+import React, { useState, useMemo, useEffect, useRef } from "react";
+import { ChevronDown } from "lucide-react"; // Added ChevronDown import
+import HeroBanner from "../ui/hero-banner";
+import ReportCarousel from "../ui/report-carousel";
 
 const AVAILABLE_YEARS = [2025, 2026];
-const AVAILABLE_MONTHS = [
-  'June', 'July', 'August'
-];
+const AVAILABLE_MONTHS = ["June", "July", "August"];
 
 const MONTH_ORDER = AVAILABLE_MONTHS;
 
@@ -16,24 +14,30 @@ const generateMonthData = (month: string, year: number, count: number) => {
     id: `${month.toLowerCase()}-${i + 1}`,
     year: year,
     month: month,
-    imageSrc: `/images/monthly-reports/${month.toLowerCase()}-reports/${month}-${i + 1}.jpg`,
-    altText: `${month} status report`
+    imageSrc: `/images/monthly-reports/${month.toLowerCase()}-reports/${month}-${
+      i + 1
+    }.jpg`,
+    altText: `${month} status report`,
   }));
 };
 
 const GALLERY_DATA = [
-  ...generateMonthData('June', 2025, 44),
-  ...generateMonthData('July', 2025, 30),
-  ...generateMonthData('August', 2025, 37),
+  ...generateMonthData("June", 2025, 44),
+  ...generateMonthData("July", 2025, 30),
+  ...generateMonthData("August", 2025, 37),
 ];
 
 function MonthlyReportsPage() {
   const [selectedYear, setSelectedYear] = useState<number>(2025);
-  const [selectedMonths, setSelectedMonths] = useState<string[]>(['June', 'July', 'August']);
+  const [selectedMonths, setSelectedMonths] = useState<string[]>([
+    "June",
+    "July",
+    "August",
+  ]);
 
   const [yearDropdownOpen, setYearDropdownOpen] = useState(false);
   const [monthDropdownOpen, setMonthDropdownOpen] = useState(false);
-  
+
   const yearRef = useRef<HTMLDivElement>(null);
   const monthRef = useRef<HTMLDivElement>(null);
 
@@ -42,7 +46,10 @@ function MonthlyReportsPage() {
       if (yearRef.current && !yearRef.current.contains(event.target as Node)) {
         setYearDropdownOpen(false);
       }
-      if (monthRef.current && !monthRef.current.contains(event.target as Node)) {
+      if (
+        monthRef.current &&
+        !monthRef.current.contains(event.target as Node)
+      ) {
         setMonthDropdownOpen(false);
       }
     }
@@ -53,7 +60,9 @@ function MonthlyReportsPage() {
   }, []);
 
   const groupedImages = useMemo(() => {
-    const yearFiltered = GALLERY_DATA.filter(item => item.year === selectedYear);
+    const yearFiltered = GALLERY_DATA.filter(
+      (item) => item.year === selectedYear
+    );
 
     const groups: Record<string, typeof GALLERY_DATA> = {};
 
@@ -71,7 +80,7 @@ function MonthlyReportsPage() {
 
   const handleMonthToggle = (month: string) => {
     if (selectedMonths.includes(month)) {
-      setSelectedMonths(selectedMonths.filter(m => m !== month));
+      setSelectedMonths(selectedMonths.filter((m) => m !== month));
     } else {
       setSelectedMonths([...selectedMonths, month]);
     }
@@ -79,7 +88,8 @@ function MonthlyReportsPage() {
 
   const getMonthDisplayText = () => {
     if (selectedMonths.length === 1) return selectedMonths[0];
-    return 'Month';
+    else if (selectedMonths.length === 0) return "None";
+    else return "All";
   };
 
   return (
@@ -93,7 +103,6 @@ function MonthlyReportsPage() {
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 mt-5 md:mt-12">
         <div className="flex gap-3 md:gap-8  justify-center lg:justify-end items-center mb-8 md:mb-16">
-          
           {/* YEAR DROPDOWN */}
           <div className="flex items-center gap-4 relative z-20" ref={yearRef}>
             <label className="text-[#002075] font-extrabold text-sm uppercase tracking-widest hidden md:block">
@@ -102,12 +111,16 @@ function MonthlyReportsPage() {
             <div className="relative">
               <button
                 onClick={() => setYearDropdownOpen(!yearDropdownOpen)}
-                className={`flex items-center justify-between text-sm md:text-base w-26 md:w-28 px-2 md:px-4 py-0.5 md:py-2.5 bg-white border border-[#002075] text-[#002075] font-bold shadow-sm hover:bg-blue-50 transition-all ${yearDropdownOpen ? 'rounded-t-xl' : 'rounded-xl'}`}
+                className={`flex items-center justify-between text-sm md:text-base w-26 md:w-28 px-2 md:px-4 py-0.5 md:py-2.5 bg-white border border-[#002075] text-[#002075] font-bold shadow-sm hover:bg-blue-50 transition-all ${
+                  yearDropdownOpen ? "rounded-t-xl" : "rounded-xl"
+                }`}
               >
                 {selectedYear}
-                <ChevronDown 
-                  size={18} 
-                  className={`ml-3 transition-transform duration-200 ${yearDropdownOpen ? 'rotate-180' : ''}`} 
+                <ChevronDown
+                  size={18}
+                  className={`ml-3 transition-transform duration-200 ${
+                    yearDropdownOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
@@ -125,11 +138,14 @@ function MonthlyReportsPage() {
                         className="group flex items-center justify-between px-2 md:px-4 py-0.5 md:py-2.5 hover:bg-gray-300 cursor-pointer transition-colors text-[#002075] font-medium"
                       >
                         <span>{y}</span>
-                        <div 
+                        <div
                           className={`w-4 h-4 border border-[#002075] rounded-[1px] flex items-center justify-center 
-                            ${isSelected ? 'bg-[#002075]' : 'bg-transparent group-hover:bg-mainblue/50'}`}
-                        >
-                        </div>
+                            ${
+                              isSelected
+                                ? "bg-[#002075]"
+                                : "bg-transparent group-hover:bg-mainblue/50"
+                            }`}
+                        ></div>
                       </div>
                     );
                   })}
@@ -146,12 +162,16 @@ function MonthlyReportsPage() {
             <div className="relative">
               <button
                 onClick={() => setMonthDropdownOpen(!monthDropdownOpen)}
-                className={`flex items-center justify-between text-sm md:text-base w-34 md:w-44 px-2 md:px-4 py-0.5 md:py-2.5 bg-white border border-[#002075] text-[#002075] font-bold shadow-sm hover:bg-blue-50 transition-all ${monthDropdownOpen ? 'rounded-t-xl' : 'rounded-xl'}`}
+                className={`flex items-center justify-between text-sm md:text-base w-34 md:w-44 px-2 md:px-4 py-0.5 md:py-2.5 bg-white border border-[#002075] text-[#002075] font-bold shadow-sm hover:bg-blue-50 transition-all ${
+                  monthDropdownOpen ? "rounded-t-xl" : "rounded-xl"
+                }`}
               >
                 {getMonthDisplayText()}
-                <ChevronDown 
-                  size={18} 
-                  className={`ml-3 transition-transform duration-200 ${monthDropdownOpen ? 'rotate-180' : ''}`} 
+                <ChevronDown
+                  size={18}
+                  className={`ml-3 transition-transform duration-200 ${
+                    monthDropdownOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
@@ -166,11 +186,14 @@ function MonthlyReportsPage() {
                         className="group flex items-center justify-between px-2 md:px-4 py-0.5 md:py-2.5 hover:bg-gray-300 cursor-pointer transition-colors text-[#002075] font-medium"
                       >
                         <span>{m}</span>
-                        <div 
+                        <div
                           className={`w-4 h-4 border border-[#002075] rounded-[1px] flex items-center justify-center
-                            ${isSelected ? 'bg-[#002075]' : 'bg-transparent group-hover:bg-mainblue/50'}`}
-                        >
-                        </div>
+                            ${
+                              isSelected
+                                ? "bg-[#002075]"
+                                : "bg-transparent group-hover:bg-mainblue/50"
+                            }`}
+                        ></div>
                       </div>
                     );
                   })}
@@ -183,7 +206,7 @@ function MonthlyReportsPage() {
         <div className="space-y-16">
           {MONTH_ORDER.map((monthName) => {
             const items = groupedImages[monthName];
-            
+
             if (!items || items.length === 0) return null;
 
             return (
@@ -198,16 +221,13 @@ function MonthlyReportsPage() {
 
           {Object.keys(groupedImages).length === 0 && (
             <div className="text-center">
-              <p className="text-xl font-semibold text-gray-400">
-                No reports.
-              </p>
+              <p className="text-xl font-semibold text-gray-400">No reports.</p>
             </div>
           )}
         </div>
-
       </div>
     </div>
-  )
+  );
 }
 
-export default MonthlyReportsPage
+export default MonthlyReportsPage;
