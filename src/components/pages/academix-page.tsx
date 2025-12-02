@@ -75,7 +75,7 @@ function AcademixPage() {
       <div className='md:px-14 2xl:px-36 mt-6 lg:mt-10 xl:mt-14 2xl:mt-20 mb-20 relative z-10'>
         
         <div className="w-full relative z-30 px-4 md:px-0 flex justify-center">
-          <div className="lg:hidden w-full block" ref={dropdownRef}>
+          <div className="xl:hidden w-full block" ref={dropdownRef}>
              <div className="relative md:font-bold text-[#002075] w-full">
               <button onClick={() => setDropdownOpen(!dropdownOpen)} className={`relative flex items-center justify-center w-full px-6 py-2 md:py-3 border-2 border-[#002075] uppercase tracking-wide text-sm md:text-base transition-all bg-white ${dropdownOpen ? 'rounded-t-2xl border-b-0' : 'rounded-2xl'}`}>
                 <span className="text-center mx-6">{currentTabLabel}</span>
@@ -96,9 +96,9 @@ function AcademixPage() {
             </div>
           </div>
 
-          <div className="hidden lg:flex w-full gap-3 justify-center flex-wrap">
+          <div className="hidden xl:flex w-full gap-3 justify-center flex-wrap">
             {tabOptions.map((tab) => (
-              <Button key={tab.id} variant="tab" active={activeTab === tab.id} onClick={() => setActiveTab(tab.id)} className="min-w-[120px]">
+              <Button key={tab.id} variant="tab" active={activeTab === tab.id} onClick={() => setActiveTab(tab.id)} className="min-w-[120px] xl:h-12 2xl:h-14">
                 {tab.label}
               </Button>
             ))}
