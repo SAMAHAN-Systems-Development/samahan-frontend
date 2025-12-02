@@ -10,7 +10,7 @@ export interface CalendarEntryProps {
 }
 
 // Helper function to parse event names with ^TAG^ format
-const parseEventName = (text: string) => {
+/* const parseEventName = (text: string) => {
   const parts = text.split(/(\^[^^]+\^)/g);
   return parts.map((part, i) => {
     if (part.startsWith("^") && part.endsWith("^")) {
@@ -18,7 +18,7 @@ const parseEventName = (text: string) => {
     }
     return part;
   });
-};
+}; */
 
 export default function CalendarEntry({
   startDate,
@@ -38,16 +38,19 @@ export default function CalendarEntry({
     <div
       onClick={onClick}
       className={cn(
-        `border-mainblue font-formular-regular flex w-full flex-row items-center gap-2 md:gap-3 rounded-3xl border-2 p-2 pl-4 lg:pl-6`,
+        `border-mainblue font-formular-regular flex w-full flex-row items-center gap-3 md:gap-4 rounded-xl md:rounded-2xl border-2 p-2 pl-4 lg:pl-6`,
         `transition-colors duration-100 hover:cursor-pointer`,
         `${active ? styles.active : styles.inactive}`,
         className
       )}
     >
-      <p className="min-w-14 md:min-w-14 text-end">
+      <p className="min-w-14 md:min-w-14 text-end text-sm sm:text-base -mb-0.5 sm:-mb-1">
         {startDate && endDate ? `${startDate} - ${endDate}` : startDate}
       </p>
-      <p className="flex-grow">{parseEventName(eventName)}</p>
+      <p 
+        className="flex-grow text-sm sm:text-base -mb-0.5 sm:-mb-1"
+        dangerouslySetInnerHTML={{ __html: eventName }}
+      />
     </div>
   );
 }
