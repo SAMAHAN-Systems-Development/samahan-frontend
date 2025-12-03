@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo, useEffect, useRef } from "react";
-import { ChevronDown } from "lucide-react"; // Added ChevronDown import
+import { ChevronDown } from "lucide-react";
 import HeroBanner from "../ui/hero-banner";
 import ReportCarousel from "../ui/report-carousel";
 
@@ -11,7 +11,7 @@ const MONTH_ORDER = AVAILABLE_MONTHS;
 
 const generateMonthData = (month: string, year: number, count: number) => {
   return Array.from({ length: count }, (_, i) => ({
-    id: `${month.toLowerCase()}-${i + 1}`,
+    id: `${year}-${month.toLowerCase()}-${i + 1}`,
     year: year,
     month: month,
     imageSrc: `/images/monthly-reports/${month.toLowerCase()}-reports/${month}-${
@@ -87,9 +87,10 @@ function MonthlyReportsPage() {
   };
 
   const getMonthDisplayText = () => {
+    if (selectedMonths.length === 0) return "None";
+    if (selectedMonths.length === AVAILABLE_MONTHS.length) return "All";
     if (selectedMonths.length === 1) return selectedMonths[0];
-    else if (selectedMonths.length === 0) return "None";
-    else return "All";
+    return "Month";
   };
 
   return (
@@ -102,17 +103,17 @@ function MonthlyReportsPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 mt-5 md:mt-12">
-        <div className="flex gap-3 md:gap-8  justify-center lg:justify-end items-center mb-8 md:mb-16">
+        <div className="flex gap-3 md:gap-8 justify-center lg:justify-end items-center mb-8 md:mb-16">
           {/* YEAR DROPDOWN */}
-          <div className="flex items-center gap-4 relative z-20" ref={yearRef}>
+          <div className="flex items-center gap-4 relative z-30" ref={yearRef}>
             <label className="text-[#002075] font-extrabold text-sm uppercase tracking-widest hidden md:block">
               YEAR:
             </label>
             <div className="relative">
               <button
                 onClick={() => setYearDropdownOpen(!yearDropdownOpen)}
-                className={`flex items-center justify-between text-sm md:text-base w-26 md:w-28 px-2 md:px-4 py-0.5 md:py-2.5 bg-white border border-[#002075] text-[#002075] font-bold shadow-sm hover:bg-blue-50 transition-all ${
-                  yearDropdownOpen ? "rounded-t-xl" : "rounded-xl"
+                className={`flex items-center justify-between text-sm md:text-base w-26 md:w-28 px-2 md:px-4 py-0.5 md:py-2 bg-white border border-[#002075] text-[#002075] font-bold shadow-sm hover:bg-blue-50 transition-all ${
+                  yearDropdownOpen ? "rounded-t-xl border-b-0" : "rounded-xl"
                 }`}
               >
                 {selectedYear}
@@ -125,7 +126,7 @@ function MonthlyReportsPage() {
               </button>
 
               {yearDropdownOpen && (
-                <div className="absolute top-full right-0 md:left-0 mt-2 w-26 md:w-28 bg-white border border-[#002075] rounded-b-lg shadow-xl overflow-hidden py-1">
+                <div className="absolute top-full right-0 md:left-0 -mt-[1px] w-26 md:w-28 bg-white border border-[#002075] rounded-b-lg shadow-xl overflow-hidden py-1 z-50">
                   {AVAILABLE_YEARS.map((y) => {
                     const isSelected = selectedYear === y;
                     return (
@@ -135,7 +136,7 @@ function MonthlyReportsPage() {
                           setSelectedYear(y);
                           setYearDropdownOpen(false);
                         }}
-                        className="group flex items-center justify-between px-2 md:px-4 py-0.5 md:py-2.5 hover:bg-gray-300 cursor-pointer transition-colors text-[#002075] font-medium"
+                        className="group flex items-center justify-between px-2 md:px-4 py-0.5 md:py-2 hover:bg-gray-300 cursor-pointer transition-colors text-[#002075] font-medium"
                       >
                         <span>{y}</span>
                         <div
@@ -155,15 +156,15 @@ function MonthlyReportsPage() {
           </div>
 
           {/* MONTH DROPDOWN */}
-          <div className="flex items-center gap-4 relative z-20" ref={monthRef}>
+          <div className="flex items-center gap-4 relative z-30" ref={monthRef}>
             <label className="text-[#002075] font-extrabold text-sm uppercase tracking-widest hidden md:block">
               MONTH:
             </label>
             <div className="relative">
               <button
                 onClick={() => setMonthDropdownOpen(!monthDropdownOpen)}
-                className={`flex items-center justify-between text-sm md:text-base w-34 md:w-44 px-2 md:px-4 py-0.5 md:py-2.5 bg-white border border-[#002075] text-[#002075] font-bold shadow-sm hover:bg-blue-50 transition-all ${
-                  monthDropdownOpen ? "rounded-t-xl" : "rounded-xl"
+                className={`flex items-center justify-between text-sm md:text-base w-34 md:w-44 px-2 md:px-4 py-0.5 md:py-2 bg-white border border-[#002075] text-[#002075] font-bold shadow-sm hover:bg-blue-50 transition-all ${
+                  monthDropdownOpen ? "rounded-t-xl border-b-0" : "rounded-xl"
                 }`}
               >
                 {getMonthDisplayText()}
@@ -176,14 +177,14 @@ function MonthlyReportsPage() {
               </button>
 
               {monthDropdownOpen && (
-                <div className="absolute top-full right-0 md:left-0 mt-2 w-34 md:w-44 max-h-80 overflow-y-auto bg-white border border-[#002075] rounded-b-lg shadow-xl py-1 custom-scrollbar">
+                <div className="absolute top-full right-0 md:left-0 -mt-[1px] w-34 md:w-44 max-h-80 overflow-y-auto bg-white border border-[#002075] rounded-b-lg shadow-xl py-1 custom-scrollbar z-50">
                   {AVAILABLE_MONTHS.map((m) => {
                     const isSelected = selectedMonths.includes(m);
                     return (
                       <div
                         key={m}
                         onClick={() => handleMonthToggle(m)}
-                        className="group flex items-center justify-between px-2 md:px-4 py-0.5 md:py-2.5 hover:bg-gray-300 cursor-pointer transition-colors text-[#002075] font-medium"
+                        className="group flex items-center justify-between px-2 md:px-4 py-0.5 md:py-2 hover:bg-gray-300 cursor-pointer transition-colors text-[#002075] font-medium"
                       >
                         <span>{m}</span>
                         <div
@@ -221,7 +222,7 @@ function MonthlyReportsPage() {
 
           {Object.keys(groupedImages).length === 0 && (
             <div className="text-center">
-              <p className="text-xl font-semibold text-gray-400">No reports.</p>
+              <p className=" md:text-xl font-semibold text-gray-400">No reports.</p>
             </div>
           )}
         </div>

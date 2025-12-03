@@ -1,4 +1,3 @@
-//Offices
 import { GoLaw } from "react-icons/go";
 import { CourtLawIcon } from "hugeicons-react";
 import { FaRegCalendar } from "react-icons/fa";
@@ -16,10 +15,8 @@ interface DocumentEntryProps {
     type: 'Act' | 'Memorandum' | 'Resolution';
 }
  
-// Fallback font function for special characters
 function withFontFallback(text?: string) {
     if (!text) return null;
-    // Regex for special characters
     const specialChars = /[~!@#$%^&*()_+{}|:"?><\[\]\\;',./’]/g;
     const parts = text.split(specialChars);
     const matches = text.match(specialChars);
@@ -41,7 +38,6 @@ function withFontFallback(text?: string) {
 }
 
 export default function DocumentEntry({ documentName, description, office, actNumber, date, year, href, type }: DocumentEntryProps){
-    // Determine label based on type
     let numberLabel = '';
     if (type === 'Act' && actNumber && year) {
         numberLabel = `SAMAHAN Act No. ${actNumber} of ${year}`;
@@ -50,17 +46,17 @@ export default function DocumentEntry({ documentName, description, office, actNu
     }
 
     return (
-        <Link href={href} className="group flex flex-col py-5 md:py-12 px-0 sm:px-4 w-full mx-auto hover:bg-mainblue transition-colors duration-200  border-b-2 border-mainblue hover:border-mainblue">
+        <Link href={href} className="group flex flex-col py-5 lg:py-12 w-full mx-auto hover:bg-mainblue transition-colors duration-200  border-b-2 border-mainblue hover:border-mainblue">
             {/* Document Name */}
             <div className="document-name font-formular-black text-lg text-mainblue font-black group-hover:text-white">
                 {withFontFallback(documentName)}
             </div>
             {/* Description */}
-            <div className="description py-5 font-formular-regular text-sm md:text-lg text-mainblue group-hover:text-white">
+            <div className="description py-5 font-formular-regular text-sm lg:text-lg text-mainblue group-hover:text-white">
                 {withFontFallback(description)}
             </div>
             {/* Office, Act Number, Date */}
-            <div className="flex flex-col md:flex-row py-3 space-y-4 md:space-y-0 md:space-x-8 items-start">
+            <div className="flex flex-col lg:flex-row py-3 space-y-4 lg:space-y-0 lg:space-x-8 items-start">
                 {/* Office */}
                 {office && (
                     <div className="office flex items-center space-x-2">
