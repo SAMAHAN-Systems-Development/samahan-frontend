@@ -118,7 +118,7 @@ export default function OnTrack() {
     "use club email",
     "submit after every email", // Note: Transcribed from image, though contextually might mean "event"
     <>
-    <span>always CC {LPAREN}carbon copy{RPAREN} COA-D's email</span>
+    <span>always CC {LPAREN}carbon copy{RPAREN} COA-D{APOSTROPHE}s email</span>
     </>
   ];
 
