@@ -6,6 +6,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function OnTrack() {
+  //fallbacks for special characters
+  const LPAREN = <span className="font-['Arial'] inline">&#40;</span>;
+  const RPAREN = <span className="font-['Arial'] inline">&#41;</span>;
+  const COLON = <span className="font-['Arial'] inline">&#58;</span>;
+  const QUOTE = <span className="font-['Arial'] inline">&quot;</span>;
+  const NDASH = <span className="font-['Arial'] inline">&ndash;</span>;
+  const PLUS_SIGN = <span className="font-['Arial'] inline">&#43;</span>;
+  const AMPERSAND = <span className="font-['Arial'] inline">&#38;</span>;
+  const SLASH = <span className="font-['Arial'] inline">&#47;</span>;
+  const APOSTROPHE = <span className="font-['Arial'] inline">&#39;</span>;
+  const LBRACKET = <span className="font-['Arial'] inline">&#91;</span>;
+  const RBRACKET = <span className="font-['Arial'] inline">&#93;</span>; 
+
   const stepsRow1 = [
     "crafting of concept paper",
     "submission to google forms",
@@ -17,7 +30,11 @@ export default function OnTrack() {
     "endorsement of moderator",
     "recommendation for approval of event",
     "approval of OSA director",
-    "post event: process kukang",
+    <>
+    <span>
+    post event{COLON} process kukang
+    </span>
+    </>
   ];
 
   const stepsRow1_2 = [
@@ -38,31 +55,71 @@ export default function OnTrack() {
 
   const venueData = [
     { venue: "Arrupe Hall", office: "OSA" },
-    { venue: "Classrooms (Activity Period)", office: "OSA" },
+    {
+      venue: (
+        <>
+          Classrooms {LPAREN}Activity Period{RPAREN}
+        </>
+      ),
+      office: "OSA",
+    },
     { venue: "Finster Auditorium", office: "PPO" },
     { venue: "F213 Multi-Purpose Room", office: "PPO" },
     { venue: "Bapa Benny Tudtud Auditorium", office: "PPO" },
     {
-      venue: "CCFC Building (3rd floor)",
-      office: "Ma'am Su's office (9th floor)",
+      venue: (
+        <>
+          CCFC Building {LPAREN}3rd floor{RPAREN}
+        </>
+      ),
+      office: (
+        <>
+          Ma&apos;am Su&apos;s office {LPAREN}9th floor{RPAREN}
+        </>
+      ),
     },
-    { venue: "CCFC Building (8th floor)", office: "UCEAC" },
+    {
+      venue: (
+        <>
+          CCFC Building {LPAREN}8th floor{RPAREN}
+        </>
+      ),
+      office: "UCEAC",
+    },
     { venue: "Miguel Pro Learning Commons", office: "Miguel Pro library" },
-    { venue: "Martin Hall (4th floor)", office: "Athletics Office" },
-    { venue: "Classrooms (Regular school days)", office: "Registrar's Office" },
+    {
+      venue: (
+        <>
+          Martin Hall {LPAREN}4th floor{RPAREN}
+        </>
+      ),
+      office: "Athletics Office",
+    },
+    {
+      venue: (
+        <>
+          Classrooms {LPAREN}Regular school days{RPAREN}
+        </>
+      ),
+      office: "Registrar's Office",
+    },
   ];
 
   const submissionSteps = [
     "event proper",
     "crafting of KUKANG report",
     "submission to program officer's email",
-    'use header"[KUKANG REPORT] Club Name, Name of Event"',
+    <>
+      <span>use header{QUOTE}{LBRACKET}KUKANG REPORT{RBRACKET} Club Name, Name of Event{QUOTE}</span>
+    </>,
   ];
 
   const reminderSteps = [
     "use club email",
     "submit after every email", // Note: Transcribed from image, though contextually might mean "event"
-    "always CC (carbon copy) COA-D's email",
+    <>
+    <span>always CC {LPAREN}carbon copy{RPAREN} COA-D's email</span>
+    </>
   ];
 
   // Shared classes for consistency
@@ -111,8 +168,9 @@ export default function OnTrack() {
                 Extra-Curricular
               </div>
               <div className={`${indent_2} mt-1`}>
-                activities following these areas: community service, sports and
-                games, cultural, social, special projects and spiritual
+                activities following these areas{COLON} community service,
+                sports and games, cultural, social, special projects and
+                spiritual
               </div>
             </div>
           </div>
@@ -316,8 +374,8 @@ export default function OnTrack() {
             <li>OSA does not reserve ALL venues in the University</li>
             <li>always include the letter of invitation</li>
             <li>
-              process and comply the CHED requirements (CHED Memo 63, series of
-              2017)
+              process and comply the CHED requirements {LPAREN}CHED Memo 63,
+              series of 2017{RPAREN}
             </li>
           </ol>
         </div>
@@ -361,7 +419,7 @@ export default function OnTrack() {
                     className="py-3 px-4 text-left text-[13px] xs:text-sm font-bold tracking-wider border-r-2 border-black" // Use border-r-2 for the vertical header separator
                     style={{ width: "30%" }} // Keep style for column width
                   >
-                    Committee(s) Involved
+                    Committee{LPAREN}s{RPAREN} Involved
                   </th>
                   <th
                     className="py-3 px-4 text-left text-[13px] xs:text-sm font-bold tracking-wider"
@@ -441,37 +499,56 @@ export default function OnTrack() {
                   Sponsorship Tier
                 </div>
                 <div className="p-3 text-sm font-bold flex items-center">
-                  Accumulated Worth (Cash & Equivalent)
+                  <span>
+                    Accumulated Worth {LPAREN}Cash {AMPERSAND} Equivalent
+                    {RPAREN}
+                  </span>
                 </div>
               </div>
 
               {/* Row 2: Blue Knight */}
               <div className="grid grid-cols-2 border-b-2 border-black">
                 <div className="p-3 text-sm font-bold text-left border-r-2 border-black ">
-                  BLUE KNIGHT (Co-Presenter)
+                  <span>
+                    BLUE KNIGHT {LPAREN}Co-Presenter{RPAREN}
+                  </span>
                 </div>
                 <div className="p-3 text-sm flex items-center text-left">
-                  Php 20,000 and above (Php 20,000 Cash + Cash Equivalents)
+                  <span>
+                    Php 20,000 and above {LPAREN}Php 20,000 Cash {PLUS_SIGN}{" "}
+                    Cash Equivalents
+                    {RPAREN}
+                  </span>
                 </div>
               </div>
 
               {/* Row 3: Rockstar */}
               <div className="grid grid-cols-2 border-b-2 border-black">
                 <div className="p-3 text-sm font-bold text-left border-r-2 border-black ">
-                  ROCKSTAR (Booth)
+                  <span>
+                    ROCKSTAR {LPAREN}Booth{RPAREN}
+                  </span>
                 </div>
                 <div className="p-3 text-sm flex items-center text-left">
-                  Php 18,000 - Php 19,999 (Cash only)
+                  <span>
+                    Php 18,000 - Php 19,999 {LPAREN}Cash only{RPAREN}
+                  </span>
                 </div>
               </div>
 
               {/* Row 4: Booster */}
               <div className="grid grid-cols-2">
                 <div className="p-3 text-sm font-bold text-left border-r-2 border-black ">
-                  BOOSTER (Non-Booth)
+                  <span>
+                    BOOSTER {LPAREN}Non-Booth{RPAREN}
+                  </span>
                 </div>
                 <div className="p-3 text-sm flex items-center text-left">
-                  Php 10,000 - Php 17,999 (Cash and/or Cash Equivalents)
+                  <span>
+                    Php 10,000 - Php 17,999 {LPAREN}Cash and{SLASH}or Cash
+                    Equivalents
+                    {RPAREN}
+                  </span>
                 </div>
               </div>
             </div>
@@ -492,35 +569,38 @@ export default function OnTrack() {
                       className="py-3 px-4 text-center text-sm font-bold tracking-wider border-r-2 border-black"
                       style={{ width: "25%" }}
                     >
-                      BLUE KNIGHT (Co-Presenter)
+                      BLUE KNIGHT {LPAREN}Co-Presenter{RPAREN}
                     </th>
                     <th
                       className="py-3 px-4 text-center text-sm font-bold tracking-wider border-r-2 border-black"
                       style={{ width: "25%" }}
                     >
-                      ROCKSTAR (Booth)
+                      ROCKSTAR {LPAREN}Booth{RPAREN}
                     </th>
                     <th
                       className="py-3 px-4 text-center text-sm font-bold tracking-wider"
                       style={{ width: "25%" }}
                     >
-                      BOOSTER (Non-Booth)
+                      BOOSTER {LPAREN}Non-Booth{RPAREN}
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td className="py-3 px-4 text-left text-sm font-medium border-r-2 border-t-2 border-black">
-                      Accumulated Worth Of Sponsorship (Cash & Cash Equivalent)
+                      Accumulated Worth Of Sponsorship {LPAREN}Cash {AMPERSAND}{" "}
+                      Cash Equivalent{RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-r-2 border-t-2 border-black">
-                      Php 20,000 and above (Php 20,000 Cash + Cash Equivalents)
+                      Php 20,000 and above {LPAREN}Php 20,000 Cash {PLUS_SIGN}{" "}
+                      Cash Equivalents{RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-r-2 border-t-2 border-black">
-                      Php 18,000 - Php 19,999 (Cash only)
+                      Php 18,000 - Php 19,999 {LPAREN}Cash only{RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-t-2 border-black">
-                      Php 10,000 - Php 17,999 (Cash and/or Cash Equivalents)
+                      Php 10,000 - Php 17,999 {LPAREN}Cash and{SLASH}or Cash
+                      Equivalents{RPAREN}
                     </td>
                   </tr>
                 </tbody>
@@ -540,11 +620,17 @@ export default function OnTrack() {
               {/* CARD 1: BLUE KNIGHT */}
               <div className="border-2 border-black bg-white">
                 <div className="p-3 text-sm font-bold text-center border-b-2 border-black bg-white">
-                  BLUE KNIGHT (Co-Presenter)
+                  <span>
+                    BLUE KNIGHT {LPAREN}Co-Presenter{RPAREN}
+                  </span>
                 </div>
                 <div className="grid grid-cols-2 border-b-2 border-black">
                   <div className="p-3 text-sm font-medium border-r-2 border-black">
-                    Company logo on promotion collaterals (Facebook Page)
+                    <span>
+                      Company logo on promotion collaterals {LPAREN}Facebook
+                      Page
+                      {RPAREN}
+                    </span>
                   </div>
                   <div className="p-3 text-sm flex items-center">
                     Largest possible size
@@ -555,7 +641,9 @@ export default function OnTrack() {
                     Space Opportunity at Arrupe Hall
                   </div>
                   <div className="p-3 text-sm flex items-center">
-                    Booth (2x3m)
+                    <span>
+                      Booth {LPAREN}2x3m{RPAREN}
+                    </span>
                   </div>
                 </div>
                 <div className="grid grid-cols-2">
@@ -571,11 +659,12 @@ export default function OnTrack() {
               {/* CARD 2: ROCKSTAR */}
               <div className="border-2 border-black bg-white">
                 <div className="p-3 text-sm font-bold text-center border-b-2 border-black bg-white">
-                  ROCKSTAR (Booth)
+                  ROCKSTAR {LPAREN}Booth{RPAREN}
                 </div>
                 <div className="grid grid-cols-2 border-b-2 border-black">
                   <div className="p-3 text-sm font-medium border-r-2 border-black">
-                    Company logo on promotion collaterals (Facebook Page)
+                    Company logo on promotion collaterals {LPAREN}Facebook Page
+                    {RPAREN}
                   </div>
                   <div className="p-3 text-sm flex items-center">
                     2nd largest possible size
@@ -586,7 +675,7 @@ export default function OnTrack() {
                     Space Opportunity at Arrupe Hall
                   </div>
                   <div className="p-3 text-sm flex items-center">
-                    Booth (2x3m)
+                    Booth {LPAREN}2x3m{RPAREN}
                   </div>
                 </div>
                 <div className="grid grid-cols-2">
@@ -602,13 +691,14 @@ export default function OnTrack() {
               {/* CARD 3: BOOSTER */}
               <div className="border-2 border-black bg-white">
                 <div className="p-3 text-sm font-bold text-center border-b-2 border-black bg-white">
-                  BOOSTER (Non-Booth)
+                  BOOSTER {LPAREN}Non-Booth{RPAREN}
                 </div>
 
                 {/* Row 1 */}
                 <div className="grid grid-cols-2 border-b-2 border-black">
                   <div className="p-3 text-sm font-medium border-r-2 border-black">
-                    Company logo on promotion collaterals (Facebook Page)
+                    Company logo on promotion collaterals {LPAREN}Facebook Page
+                    {RPAREN}
                   </div>
                   <div className="p-3 text-sm flex items-center">
                     3rd largest possible size
@@ -627,8 +717,8 @@ export default function OnTrack() {
                   {/* 2. Added 'block' to allow natural flow */}
                   {/* 3. Added 'break-words' to force wrapping */}
                   <div className="p-3 text-sm block break-words">
-                    One (1) Vertical Streamer (3ft by 5ft to be provided by the
-                    company/organization)
+                    One {LPAREN}1{RPAREN} Vertical Streamer {LPAREN}3ft by 5ft
+                    to be provided by the company{SLASH}organization{RPAREN}
                   </div>
                 </div>
 
@@ -660,19 +750,19 @@ export default function OnTrack() {
                       className="py-3 px-4 text-center text-sm font-bold  tracking-wider border-r-2 border-black"
                       style={{ width: "20%" }}
                     >
-                      BLUE KNIGHT (Co-Presenter)
+                      BLUE KNIGHT {LPAREN}Co-Presenter{RPAREN}
                     </th>
                     <th
                       className="py-3 px-4 text-center text-sm font-bold  tracking-wider border-r-2 border-black"
                       style={{ width: "20%" }}
                     >
-                      ROCKSTAR (Booth)
+                      ROCKSTAR {LPAREN}Booth{RPAREN}
                     </th>
                     <th
                       className="py-3 px-4 text-center text-sm font-bold tracking-wider"
                       style={{ width: "20%" }}
                     >
-                      BOOSTER (Non-Booth)
+                      BOOSTER {LPAREN}Non-Booth{RPAREN}
                     </th>
                   </tr>
                 </thead>
@@ -680,8 +770,8 @@ export default function OnTrack() {
                   {/* Row 1: Company Logo */}
                   <tr className="border-t-2 border-black">
                     <td className="py-3 px-4 text-left text-sm font-medium border-r-2 border-black">
-                      Company logo on promotion collaterals (Facebook Page) for
-                      the Sadya on SAMAHAN Official FB Page.
+                      Company logo on promotion collaterals {LPAREN}Facebook
+                      Page{RPAREN} for the Sadya on SAMAHAN Official FB Page.
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-r-2 border-black">
                       Largest possible size
@@ -696,18 +786,18 @@ export default function OnTrack() {
                   {/* Row 2: Space Opportunity */}
                   <tr className="border-t-2 border-black">
                     <td className="py-3 px-4 text-left text-sm font-medium border-r-2 border-black">
-                      Space Opportunity at Arrupe Hall for three (3) days
-                      September 26–28, 2024.
+                      Space Opportunity at Arrupe Hall for three {LPAREN}3
+                      {RPAREN} days September 26{NDASH}28, 2024.
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-r-2 border-black">
-                      Booth (2x3m)
+                      Booth {LPAREN}2x3m{RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-r-2 border-black">
-                      Booth (2x3m)
+                      Booth {LPAREN}2x3m{RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-sm">
-                      One (1) Vertical Streamer (3ft by 5ft to be provided by
-                      the company/organization)
+                      One {LPAREN}1{RPAREN} Vertical Streamer {LPAREN}3ft by 5ft
+                      to be provided by the company/organization{RPAREN}
                     </td>
                   </tr>
                   {/* Row 3: Certificate */}
@@ -748,7 +838,9 @@ export default function OnTrack() {
               {/* CARD 1: BLUE KNIGHT */}
               <div className="border-2 border-black bg-white">
                 <div className="p-3 text-sm font-bold text-center border-b-2 border-black bg-white">
-                  BLUE KNIGHT (Co-Presenter)
+                  <span>
+                    BLUE KNIGHT {LPAREN}Co-Presenter{RPAREN}
+                  </span>
                 </div>
                 <div className="grid grid-cols-2 border-b-2 border-black">
                   <div className="p-3 text-sm font-medium border-r-2 border-black">
@@ -787,7 +879,10 @@ export default function OnTrack() {
                     User Generated Content
                   </div>
                   <div className="p-3 text-sm flex items-center">
-                    Two (2) Videos (solo ad and all sponsors in one video)
+                    <span>
+                      Two {LPAREN}2{RPAREN} Videos {LPAREN}solo ad and all
+                      sponsors in one video{RPAREN}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -795,7 +890,7 @@ export default function OnTrack() {
               {/* CARD 2: ROCKSTAR */}
               <div className="border-2 border-black bg-white">
                 <div className="p-3 text-sm font-bold text-center border-b-2 border-black bg-white">
-                  ROCKSTAR (Booth)
+                  ROCKSTAR {LPAREN}Booth{RPAREN}
                 </div>
                 <div className="grid grid-cols-2 border-b-2 border-black">
                   <div className="p-3 text-sm font-medium border-r-2 border-black">
@@ -834,7 +929,10 @@ export default function OnTrack() {
                     User Generated Content
                   </div>
                   <div className="p-3 text-sm flex items-center">
-                    One (1) Video (all sponsors in one video)
+                    <span>
+                      One {LPAREN}1{RPAREN} Video {LPAREN}all sponsors in one
+                      video{RPAREN}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -842,7 +940,7 @@ export default function OnTrack() {
               {/* CARD 3: BOOSTER */}
               <div className="border-2 border-black bg-white">
                 <div className="p-3 text-sm font-bold text-center border-b-2 border-black bg-white">
-                  BOOSTER (Non-Booth)
+                  BOOSTER {LPAREN}Non-Booth{RPAREN}
                 </div>
                 <div className="grid grid-cols-2 border-b-2 border-black">
                   <div className="p-3 text-sm font-medium border-r-2 border-black">
@@ -901,19 +999,19 @@ export default function OnTrack() {
                       className="py-3 px-4 text-center text-sm font-bold  tracking-wider border-r-2 border-black"
                       style={{ width: "20%" }}
                     >
-                      BLUE KNIGHT (Co-Presenter)
+                      BLUE KNIGHT {LPAREN}Co-Presenter{RPAREN}
                     </th>
                     <th
                       className="py-3 px-4 text-center text-sm font-bold  tracking-wider border-r-2 border-black"
                       style={{ width: "20%" }}
                     >
-                      ROCKSTAR (Booth)
+                      ROCKSTAR {LPAREN}Booth{RPAREN}
                     </th>
                     <th
                       className="py-3 px-4 text-center text-sm font-bold  tracking-wider"
                       style={{ width: "20%" }}
                     >
-                      BOOSTER (Non-Booth)
+                      BOOSTER {LPAREN}Non-Booth{RPAREN}
                     </th>
                   </tr>
                 </thead>
@@ -921,7 +1019,8 @@ export default function OnTrack() {
                   {/* Row 1: Carousel Post */}
                   <tr className="border-t-2 border-black">
                     <td className="py-3 px-4 text-left text-sm font-medium border-r-2 border-black">
-                      Carousel Post (Products/Services of the Entity)
+                      Carousel Post {LPAREN}Products{SLASH}Services of the
+                      Entity{RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-r-2 border-black">
                       Logo{" "}
@@ -938,7 +1037,8 @@ export default function OnTrack() {
                   {/* Row 2: Video Ad */}
                   <tr className="border-t-2 border-black">
                     <td className="py-3 px-4 text-left text-sm font-medium border-r-2 border-black">
-                      Video Advertisement (Products/Services of the Entity)
+                      Video Advertisement {LPAREN}Products{SLASH}Services of the
+                      Entity{RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-r-2 border-black">
                       30s to 1min Video Ad
@@ -953,7 +1053,8 @@ export default function OnTrack() {
                   {/* Row 3: Happening Now */}
                   <tr className="border-t-2 border-black">
                     <td className="py-3 px-4 text-left text-sm font-medium border-r-2 border-black">
-                      Happening Now (applicable if booth/standee is availed)
+                      Happening Now {LPAREN}applicable if booth{SLASH}standee is
+                      availed{RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-xl border-r-2 border-black">
                       <Check className="inline w-6 h-6 text-black" />
@@ -986,10 +1087,13 @@ export default function OnTrack() {
                       User Generated Content
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-r-2 border-black">
-                      Two (2) Videos (solo ad and all sponsors in one video)
+                      Two {LPAREN}2{RPAREN} Videos {LPAREN}solo ad and all
+                      sponsors in one video{RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-sm border-r-2 border-black">
-                      One (1) Video (all sponsors in one video)
+                      One {LPAREN}1{RPAREN} Video {LPAREN}all sponsors in one
+                      video
+                      {RPAREN}
                     </td>
                     <td className="py-3 px-4 text-left text-xl border-r-2 border-black">
                       <Check className="inline w-6 h-6 text-black" />
@@ -1025,7 +1129,7 @@ export default function OnTrack() {
                     className="py-3 px-6 text-left text-[13px] xs:text-sm font-bold border-r-2 border-b-2 border-black"
                     style={{ width: "30%" }}
                   >
-                    Committee(s) Involved
+                    Committee{LPAREN}s{RPAREN} Involved
                   </th>
                   <th
                     className="py-3 px-6 text-left text-[13px] xs:text-sm font-bold border-b-2 border-black"
@@ -1054,7 +1158,7 @@ export default function OnTrack() {
                         the Concept Paper.
                       </li>
                       <li className="pl-1">
-                        Secretariat will make the Concept Paper within 3–4 days.
+                        Secretariat will make the Concept Paper within 3-4 days.
                       </li>
                       <li className="pl-1">
                         Project Heads must pass the Concept Paper by the 5th day
@@ -1103,7 +1207,7 @@ export default function OnTrack() {
                     className="py-3 px-4 sm:px-6 text-left text-[13px] xs:text-sm font-bold border-r-2 border-b-2 border-black"
                     style={{ width: "30%" }}
                   >
-                    Committee(s) Involved
+                    Committee{LPAREN}s{RPAREN} Involved
                   </th>
                   <th
                     className="py-3 px-4 sm:px-6 text-left text-[13px] xs:text-sm font-bold border-b-2 border-black"
@@ -1166,8 +1270,8 @@ export default function OnTrack() {
                       </li>
                     </ol>
                     <p className="mt-4">
-                      Note: Only the Outsourcing Team are allowed to contact the
-                      Sponsors.
+                      Note{COLON} Only the Outsourcing Team are allowed to
+                      contact the Sponsors.
                     </p>
                   </td>
                 </tr>
@@ -1194,8 +1298,8 @@ export default function OnTrack() {
                       </li>
                     </ol>
                     <p className="mt-4">
-                      Note: Finance Team are allowed to directly contact the
-                      Sponsor but only for Payment Inquiries.
+                      Note{COLON} Finance Team are allowed to directly contact
+                      the Sponsor but only for Payment Inquiries.
                     </p>
                   </td>
                 </tr>
@@ -1228,7 +1332,7 @@ export default function OnTrack() {
                     className="py-3 px-4 sm:px-6 text-left text-[13px] xs:text-sm font-bold border-r-2 border-b-2 border-mainblue"
                     style={{ width: "30%" }}
                   >
-                    Committee(s) Involved
+                    Committee{LPAREN}s{RPAREN} Involved
                   </th>
                   <th
                     className="py-3 px-4 sm:px-6 text-left text-[13px] xs:text-sm font-bold border-b-2 border-mainblue"
@@ -1250,7 +1354,7 @@ export default function OnTrack() {
                     </ul>
 
                     <div className={`xs:ml-11 mt-4 mb-2`}>
-                      In close coordination with:
+                      In close coordination with{COLON}
                     </div>
 
                     <ul
@@ -1271,7 +1375,7 @@ export default function OnTrack() {
                         Operations Team.
                       </li>
                       <li className="pl-1">
-                        Simultaneously, Operations Team will make:
+                        Simultaneously, Operations Team will make{COLON}
                         {/* Nested List */}
                         <ol className="list-[lower-alpha] list-outside xs:ml-11 mt-1">
                           <li className="pl-1">
@@ -1290,7 +1394,7 @@ export default function OnTrack() {
                       </li>
                     </ol>
                     <p className="mt-4">
-                      Note: 1 week worth of days for waiting period.
+                      Note{COLON} 1 week worth of days for waiting period.
                     </p>
                   </td>
                 </tr>
@@ -1306,7 +1410,7 @@ export default function OnTrack() {
                     </ul>
 
                     <div className={`xs:ml-11 mt-4 mb-2`}>
-                      In close coordination with:
+                      In close coordination with{COLON}
                     </div>
 
                     <ul
@@ -1366,7 +1470,7 @@ export default function OnTrack() {
                     className="py-3 px-4 sm:px-6 text-left text-sm font-bold border-r-2 border-b-2 border-mainblue"
                     style={{ width: "30%" }}
                   >
-                    Committee(s) Involved
+                    Committee{LPAREN}s{RPAREN} Involved
                   </th>
                   <th
                     className="py-3 px-4 sm:px-6 text-left text-sm font-bold border-b-2 border-mainblue"
@@ -1387,7 +1491,7 @@ export default function OnTrack() {
                     </ul>
 
                     <div className={`xs:ml-11 mt-4 mb-2`}>
-                      In close coordination with:
+                      In close coordination with{COLON}
                     </div>
 
                     <ul
@@ -1409,7 +1513,7 @@ export default function OnTrack() {
                     </ol>
 
                     <div className="mt-4">
-                      Note:
+                      Note{COLON}
                       <ul className="list-disc list-outside pl-5 mt-1 space-y-1">
                         <li>Termination must be reviewed by the Legal Team</li>
                         <li>
@@ -1448,7 +1552,7 @@ export default function OnTrack() {
                     className="py-3 px-4 sm:px-6 text-left text-sm font-bold border-r-2 border-b-2 border-mainblue"
                     style={{ width: "30%" }}
                   >
-                    Committee(s) Involved
+                    Committee{LPAREN}s{RPAREN} Involved
                   </th>
                   <th
                     className="py-3 px-4 sm:px-6 text-left text-sm font-bold border-b-2 border-mainblue"
@@ -1545,7 +1649,7 @@ export default function OnTrack() {
                     className="py-3 px-4 sm:px-6 text-left text-sm font-bold border-r-2 border-b-2 border-mainblue"
                     style={{ width: "30%" }}
                   >
-                    Committee(s) Involved
+                    Committee{LPAREN}s{RPAREN} Involved
                   </th>
                   <th
                     className="py-3 px-4 sm:px-6 text-left text-sm font-bold border-b-2 border-mainblue"
@@ -1611,7 +1715,7 @@ export default function OnTrack() {
                     </ul>
 
                     <div className={`xs:ml-11 mt-4 mb-2`}>
-                      In close coordination with:
+                      In close coordination with{COLON}
                     </div>
 
                     <ul
@@ -1626,7 +1730,7 @@ export default function OnTrack() {
                     <ol className="list-decimal list-outside pl-4 space-y-1">
                       <li className="pl-1">
                         After the confirmation of non-compliance by the Sponsor,
-                        a meeting will be scheduled with:
+                        a meeting will be scheduled with{COLON}
                         {/* Nested List */}
                         <ol className="list-[lower-alpha] list-outside xs:pl-5 mt-1">
                           <li className="pl-1">Legal</li>
@@ -1877,10 +1981,10 @@ export default function OnTrack() {
           </div>
 
           <div className="mt-7 lg:mt-9 font-formular-medium lg:hidden lg:uppercase text-2xl lg:text-3xl">
-            ‘DUNGOG’ SESSIONS
+            {APOSTROPHE}DUNGOG{APOSTROPHE} SESSIONS
           </div>
           <div className="mt-7 lg:mt-9 hidden lg:block font-trapix lg:uppercase text-2xl lg:text-2xl">
-            ‘DUNGOG’ SESSIONS
+            {APOSTROPHE}DUNGOG{APOSTROPHE} SESSIONS
           </div>
           <div className={`${indent_1} mt-3`}>
             Once or twice a month, the Office of Student Affairs, in partnership
@@ -1889,7 +1993,7 @@ export default function OnTrack() {
           <div
             className={`${indent_1} text-xl lg:text-lg lg:font-semibold mt-3`}
           >
-            Offices included:
+            Offices included{COLON}
           </div>
           <ul className={`${indent_3} list-disc mt-2`}>
             <li>Arrupe Social Formation Office</li>
@@ -1901,10 +2005,10 @@ export default function OnTrack() {
             <li>University Community Engagement and Advocacy Council Office</li>
           </ul>
           <div className="mt-7 lg:mt-9 font-formular-medium lg:hidden text-2xl lg:text-3xl">
-            Things to Remember:
+            Things to Remember{COLON}
           </div>
           <div className="mt-7 lg:mt-9 hidden lg:block font-trapix text-2xl lg:text-2xl">
-            Things to Remember:
+            Things to Remember{COLON}
           </div>
           <ul className={`${indent_2} list-disc mt-2`}>
             <li>2 weeks before the final exams rule</li>
@@ -1922,10 +2026,10 @@ export default function OnTrack() {
           </ul>
 
           <div className="mt-7 lg:mt-9 font-formular-medium lg:hidden lg:uppercase text-2xl lg:text-3xl">
-            QR CODES FOR VARIOUS DOCUMENTS AND REFERENCES:
+            QR CODES FOR VARIOUS DOCUMENTS AND REFERENCES{COLON}
           </div>
           <div className="mt-7 lg:mt-9 hidden lg:block font-trapix lg:uppercase text-2xl lg:text-2xl">
-            QR CODES FOR VARIOUS DOCUMENTS AND REFERENCES:
+            QR CODES FOR VARIOUS DOCUMENTS AND REFERENCES{COLON}
           </div>
           <div className="flex flex-col lg:flex-row justify-center w-full gap-10 lg:gap-28 mt-10">
             <div className="flex flex-col justify-center items-center">
