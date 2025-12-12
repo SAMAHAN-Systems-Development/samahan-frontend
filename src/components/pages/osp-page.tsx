@@ -8,17 +8,6 @@ import ProfileCard from "../ui/profile-card";
 const LPAREN = <span className="font-['Arial'] inline">&#40;</span>;
 const RPAREN = <span className="font-['Arial'] inline">&#41;</span>;
 const COLON = <span className="font-['Arial'] inline">&#58;</span>;
-const SEMICOLON = <span className="font-['Arial'] inline">&#59;</span>;
-const QUOTE = <span className="font-['Arial'] inline">&quot;</span>;
-const DASH = <span className="font-['Arial'] inline">&#45;</span>;
-const NDASH = <span className="font-['Arial'] inline">&ndash;</span>;
-const MDASH = <span className="font-['Arial'] inline">&mdash;</span>;
-const PLUS_SIGN = <span className="font-['Arial'] inline">&#43;</span>;
-const AMPERSAND = <span className="font-['Arial'] inline">&#38;</span>;
-const SLASH = <span className="font-['Arial'] inline">&#47;</span>;
-const APOSTROPHE = <span className="font-['Arial'] inline">&#39;</span>;
-const LBRACKET = <span className="font-['Arial'] inline">&#91;</span>;
-const RBRACKET = <span className="font-['Arial'] inline">&#93;</span>;
 
 function OSPPage() {
   return (
@@ -32,7 +21,15 @@ function OSPPage() {
 
       <ProfileGroup
         groupTitle="OFFICE OF THE SAMAHAN PRESIDENT"
-        description="The highest executive office aims to establish harmony and efficiency in both the internal operations of the student government and external relations. The Office of the SAMAHAN President is composed of the following deputies: Chief of Staff, Executive Secretary, and Executive Undersecretary."
+        description={
+          <>
+            The Office of the SAMAHAN President aims to establish harmony and
+            efficiency in both the internal operations of the student government
+            and external relations. The Office is composed of the following
+            deputies{COLON} Chief of Staff, Executive Secretary, and Executive
+            Undersecretary.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-2 lg:col-start-3 lg:col-span-2">
@@ -94,7 +91,17 @@ function OSPPage() {
 
       <ProfileGroup
         groupTitle="DEPARTMENT OF EXTERNAL AFFAIRS"
-        description="The Department of External Affairs is the primary arm of the SAMAHAN Central Board for managing external engagements under the Office of the SAMAHAN President. Anchored in student-centered initiatives, it facilitates national and international opportunities for Ateneo de Davao students and represents SAMAHAN in external partnerships and alliances, including Buklod Atenista and Unyon ng mga Estudyante sa Mindanao (Unyon Mindanao)."
+        description={
+          <>
+            The Department of External Affairs is the primary arm of the SAMAHAN
+            Central Board for managing external engagements under the Office of
+            the SAMAHAN President. Anchored in student-centered initiatives, it
+            facilitates national and international opportunities for Ateneo de
+            Davao students and represents SAMAHAN in external partnerships and
+            alliances, including Buklod Atenista and Unyon ng mga Estudyante sa
+            Mindanao {LPAREN}Unyon Mindanao{RPAREN}.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
@@ -119,7 +126,16 @@ function OSPPage() {
 
       <ProfileGroup
         groupTitle="ECOTENEO STUDENT UNIT"
-        description="The SAMAHAN Ecoteneo Student Unit (ESU) is the official environmental advocacy arm of the SAMAHAN Central Board, committed to championing ecological justice and student-led action for the planet. Inspired the Jesuit call to care for our common home, ESU serves as a space where advocacy takes root, and where compassion is transformed into concrete initiatives."
+        description={
+          <>
+            The SAMAHAN Ecoteneo Student Unit {LPAREN}ESU{RPAREN} is the
+            official environmental advocacy arm of the SAMAHAN Central Board,
+            committed to championing ecological justice and student-led action
+            for the planet. Inspired the Jesuit call to care for our common
+            home, ESU serves as a space where advocacy takes root, and where
+            compassion is transformed into concrete initiatives.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
@@ -145,7 +161,7 @@ function OSPPage() {
 
       <ProfileGroup
         groupTitle="DEPARTMENT OF CAMPAIGNS AND ADVOCACIES"
-        description="The SAMAHAN Department of Campaigns and Advocacies is the advocacy arm of the  SAMAHAN Central Board under the Office of the SAMAHAN President. It aims to amplify the voices of Ateneans in actualizing the pursuit of serving the University, Mindanao, and the Philippines."
+        description="The SAMAHAN Department of Campaigns and Advocacies is the advocacy arm of the SAMAHAN Central Board under the Office of the SAMAHAN President. It aims to amplify the voices of Ateneans in actualizing the pursuit of serving the University, Mindanao, and the Philippines."
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
@@ -170,7 +186,7 @@ function OSPPage() {
 
       <ProfileGroup
         groupTitle="STUDENT NEEDS AND SERVICES DEPARTMENT"
-        description="This department focuses on addressing students’ welfare, needs, and access to services. It is a centralized body tasked with handling long-term student support programs, ensuring that services related to student life are better coordinated and sustained."
+        description="The Student Needs and Services Department focuses on addressing students' welfare, needs, and access to services. It is a centralized body tasked with handling long-term student support programs, ensuring that services related to student life are better coordinated and sustained."
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">

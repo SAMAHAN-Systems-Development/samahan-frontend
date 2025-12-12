@@ -1,9 +1,12 @@
-import React from 'react'
-import HeroBanner from '../ui/hero-banner'
-import OtherOffices from '../sections/other-offices'
-import ProfileGroup from '../sections/profile-group'
-import ProfileCard from '../ui/profile-card'
-import ProjectCarouselSection from '../sections/project-carousel-section'
+import React from "react";
+import HeroBanner from "../ui/hero-banner";
+import OtherOffices from "../sections/other-offices";
+import ProfileGroup from "../sections/profile-group";
+import ProfileCard from "../ui/profile-card";
+import ProjectCarouselSection from "../sections/project-carousel-section";
+
+const COLON = <span className="font-['Arial'] inline">&#58;</span>;
+const SEMICOLON = <span className="font-['Arial'] inline">&#59;</span>;
 
 function OSTPage() {
   return (
@@ -17,7 +20,15 @@ function OSTPage() {
 
       <ProfileGroup
         groupTitle="OFFICE OF THE SAMAHAN TREASURER"
-        description="This office aims to establish a well-financed, transparent, and resourceful student government that can utilize its funds to meet its goals and implement its mandates. The Office of the SAMAHAN Treasurer is composed of the following deputies: Finance Secretary and Finance Undersecretaries."
+        description={
+          <>
+            The Office of the SAMAHAN Treasurer aims to establish a
+            well-financed, transparent, and resourceful student government that
+            can utilize its funds to meet its goals and implement its mandates.
+            The Office is composed of the following deputies{COLON} Finance
+            Secretary and Finance Undersecretaries.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-2 lg:col-start-3 lg:col-span-2">
@@ -62,7 +73,19 @@ function OSTPage() {
 
       <ProfileGroup
         groupTitle="SAMAHAN LOGISTICS DEPARTMENT"
-        description="SAMAHAN Logistics Department, formerly SAMAHAN Task Force, is a department under the Office of the SAMAHAN Treasurer. The logistics arm of the SAMAHAN is in charge of the different logistical works such as procurement and canvassing of equipment and materials; keeping records and supervision of office equipment and materials; preparing, creating, and organizing physical event materials. The department's primary goal is to make the SAMAHAN Office and events physically organized, safely keep the equipment, and assist SAMAHAN in their operations."
+        description={
+          <>
+            SAMAHAN Logistics Department, formerly SAMAHAN Task Force, is a
+            department under the Office of the SAMAHAN Treasurer. The logistics
+            arm of the SAMAHAN is in charge of the different logistical works
+            such as procurement and canvassing of equipment and materials;
+            keeping records and supervision of office equipment and materials
+            {SEMICOLON} preparing, creating, and organizing physical event
+            materials. The department&apos;s primary goal is to make the SAMAHAN
+            Office and events physically organized, safely keep the equipment,
+            and assist SAMAHAN in their operations.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
@@ -118,4 +141,4 @@ function OSTPage() {
   );
 }
 
-export default OSTPage
+export default OSTPage;
