@@ -1,9 +1,13 @@
-import React from 'react'
-import HeroBanner from '../ui/hero-banner'
-import OtherOffices from '../sections/other-offices'
-import ProfileGroup from '../sections/profile-group'
-import ProfileCard from '../ui/profile-card'
-import ProjectCarouselSection from '../sections/project-carousel-section'
+import React from "react";
+import HeroBanner from "../ui/hero-banner";
+import OtherOffices from "../sections/other-offices";
+import ProfileGroup from "../sections/profile-group";
+import ProfileCard from "../ui/profile-card";
+import ProjectCarouselSection from "../sections/project-carousel-section";
+
+const LPAREN = <span className="font-['Arial'] inline">&#40;</span>;
+const RPAREN = <span className="font-['Arial'] inline">&#41;</span>;
+const COLON = <span className="font-['Arial'] inline">&#58;</span>;
 
 function OSVPPage() {
   return (
@@ -17,7 +21,15 @@ function OSVPPage() {
 
       <ProfileGroup
         groupTitle="OFFICE OF THE SAMAHAN VICE PRESIDENT"
-        description="This SAMAHAN Office supervises the internal affairs of the SAMAHAN Central Board and leads the Student Assembly.  The Office of the SAMAHAN Vice President is composed of the following committees: Executive Committee and the Legislative Support and Monitoring Bureau (LSMB)."
+        description={
+          <>
+            The Office of the SAMAHAN Vice President supervises the internal
+            affairs of the SAMAHAN Central Board and leads the Student Assembly.
+            The Office is composed of the following committees{COLON} Executive
+            Committee and the Legislative Support and Monitoring Bureau {LPAREN}
+            LSMB{RPAREN}.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-2 lg:col-start-3 lg:col-span-2">
@@ -86,8 +98,19 @@ function OSVPPage() {
 
       <ProfileGroup
         groupTitle="DEPARTMENT OF ACADEMIC AFFAIRS"
-        description="The SAMAHAN Department of Academic Affairs (DAA) serves as the academic arm of the SAMAHAN, under the Office of the SAMAHAN Vice President. 
-At its core, the department is committed to promoting the academic welfare of the student body. It strives to provide support through various initiatives that respond to students’ academic needs. The DAA also plays a role in examining and reflecting on academic policies, contributing student-centered insights that help improve the learning environment."
+        description={
+          <>
+            The SAMAHAN Department of Academic Affairs {LPAREN}DAA{RPAREN}{" "}
+            serves as the academic arm of the SAMAHAN, under the Office of the
+            SAMAHAN Vice President. At its core, the department is committed to
+            promoting the academic welfare of the student body. It strives to
+            provide support through various initiatives that respond to
+            students&apos; academic needs. The DAA also plays a role in
+            examining and reflecting on academic policies, contributing
+            student-centered insights that help improve the learning
+            environment.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
@@ -113,7 +136,19 @@ At its core, the department is committed to promoting the academic welfare of th
 
       <ProfileGroup
         groupTitle="DEPARTMENT OF DISASTER RISK REDUCTION AND MANAGEMENT"
-        description="The SAMAHAN Department of Disaster Risk Reduction and Management (DDRRM) is the helping arm of the Ateneo de Davao University by providing its services to its constituents. The organization also aims to develop and implement effective disaster response plans and protocols to ensure the safety of everyone in the university in the event of a disaster. Additionally, the department aims to establish partnerships and collaborations with local government units and other organizations to enhance the university community's disaster risk reduction and management efforts."
+        description={
+          <>
+            The SAMAHAN Department of Disaster Risk Reduction and Management{" "}
+            {LPAREN}DDRRM{RPAREN} is the helping arm of the Ateneo de Davao
+            University by providing its services to its constituents. The
+            organization also aims to develop and implement effective disaster
+            response plans and protocols to ensure the safety of everyone in the
+            university in the event of a disaster. Additionally, the department
+            aims to establish partnerships and collaborations with local
+            government units and other organizations to enhance the university
+            community&apos;s disaster risk reduction and management efforts.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
@@ -171,4 +206,4 @@ At its core, the department is committed to promoting the academic welfare of th
   );
 }
 
-export default OSVPPage
+export default OSVPPage;

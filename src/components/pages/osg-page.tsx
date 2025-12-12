@@ -1,9 +1,12 @@
-import React from 'react'
-import HeroBanner from '../ui/hero-banner';
-import OtherOffices from '../sections/other-offices';
-import ProfileCard from '../ui/profile-card';
-import ProfileGroup from '../sections/profile-group';
-import ProjectCarouselSection from '../sections/project-carousel-section';
+import React from "react";
+import HeroBanner from "../ui/hero-banner";
+import OtherOffices from "../sections/other-offices";
+import ProfileCard from "../ui/profile-card";
+import ProfileGroup from "../sections/profile-group";
+import ProjectCarouselSection from "../sections/project-carousel-section";
+
+const COLON = <span className="font-['Arial'] inline">&#58;</span>;
+const NDASH = <span className="font-['Arial'] inline">&ndash;</span>;
 
 function OSGPage() {
   return (
@@ -17,7 +20,15 @@ function OSGPage() {
 
       <ProfileGroup
         groupTitle="OFFICE OF THE SAMAHAN SECRETARY-GENERAL"
-        description="This office aims to ensure efficiency in administrative and secretariat work that shall mobilize the student government to operate its services and meet its goals. The Office of the SAMAHAN Secretary General is composed of the following deputies: Administrative Secretary and Administrative Undersecretaries."
+        description={
+          <>
+            The Office of the SAMAHAN Secretary-General aims to ensure
+            efficiency in administrative and secretariat work that shall
+            mobilize the student government to operate its services and meet its
+            goals. The Office is composed of the following deputies{COLON}{" "}
+            Administrative Secretary and Administrative Undersecretaries.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-2 lg:col-start-3 lg:col-span-2">
@@ -62,7 +73,20 @@ function OSGPage() {
 
       <ProfileGroup
         groupTitle="SAMAHAN COMMUNICATIONS"
-        description="Housed in the Office of the Secretary General, SAMAHAN Communications serves as the public affairs and information arm of SAMAHAN. The department is entrusted with chronicling moments that shape student life and carrying messages that matter—with clarity and intent. It also takes charge of secretariat duties, such as written documentation and the dissemination of information across various social media platforms. In addition, it manages SAMAHAN’s digital spaces and crafts student-facing messaging that inclusively reaches the student body and sparks points of action toward a well-informed Atenean community."
+        description={
+          <>
+            Housed in the Office of the Secretary General, SAMAHAN
+            Communications serves as the public affairs and information arm of
+            SAMAHAN. The department is entrusted with chronicling moments that
+            shape student life and carrying messages that matter{NDASH}with
+            clarity and intent. It also takes charge of secretariat duties, such
+            as written documentation and the dissemination of information across
+            various social media platforms. In addition, it manages
+            SAMAHAN&apos;s digital spaces and crafts student-facing messaging
+            that inclusively reaches the student body and sparks points of
+            action toward a well-informed Atenean community.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
@@ -87,7 +111,18 @@ function OSGPage() {
 
       <ProfileGroup
         groupTitle="ATENEO SAMAHAN PRODUCTIONS"
-        description="The Ateneo SAMAHAN Productions, under the Office of the Secretary-General, is the premier event productions department of the SAMAHAN and Ateneo de Davao University. It is responsible for strategically planning and managing any SAMAHAN-led activities or events, such as festivals, competitions, conferences, and workshops, among others. It is handled and supported by the department's four committees: Advance Planning, Designs and Logistics, Talents, and Technical."
+        description={
+          <>
+            The Ateneo SAMAHAN Productions, under the Office of the
+            Secretary-General, is the premier event productions department of
+            the SAMAHAN and Ateneo de Davao University. It is responsible for
+            strategically planning and managing any SAMAHAN-led activities or
+            events, such as festivals, competitions, conferences, and workshops,
+            among others. It is handled and supported by the department&apos;s
+            four committees{COLON} Advance Planning, Designs and Logistics,
+            Talents, and Technical.
+          </>
+        }
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
@@ -194,4 +229,4 @@ function OSGPage() {
   );
 }
 
-export default OSGPage
+export default OSGPage;
