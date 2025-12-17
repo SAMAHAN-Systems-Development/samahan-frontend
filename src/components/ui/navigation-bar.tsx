@@ -73,7 +73,7 @@ export default function Navbar() {
 
             {/* Offices collapsible */}
             <details className="py-1 [&[open]_summary>svg]:rotate-180">
-              <summary className="font-formular-mono flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
+              <summary className="font-formular-mono [&::-webkit-details-marker]:hidden flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
                 <span>Offices</span>
                 <FiChevronDown className="transition-transform duration-400" />
               </summary>
@@ -101,7 +101,7 @@ export default function Navbar() {
 
             {/* Information portal collapsible */}
             <details className="py-1 [&[open]_summary>svg]:rotate-180">
-              <summary className="font-formular-mono flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
+              <summary className="font-formular-mono [&::-webkit-details-marker]:hidden flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
                 <span>Information Portal</span>
                 <FiChevronDown className="transition-transform duration-400" />
               </summary>
