@@ -234,11 +234,9 @@ function AboutPage() {
                 <a
                   href="/documents/SAMAHAN-On-The-Move-Organizational-Chart.pdf"
                   download="SAMAHAN-On-The-Move-Organizational-Chart.pdf"
-                  className="font-formular-mono xs:text-xl flex items-center justify-center gap-x-5 text-lg text-white"
+                  className="font-formular-mono mt-4 cursor-pointer rounded-sm bg-mainblue px-4 py-1.5 text-center text-xs tracking-wide text-white md:rounded-xl md:px-12 md:py-3 md:text-sm"
                 >
-                  <div className="hidden h-3 w-3 bg-[#D9D9D9] lg:block"></div>
                   DOWNLOAD CHART
-                  <div className="hidden h-3 w-3 bg-[#D9D9D9] lg:block"></div>
                 </a>
               </div>
             </div>
