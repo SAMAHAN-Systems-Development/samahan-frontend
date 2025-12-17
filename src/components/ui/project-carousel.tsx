@@ -20,8 +20,8 @@ export default function ProjectCarousel({
     ) : null;
   }
 
-  // Ensures the total number of cards per pagination is strictly 3
-  const CARDS_PER_PAGE = 3;
+  // Show 1 card per slide
+  const CARDS_PER_PAGE = 1;
   const totalCards = projects.length;
 
   // Calculates the total pages displayed per pagination dot, total projects / cards per page
@@ -78,7 +78,7 @@ export default function ProjectCarousel({
             {projects.map((project, index) => (
               <div
                 key={`${project.title}-${index}`}
-                className="w-[calc(33.333%-1rem)] flex-shrink-0"
+                className="w-full flex-shrink-0"
               >
                 <ProjectCard {...project} />
               </div>
