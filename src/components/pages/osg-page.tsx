@@ -178,17 +178,16 @@ function OSGPage() {
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
             <ProfileCard
               image={{
-                imageUrl: "/images/osg/arabella-mejorada.png",
+                imageUrl: "/images/osg/ron-dulhao.png",
                 imageAlt: "Profile Picture",
               }}
-              variant="taller"
             />
           </div>
 
           <div className="col-span-1 lg:col-span-2">
             <ProfileCard
               image={{
-                imageUrl: "/images/osg/nica-dable.png",
+                imageUrl: "/images/osg/joyce-hondos.png",
                 imageAlt: "Profile Picture",
               }}
             />
@@ -204,16 +203,17 @@ function OSGPage() {
           <div className="col-span-1 lg:col-start-2 lg:col-span-2">
             <ProfileCard
               image={{
-                imageUrl: "/images/osg/ron-dulhao.png",
+                imageUrl: "/images/osg/arabella-mejorada.png",
                 imageAlt: "Profile Picture",
               }}
+              variant="taller"
             />
           </div>
 
           <div className="col-span-1 lg:col-span-2">
             <ProfileCard
               image={{
-                imageUrl: "/images/osg/joyce-hondos.png",
+                imageUrl: "/images/osg/nica-dable.png",
                 imageAlt: "Profile Picture",
               }}
             />
