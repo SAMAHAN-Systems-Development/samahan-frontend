@@ -73,7 +73,7 @@ export default function Navbar() {
 
             {/* Offices collapsible */}
             <details className="py-1 [&[open]_summary>svg]:rotate-180">
-              <summary className="font-formular-mono flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
+              <summary className="font-formular-mono [&::-webkit-details-marker]:hidden flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
                 <span>Offices</span>
                 <FiChevronDown className="transition-transform duration-400" />
               </summary>
@@ -82,7 +82,7 @@ export default function Navbar() {
                   <Link
                     key={o.href}
                     href={o.href}
-                    className="block rounded-md px-2 py-2 hover:bg-white/10"
+                    className="font-formular-mono block rounded-md px-2 py-2 hover:bg-white/10"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {o.label}
@@ -101,7 +101,7 @@ export default function Navbar() {
 
             {/* Information portal collapsible */}
             <details className="py-1 [&[open]_summary>svg]:rotate-180">
-              <summary className="font-formular-mono flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
+              <summary className="font-formular-mono [&::-webkit-details-marker]:hidden flex w-full cursor-pointer list-none items-center justify-between rounded-md px-4 py-3 hover:bg-white/10">
                 <span>Information Portal</span>
                 <FiChevronDown className="transition-transform duration-400" />
               </summary>
@@ -110,7 +110,7 @@ export default function Navbar() {
                   <Link
                     key={i.href}
                     href={i.href}
-                    className="block rounded-md px-2 py-2 hover:bg-white/10"
+                    className="font-formular-mono block rounded-md px-2 py-2 hover:bg-white/10"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {i.label}
@@ -159,7 +159,7 @@ export default function Navbar() {
                       <Link
                         key={o.href}
                         href={o.href}
-                        className="text-mainblue hover:bg-mainblue block px-4 py-2 hover:text-white"
+                        className="font-formular-mono text-mainblue hover:bg-mainblue block px-4 py-2 hover:text-white"
                       >
                         {o.label}
                       </Link>
@@ -190,7 +190,7 @@ export default function Navbar() {
                       <Link
                         key={i.href}
                         href={i.href}
-                        className="text-mainblue hover:bg-mainblue block px-4 py-2 hover:text-white"
+                        className="font-formular-mono text-mainblue hover:bg-mainblue block px-4 py-2 hover:text-white"
                       >
                         {i.label}
                       </Link>
