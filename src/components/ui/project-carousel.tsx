@@ -20,8 +20,8 @@ export default function ProjectCarousel({
     ) : null;
   }
 
-  // Ensures the total number of cards per pagination is strictly 3
-  const CARDS_PER_PAGE = 3;
+  // Show 1 card per slide
+  const CARDS_PER_PAGE = 1;
   const totalCards = projects.length;
 
   // Calculates the total pages displayed per pagination dot, total projects / cards per page
@@ -59,7 +59,7 @@ export default function ProjectCarousel({
         <button
           onClick={handlePrev}
           disabled={!canGoPrev}
-          className="flex-shrink-0 items-center justify-center rounded-none border-none bg-transparent p-0 text-mainblue shadow-none transition-colors duration-300 hover:text-mainblue/70 focus-visible:outline-none focus-visible:ring-0 disabled:pointer-events-none flex"
+          className="flex-shrink-0 items-center justify-center rounded-none border-none bg-transparent p-0 text-mainblue shadow-none transition-colors duration-300 hover:text-mainblue/70 focus-visible:outline-none focus-visible:ring-0 disabled:pointer-events-none disabled:opacity-50 flex"
           aria-label="Previous slide"
         >
           <BsFillCaretLeftFill className="h-12 w-12" />
@@ -78,7 +78,7 @@ export default function ProjectCarousel({
             {projects.map((project, index) => (
               <div
                 key={`${project.title}-${index}`}
-                className="w-[calc(33.333%-1rem)] flex-shrink-0"
+                className="w-full flex-shrink-0"
               >
                 <ProjectCard {...project} />
               </div>
@@ -90,7 +90,7 @@ export default function ProjectCarousel({
         <button
           onClick={handleNext}
           disabled={!canGoNext}
-          className="flex-shrink-0 items-center justify-center rounded-none border-none bg-transparent p-0 text-mainblue shadow-none transition-colors duration-300 hover:text-mainblue/70 focus-visible:outline-none focus-visible:ring-0 disabled:pointer-events-none flex"
+          className="flex-shrink-0 items-center justify-center rounded-none border-none bg-transparent p-0 text-mainblue shadow-none transition-colors duration-300 hover:text-mainblue/70 focus-visible:outline-none focus-visible:ring-0 disabled:pointer-events-none disabled:opacity-50 flex"
           aria-label="Next slide"
         >
           <BsFillCaretRightFill className="h-12 w-12" />

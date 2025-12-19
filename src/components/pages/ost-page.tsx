@@ -4,6 +4,8 @@ import OtherOffices from "../sections/other-offices";
 import ProfileGroup from "../sections/profile-group";
 import ProfileCard from "../ui/profile-card";
 import ProjectCarouselSection from "../sections/project-carousel-section";
+import { treasurerProjects } from "@/data/projects-carousel-data";
+import ProjectCarousel from "../ui/project-carousel";
 
 const COLON = <span className="font-['Arial'] inline">&#58;</span>;
 const SEMICOLON = <span className="font-['Arial'] inline">&#59;</span>;
@@ -133,7 +135,9 @@ function OSTPage() {
         </div>
       </ProfileGroup>
 
-      <ProjectCarouselSection />
+      <ProjectCarouselSection>
+        <ProjectCarousel projects={treasurerProjects} />
+      </ProjectCarouselSection>
       <div className="h-20"></div>
       <OtherOffices office="ost" />
       <div className="h-20"></div>

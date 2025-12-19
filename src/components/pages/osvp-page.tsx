@@ -4,7 +4,8 @@ import OtherOffices from "../sections/other-offices";
 import ProfileGroup from "../sections/profile-group";
 import ProfileCard from "../ui/profile-card";
 import ProjectCarouselSection from "../sections/project-carousel-section";
-
+import { vicepresidentProjects } from "@/data/projects-carousel-data";
+import ProjectCarousel from "../ui/project-carousel";
 const LPAREN = <span className="font-['Arial'] inline">&#40;</span>;
 const RPAREN = <span className="font-['Arial'] inline">&#41;</span>;
 const COLON = <span className="font-['Arial'] inline">&#58;</span>;
@@ -198,7 +199,9 @@ function OSVPPage() {
         </div>
       </ProfileGroup>
 
-      <ProjectCarouselSection />
+      <ProjectCarouselSection>
+        <ProjectCarousel projects={vicepresidentProjects} />
+      </ProjectCarouselSection>
       <div className="h-20"></div>
       <OtherOffices office="osvp" />
       <div className="h-20"></div>

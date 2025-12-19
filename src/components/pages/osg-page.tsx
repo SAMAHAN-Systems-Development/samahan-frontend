@@ -4,6 +4,8 @@ import OtherOffices from "../sections/other-offices";
 import ProfileCard from "../ui/profile-card";
 import ProfileGroup from "../sections/profile-group";
 import ProjectCarouselSection from "../sections/project-carousel-section";
+import { secretaryGeneralProjects } from "@/data/projects-carousel-data";
+import ProjectCarousel from "../ui/project-carousel";
 
 const COLON = <span className="font-['Arial'] inline">&#58;</span>;
 const NDASH = <span className="font-['Arial'] inline">&ndash;</span>;
@@ -221,7 +223,9 @@ function OSGPage() {
         </div>
       </ProfileGroup>
 
-      <ProjectCarouselSection />
+      <ProjectCarouselSection>
+        <ProjectCarousel projects={secretaryGeneralProjects} />
+      </ProjectCarouselSection>
       <div className="h-20"></div>
       <OtherOffices office="osg" />
       <div className="h-20"></div>
