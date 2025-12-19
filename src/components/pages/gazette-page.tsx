@@ -46,7 +46,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({ options, value, onChang
             isOpen ? "rounded-t-xl border-b-0" : "rounded-xl"
           }`}
         >
-          <span className="truncate">{value}</span>
+          <span className="truncate -mb-0.5">{value}</span>
           <ChevronDown
             size={18}
             className={`ml-2 transition-transform duration-200 flex-shrink-0 ${
