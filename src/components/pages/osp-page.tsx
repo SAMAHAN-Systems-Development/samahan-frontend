@@ -2,8 +2,10 @@ import React from "react";
 import HeroBanner from "../ui/hero-banner";
 import OtherOffices from "../sections/other-offices";
 import ProjectCarouselSection from "../sections/project-carousel-section";
+import ProjectCarousel from "../ui/project-carousel";
 import ProfileGroup from "../sections/profile-group";
 import ProfileCard from "../ui/profile-card";
+import { presidentProjects } from "@/data/projects-carousel-data";
 
 const LPAREN = <span className="font-['Arial'] inline">&#40;</span>;
 const RPAREN = <span className="font-['Arial'] inline">&#41;</span>;
@@ -209,7 +211,9 @@ function OSPPage() {
         </div>
       </ProfileGroup>
 
-      <ProjectCarouselSection />
+      <ProjectCarouselSection>
+        <ProjectCarousel projects={presidentProjects} />
+      </ProjectCarouselSection>
       <div className="h-20"></div>
       <OtherOffices office="osp" />
       <div className="h-20"></div>
