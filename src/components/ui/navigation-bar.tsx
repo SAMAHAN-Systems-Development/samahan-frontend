@@ -50,7 +50,7 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div className="bg-mainblue pointer-events-auto absolute top-14 right-0 left-0 z-40 mt-0 overflow-y-auto rounded-b-4xl px-10 pb-6 text-white shadow-xl">
             {/* Logo shown when menu is open */}
-            <div className="mb-4 flex items-center justify-start pt-16">
+            <div className="mb-4 flex items-center justify-start pt-5">
               <Link href="/" className="relative h-8 w-24">
                 <Image
                   src="/images/on-the-move-logo.png"
