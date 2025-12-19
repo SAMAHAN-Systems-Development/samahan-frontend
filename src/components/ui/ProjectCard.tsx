@@ -30,18 +30,16 @@ const ProjectCard = ({
       </div>
 
       {/* Content Section */}
-      <div className="pt-2 lg:pt-6 px-6 lg:px-12 pb-6 lg:pb-8 flex flex-col gap-3 lg:gap-4 flex-grow">
+      <div className="px-5 md:px-6 lg:px-12 py-5 md:py-6 lg:py-8 flex flex-col gap-3 lg:gap-4 flex-grow justify-center">
         <h3
-          className={`${trapix.className} text-2xl lg:text-3xl xl:text-4xl text-white uppercase`}
+          className={`${trapix.className} text-lg md:text-2xl lg:text-3xl text-white uppercase`}
         >
           {title}
         </h3>
 
         {/* Expandable description - Both Mobile & Desktop */}
         <p
-          className={`${
-            formularRegular.className
-          } text-sm lg:text-base xl:text-lg text-white ${
+          className={` text-sm lg:text-base text-white ${
             isExpanded ? "" : "line-clamp-3"
           }`}
         >
