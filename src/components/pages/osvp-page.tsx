@@ -65,7 +65,6 @@ function OSVPPage() {
 
       <ProfileGroup
         groupTitle="OFFICE OF THE LEGISLATIVE SECRETARY"
-        description="Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam ibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat."
       >
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-4 gap-y-12 lg:gap-x-10 justify-items-center">
           <div className="col-span-1 lg:col-start-1 lg:col-span-2">
