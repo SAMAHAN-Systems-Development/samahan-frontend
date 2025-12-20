@@ -126,7 +126,7 @@ export default function DocumentRequestTabSection() {
         </div>
         <Button 
           className="cursor-pointer py-3 px-6 rounded-2xl mt-6 sm:mt-6 md:mt-8"
-          onClick={() => window.open("https://forms.gle/icompp-booking-form", "_blank")}
+          onClick={() => window.open("https://www.addu.edu.ph/registrar/", "_blank")}
         >
           REQUEST REGISTRAR CERTIFICATE
         </Button>
@@ -145,7 +145,7 @@ export default function DocumentRequestTabSection() {
         </div>
         <Button 
           className="cursor-pointer py-3 px-6 rounded-2xl mt-6 sm:mt-6 md:mt-8"
-          onClick={() => window.open("https://forms.gle/icompp-booking-form", "_blank")}
+          onClick={() => window.open("https://www.addu.edu.ph/registrar/", "_blank")}
         >
           REQUEST CERTIFICATE
         </Button>
