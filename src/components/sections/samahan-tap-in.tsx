@@ -60,7 +60,7 @@ export default function TapIn() {
                 <ol type="1" className="list-decimal pl-5 space-y-6">
                     <li><strong>Craft the concept paper for your event/activity. </strong>
                         Secure required parts of the paper {renderWithFallbackFont('(refer to the concept paper form), and its needed signatures. Afterward, submit it to the Office of the Student Affairs through this link: ')}
-                        <Link href="/" target="_blank" rel="noopener noreferrer" className="hover:underline text-mainblue break-all">Concept Paper Form</Link>
+                        <Link href="https://forms.gle/6Wcf8GL8rbGfq7cn9" target="_blank" rel="noopener noreferrer" className="hover:underline text-mainblue break-all">Concept Paper Form</Link>
                         . Submit your response through this link as well.
                     </li>
                     <li><strong>Once approved, you may proceed with booking your desired venue. </strong>
