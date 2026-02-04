@@ -61,7 +61,7 @@ const SamaSynchCalendarSection = () => {
         <div className="absolute left-1/2 bottom-10  md:bottom-40 -translate-x-1/2 h-[75vh]  md:h-[70vh] lg:h-[75vh] -z-10 pointer-events-none">
           <div className="relative w-[90vw] h-full">
             <Image
-              alt="SamaSynch Background"
+              alt="SamaSync Background"
               src="/images/SAMASYNC.png"
               fill
               priority

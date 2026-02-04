@@ -7,7 +7,7 @@ import { FiChevronDown, FiMenu } from "react-icons/fi";
 const headLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "SAMASYNCH", href: "/samasynch" },
+  { label: "SAMASYNC", href: "/samasync" },
 ];
 const offices = [
   { label: "Central Board", href: "/offices/central-board" },

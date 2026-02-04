@@ -7,8 +7,8 @@ function SamasynchPage() {
     <div className="flex flex-col min-h-screen relative ">
       <HeroBanner
         imageSrc="/images/hero-images/SAMASYNCH-Hero.png"
-        imageAlt="Samasynch Page Hero"
-        header2="SAMASYNCH"
+        imageAlt="Samasync Page Hero"
+        header2="SAMASYNC"
       />
       <SamaSynchCalendarSection />
     </div>
