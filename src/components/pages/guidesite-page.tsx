@@ -7,13 +7,15 @@ import TapIn from "../sections/samahan-tap-in";
 import IcommpEquipment from "../sections/icommp-equipment";
 import DocumentRequestTabSection from "../sections/request-document-tab-section";
 import OnTrack from "../sections/samahan-on-track";
+import EvaluationFormsSection from "../sections/evaluation-forms-section";
 
-// Define tabs data structure
+
 const tabOptions = [
   { id: "tap-in", label: "SAMAHAN TAP-IN" },
   { id: "booking", label: "icommp equipment and studios booking" },
   { id: "documents", label: "request for official documents" },
   { id: "on-track", label: "samahan on track" },
+  { id: "eval", label: "evaluation forms" },
 ];
 
 function GuidesitePage() {
@@ -23,7 +25,6 @@ function GuidesitePage() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -37,7 +38,6 @@ function GuidesitePage() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Helper to get current label for the dropdown trigger
   const currentTabLabel = tabOptions.find((t) => t.id === activeTab)?.label;
 
   return (
@@ -52,7 +52,6 @@ function GuidesitePage() {
         {/* --- NAVIGATION WRAPPER --- */}
         <div className="w-full relative z-30 px-4 md:px-0 flex justify-center">
           {/* 1. MOBILE/TABLET DROPDOWN (Visible < xl, Hidden on xl) */}
-          {/* Styled to match the "Frame 319" reference image */}
           <div className="xl:hidden w-full block" ref={dropdownRef}>
             <div className="relative md:font-bold text-[#002075] w-full">
               {/* Trigger Button */}
@@ -76,9 +75,6 @@ function GuidesitePage() {
                 <div className="absolute top-full left-0 w-full bg-gray-200 border-x-2 border-b-2 border-[#002075] rounded-b-2xl overflow-hidden z-30 flex flex-col shadow-lg">
                   {tabOptions.map((tab) => {
                     const isSelected = activeTab === tab.id;
-
-                    // We don't render the currently selected item in the list if you want to mimic a "Select" behavior where the top bar is the selected one.
-                    // However, standard menus usually show all. Based on the image showing multiple items, I will render all.
 
                     return (
                       <div
@@ -128,6 +124,7 @@ function GuidesitePage() {
           {activeTab === "booking" && <IcommpEquipment />}
           {activeTab === "documents" && <DocumentRequestTabSection />}
           {activeTab === "on-track" && <OnTrack />}
+          {activeTab === "eval" && <EvaluationFormsSection />}
         </div>
       </div>
     </div>
