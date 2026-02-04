@@ -37,7 +37,7 @@ export const presidentProjects: Project[] = [
     url: "/projects/president-project",
   },
   {
-    title: "UJam in Faith: The Ateneo Praise Festival 2025",
+    title: "Jam in Faith: The Ateneo Praise Festival 2025",
     description:
       "The SAMAHAN launched the first-ever Jam in Faith: The Ateneo Praise Fest, a university-wide worship gathering held on August 14, 2025 at the 4F Martin Hall. The event brought together students, musicians, and campus ministries in a night of music and shared prayer, highlighting the community’s collective movement toward deeper faith, unity, and purpose as part of the university’s ongoing commitment to spiritual formation.",
     imageUrl: "/images/samahan-projects/samahan-osp-jamInFaith.jpg",
