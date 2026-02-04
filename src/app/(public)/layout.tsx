@@ -25,7 +25,7 @@ export default function RootLayout({
           href="{{ base_path }}/images/safari-pinned-tab.svg?v=M44lzPylqQ"
           color="#000000"
         ></link>
-        <meta property="og:image" content={"/images/SysDevLogo.png"}></meta>
+        <meta property="og:image" content={"/images/samahan-logo-white.png"}></meta>
       </head>
       <body
         className={[
