@@ -127,7 +127,7 @@ function OSTPage() {
           <div className="col-span-1 lg:col-span-2">
             <ProfileCard
               image={{
-                imageUrl: "/images/ost/rafael-canete.png",
+                imageUrl: "/images/ost/eva-calidguid.png",
                 imageAlt: "Profile Picture",
               }}
             />
