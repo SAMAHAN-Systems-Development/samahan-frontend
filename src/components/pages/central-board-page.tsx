@@ -9,10 +9,11 @@ function CentralBoardPage() {
   return (
     <div className="flex flex-col min-h-screen relative ">
       <HeroBanner
-        imageSrc="/images/hero-images/OST-SCB-Hero.png"
+        imageSrc="/images/home-hero-background.jpg"
         imageAlt="SCB Page Hero"
         header1="SAMAHAN"
         header2="CENTRAL BOARD"
+        className="bg-mainblue/50"
       />
 
       <div className="w-full max-w-7xl mx-auto px-8 mt-7 md:mt-16 mb-16">
