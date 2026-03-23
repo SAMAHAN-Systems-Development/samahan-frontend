@@ -6,6 +6,7 @@ interface HeroBannerProps {
   imageAlt: string;
   header1?: string;
   header2?: string;
+  overlayClassName?: string;
 }
 
 const HeroBanner: React.FC<HeroBannerProps> = ({
@@ -13,6 +14,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   imageAlt,
   header1,
   header2,
+  overlayClassName,
 }) => (
   <div className="xs:h-64 relative z-10 h-56 w-full md:h-72 lg:h-96 2xl:h-[600px]">
     <Image
@@ -22,6 +24,9 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       className="object-cover"
       priority
     />
+    {overlayClassName && (
+      <div className={`absolute inset-0 z-[1] ${overlayClassName}`} />
+    )}
     <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-y-2">
       {header1 && (
         <div>
