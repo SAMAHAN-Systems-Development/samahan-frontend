@@ -106,7 +106,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
 
 function GazettePage() {
   const [type, setType] = React.useState("Resolutions");
-  const [year, setYear] = React.useState("2024");
+  const [year, setYear] = React.useState("2025");
 
   const [inputValue, setInputValue] = React.useState("");
   const [activeSearch, setActiveSearch] = React.useState("");
